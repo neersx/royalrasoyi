@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FoodMenuComponent } from './pages/food-menu/food-menu.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FoodDetailsComponent } from './pages/food-details/food-details.component';
+import { WhyUsComponent } from './pages/why-us/why-us.component';
 
 export const routes: Routes = [
   {
@@ -46,5 +47,13 @@ export const routes: Routes = [
       title: 'About Us',
       description: 'Welcome to the about us page of Royal रसोई .',
     },
+  },
+    {
+      path: 'why-choose-us',
+      component: WhyUsComponent,
+      data: {
+        title: 'Why choose Royal रसोई',
+        description: 'Introducing our esteemed culinary virtuoso, a maestro of flavors crafting exquisite dishes with passion, precision, and a touch of magic',
+      },
   },
 ];
