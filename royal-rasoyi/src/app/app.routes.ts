@@ -52,7 +52,7 @@ export const routes: Routes = [
       path: 'why-choose-us',
       component: WhyUsComponent,
       data: {
-        title: 'Why choose Royal रसोई',
+        title: 'Why choose Royal रसोई?',
         description: 'Introducing our esteemed culinary virtuoso, a maestro of flavors crafting exquisite dishes with passion, precision, and a touch of magic',
       },
   },

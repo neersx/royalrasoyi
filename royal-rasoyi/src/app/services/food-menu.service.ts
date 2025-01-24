@@ -39,7 +39,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Maharaja Laddoo Image',
-            url: 'assets/images/product/maharaja-laddoo.jpg',
+            url: 'https://ucarecdn.com/10f12f9d-f272-448c-96e5-e2caa40572cb/maharajaladdoo.jpg',
           },
         ],
         description: 'A rich and traditional Indian sweet.',
@@ -111,7 +111,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Chole Poori Image',
-            url: 'assets/images/product/chole-poori.jpg',
+            url: 'https://ucarecdn.com/60a6c6b4-bc56-4ac1-a40b-071490c510a4/cholepoori.jpg',
           },
         ],
         description: `
@@ -186,7 +186,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Royal Thali Image',
-            url: 'assets/images/product/royal-rajasthani-thali.jpg',
+            url: 'https://ucarecdn.com/72fbb4ec-f4e9-468f-a6e8-3ea0353f5864/royalrajasthanithali.jpg',
           },
         ],
         description: 'A grand and wholesome meal.',
@@ -281,7 +281,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Veg Appe Image',
-            url: 'assets/images/product/veg-appe.jpg',
+            url: 'https://ucarecdn.com/1e25a2ea-fd56-4c37-92ab-b3a403757abc/vegappe.jpg',
           },
         ],
         description: 'A healthy and tasty snack.',
@@ -343,7 +343,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Shahi Laddoo Image',
-            url: 'assets/images/product/shahi-laddoo.jpg',
+            url: 'https://ucarecdn.com/652c4869-4145-467b-bdbe-19d7e8f99f52/shahiladdoo.jpg',
           },
         ],
         description: 'A luxurious and healthy sweet.',
@@ -408,8 +408,8 @@ export class FoodMenuService {
         images: [
           {
             id: 1,
-            name: 'Veg Appe Image',
-            url: 'assets/images/product/veg-sandwich.jpg',
+            name: 'Veg Sandwich Image',
+            url: 'https://ucarecdn.com/219dfed1-3fe4-4498-9ef2-e3ddfffdf44f/vegsandwich.jpg',
           },
         ],
         description: 'A healthy and tasty snack.',
@@ -490,7 +490,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Aloo Pyaaj Paratha',
-            url: 'assets/images/product/aloo-pyaj-paratha.jpg',
+            url: 'https://ucarecdn.com/47e824fa-cb5a-4a5c-bc26-577de5d2fd9b/aloopyajparatha.jpg',
           },
         ],
         description:
@@ -539,7 +539,7 @@ export class FoodMenuService {
           {
             id: 2,
             name: 'Pao Bhaaji Image',
-            url: 'assets/images/product/pao-bhaaji.jpg',
+            url: 'https://ucarecdn.com/3fc61ce7-d5bb-4517-a20e-c72f3b260b85/paobhaaji.jpg',
           },
         ],
         description: 'A spicy and flavorful street food dish.',
@@ -600,7 +600,7 @@ export class FoodMenuService {
           {
             id: 5,
             name: 'Matar Mushroom Meal Image',
-            url: 'assets/images/product/matar-mushroom-meal.jpg',
+            url: 'https://ucarecdn.com/b3d6c8a2-1ccf-48c6-b618-dcf8fe3163a9/matarmushroommeal.jpg',
           },
         ],
         description: 'A hearty meal with mushrooms and peas in a creamy curry.',
@@ -660,7 +660,7 @@ export class FoodMenuService {
           {
             "id": 6,
             "name": "Shahi Thali Image",
-            "url": "assets/images/product/shahi-thali.jpg"
+            "url": "https://ucarecdn.com/35ef19d9-b73f-4470-939d-ddf8aa1e0699/shahithali.jpg"
           }
         ],
         "description": "A luxurious thali featuring stuffed parathas, creamy dal makhani, paneer curry, pickle, and accompaniments.",
@@ -762,7 +762,7 @@ export class FoodMenuService {
           {
             "id": 7,
             "name": "Aloo Matar Kachori Image",
-            "url": "assets/images/product/aloo-matar-kachori.jpg"
+            "url": "https://ucarecdn.com/931e3ccd-2d20-4883-a925-6b4df3d07471/aloomatarkachori.jpg"
           }
         ],
         "description": "Crispy and flaky kachoris stuffed with a spicy potato and green pea mixture, served with chutney.",
@@ -837,7 +837,7 @@ export class FoodMenuService {
           {
             "id": 8,
             "name": "Methi Dhaniya Paratha Image",
-            "url": "assets/images/product/methi-dhaniya-paratha.jpg"
+            "url": "https://ucarecdn.com/87e0654b-9059-4141-b385-b21360e41603/methidhaniyaparatha.jpg"
           }
         ],
         "description": "Soft and flavorful parathas made with fresh fenugreek and coriander leaves, served with creamy dahi.",
