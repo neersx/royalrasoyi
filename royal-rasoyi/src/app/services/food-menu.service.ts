@@ -28,14 +28,18 @@ export class FoodMenuService {
             name: 'Ghee',
             healthBenefits: 'Boosts energy and aids digestion',
           },
-          { id: 3, name: 'Gudd & Jaggery', healthBenefits: 'Provides quick energy' },
+          {
+            id: 3,
+            name: 'Gudd & Jaggery',
+            healthBenefits: 'Provides quick energy',
+          },
         ],
         region: 'North India',
         images: [
           {
             id: 1,
             name: 'Maharaja Laddoo Image',
-            url: 'assets/images/product/maharaja-laddoo/thumbnail.jpg',
+            url: 'assets/images/product/maharaja-laddoo.jpg',
           },
         ],
         description: 'A rich and traditional Indian sweet.',
@@ -60,7 +64,7 @@ export class FoodMenuService {
             id: 1,
             name: 'Laddoo Piece',
             quantity: null,
-            isRequired : true,
+            isRequired: true,
             availableToday: 'true',
             weight: '1 Kg',
             description: 'Soft and rich laddoo pieces.',
@@ -107,7 +111,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Chole Poori Image',
-            url: 'assets/images/product/chole-poori/thumbnail.jpg',
+            url: 'assets/images/product/chole-poori.jpg',
           },
         ],
         description: `
@@ -120,8 +124,8 @@ export class FoodMenuService {
         isDeleted: false,
         lastUpdatedOn: new Date('2025-01-05'),
         size: 'Large',
-        price: '120',
-        quantity: 1,
+        price: 169,
+        quantity: 5,
         measurement: 'Plate',
         addons: ['Pickle', 'Curd'],
         discount: 5,
@@ -134,7 +138,7 @@ export class FoodMenuService {
             id: 1,
             name: 'Chole',
             quantity: null,
-            isRequired : true,
+            isRequired: true,
             availableToday: 'true',
             weight: '300g',
             description: 'Spicy and flavorful chickpeas.',
@@ -143,7 +147,7 @@ export class FoodMenuService {
             id: 2,
             name: 'Poori',
             quantity: 5,
-            isRequired : true,
+            isRequired: true,
             availableToday: 'true',
             weight: null,
             description: 'Crispy and golden Oats Poori.',
@@ -182,7 +186,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Royal Thali Image',
-            url: 'assets/images/product/royal-rajasthani-thali/thumbnail.jpg',
+            url: 'assets/images/product/royal-rajasthani-thali.jpg',
           },
         ],
         description: 'A grand and wholesome meal.',
@@ -195,7 +199,7 @@ export class FoodMenuService {
         type: 'Dish',
         availableToday: true,
         size: 'MEDIUM',
-        price: '350',
+        price: 329,
         quantity: 1,
         measurement: 'Plate',
         addons: ['Extra Curry', 'Dessert'],
@@ -208,7 +212,7 @@ export class FoodMenuService {
             name: 'Paneer Curry',
             quantity: null,
             weight: '200g',
-            isRequired : true,
+            isRequired: true,
             availableToday: true,
             description: 'Rich and creamy paneer curry.',
           },
@@ -216,7 +220,7 @@ export class FoodMenuService {
             id: 2,
             name: 'Arahar Dal Tadka',
             quantity: null,
-            isRequired : true,
+            isRequired: true,
             availableToday: true,
             weight: '150g',
             description: 'Light and flavorful arahar/channa daal',
@@ -225,7 +229,7 @@ export class FoodMenuService {
             id: 3,
             name: 'Rice',
             quantity: null,
-            isRequired : false,
+            isRequired: false,
             availableToday: true,
             weight: '200g',
             description: 'Steamed basmati rice.',
@@ -234,7 +238,7 @@ export class FoodMenuService {
             id: 4,
             name: 'Desi Ghee Dipped Baati',
             quantity: 4,
-            isRequired : true,
+            isRequired: true,
             availableToday: true,
             weight: null,
             description: 'Rounded crunchy baati, dipped in Ghee.',
@@ -277,7 +281,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Veg Appe Image',
-            url: 'assets/images/product/veg-appe/thumbnail.jpg',
+            url: 'assets/images/product/veg-appe.jpg',
           },
         ],
         description: 'A healthy and tasty snack.',
@@ -339,7 +343,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Shahi Laddoo Image',
-            url: 'assets/images/product/shahi-laddoo/thumbnail.jpg',
+            url: 'assets/images/product/shahi-laddoo.jpg',
           },
         ],
         description: 'A luxurious and healthy sweet.',
@@ -405,7 +409,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Veg Appe Image',
-            url: 'assets/images/product/veg-sandwich/thumbnail.jpg',
+            url: 'assets/images/product/veg-sandwich.jpg',
           },
         ],
         description: 'A healthy and tasty snack.',
@@ -416,8 +420,8 @@ export class FoodMenuService {
         isDeleted: false,
         lastUpdatedOn: new Date('2025-01-05'),
         size: 'MEDIUM',
-        price: '95',
-        quantity: 1,
+        price: 120,
+        quantity: 4,
         measurement: 'Plate',
         addons: ['Chutney'],
         discount: 5,
@@ -483,12 +487,12 @@ export class FoodMenuService {
         ],
         region: 'North India',
         images: [
-            {
-              id: 1,
-              name: 'Aloo Pyaaj Paratha',
-              url: 'assets/images/product/aloo-pyaj-paratha/thumbnail.jpg',
-            },
-          ],
+          {
+            id: 1,
+            name: 'Aloo Pyaaj Paratha',
+            url: 'assets/images/product/aloo-pyaj-paratha.jpg',
+          },
+        ],
         description:
           'Traditional North Indian delight made with love and fresh ingredients, perfect for breakfast or evening snacks.',
         category: 'breakfast',
@@ -497,9 +501,9 @@ export class FoodMenuService {
         createdOn: new Date(),
         isDeleted: false,
         lastUpdatedOn: new Date(),
-        size: 'MEDIUM',
-        price: '150',
-        quantity: 1,
+        size: 'LARGE',
+        price: 129,
+        quantity: 2,
         measurement: 'Per Plate',
         addons: ['Red Sweet Chutney', 'Green Spicy Chutney'],
         discount: 0,
@@ -519,147 +523,378 @@ export class FoodMenuService {
         ],
         comments: [],
       },
-        {
-          "id": 8,
-          "name": "pao-bhaaji",
-          "title": "Pao Bhaaji",
-          "bestSeason": "All",
-          "isNonVeg": false,
-          "ingredients": [
-            { "id": 1, "name": "Potatoes", "healthBenefits": "Rich in carbohydrates" },
-            { "id": 2, "name": "Tomatoes", "healthBenefits": "High in Vitamin C" },
-            { "id": 3, "name": "Spices", "healthBenefits": "Boosts metabolism" }
-          ],
-          "region": "West India",
-          "images": [
-            { "id": 2, "name": "Pao Bhaaji Image", "url": "assets/images/product/pao-bhaaji/thumbnail.jpg" }
-          ],
-          "description": "A spicy and flavorful street food dish.",
-          "category": "snacks",
-          "lifeInDays": 1,
-          "flavourType": "spicy",
-          "createdOn": "2025-01-01T00:00:00.000Z",
-          "isDeleted": false,
-          "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-          "size": "MEDIUM",
-          "price": "150",
-          "quantity": null,
-          "measurement": "per plate",
-          "addons": ["Extra Butter", "Pav"],
-          "discount": 5,
-          "days": "Tuesday",
-          "type": "Dish",
-          "availableToday": "true",
-          "ratings": 4.7,
-          "foodItems": [
-            {
-              "id": 2,
-              "name": "Pao Bhaaji Plate",
-              "quantity": null,
-              "isRequired": true,
-              "availableToday": "true",
-              "weight": "250 g",
-              "description": "Spicy Bhaaji served with buttery Pao."
-            }
-          ],
-          "comments": [
-            { "id": 1, "comment": "Loved the buttery pao!", "userId": 103, "userName": "Ravi Kumar", "userImage": "https://example.com/ravi.jpg" }
-          ]
-        },
-        {
-          "id": 9,
-          "name": "methi-dhaniya-paratha",
-          "title": "Methi Dhaniya Paratha",
-          "bestSeason": "Winter",
-          "isNonVeg": false,
-          "ingredients": [
-            { "id": 1, "name": "Fenugreek", "healthBenefits": "Good for digestion" },
-            { "id": 2, "name": "Coriander", "healthBenefits": "Rich in antioxidants" },
-            { "id": 3, "name": "Wheat Flour", "healthBenefits": "High in fiber" }
-          ],
-          "region": "North India",
-          "images": [
-            { "id": 3, "name": "Methi Dhaniya Paratha Image", "url": "assets/images/product/methi-dhaniya-paratha/thumbnail.jpg" }
-          ],
-          "description": "Healthy flatbread with fenugreek and coriander.",
-          "category": "breakfast",
-          "lifeInDays": 2,
-          "flavourType": "mild",
-          "createdOn": "2025-01-01T00:00:00.000Z",
-          "isDeleted": false,
-          "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-          "size": "LARGE",
-          "price": "80",
-          "quantity": null,
-          "measurement": "per piece",
-          "addons": ["Butter", "Curd"],
-          "discount": 10,
-          "days": "Wednesday",
-          "type": "Dish",
-          "availableToday": "true",
-          "ratings": 4.6,
-          "foodItems": [
-            {
-              "id": 3,
-              "name": "Paratha Piece",
-              "quantity": null,
-              "isRequired": true,
-              "availableToday": "true",
-              "weight": "200 g",
-              "description": "Soft and healthy paratha pieces."
-            }
-          ],
-          "comments": [
-            { "id": 1, "comment": "Perfectly cooked!", "userId": 104, "userName": "Neha Sharma", "userImage": "https://example.com/neha.jpg" }
-          ]
-        },
-        {
-          "id": 10,
-          "name": "matar-mashroom-meal",
-          "title": "Matar Mushroom Meal",
-          "bestSeason": "Winter",
-          "isNonVeg": false,
-          "ingredients": [
-            { "id": 1, "name": "Mushrooms", "healthBenefits": "Rich in protein" },
-            { "id": 2, "name": "Green Peas", "healthBenefits": "High in fiber" },
-            { "id": 3, "name": "Rice", "healthBenefits": "Good source of carbohydrates" }
-          ],
-          "region": "North India",
-          "images": [
-            { "id": 5, "name": "Matar Mushroom Meal Image", "url": "assets/images/product/matar-mushroom-meal/thumbnail.jpg" }
-          ],
-          "description": "A hearty meal with mushrooms and peas in a creamy curry.",
-          "category": "thali",
-          "lifeInDays": 1,
-          "flavourType": "spicy",
-          "createdOn": "2025-01-01T00:00:00.000Z",
-          "isDeleted": false,
-          "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-          "size": "LARGE",
-          "price": "200",
-          "quantity": null,
-          "measurement": "per meal",
-          "addons": ["Raita", "Papad"],
-          "discount": 12,
-          "days": "Friday",
-          "type": "Dish",
-          "availableToday": "true",
-          "ratings": 4.6,
-          "foodItems": [
-            {
-              "id": 5,
-              "name": "Matar Mushroom Curry with Rice",
-              "quantity": null,
-              "isRequired": true,
-              "availableToday": "true",
-              "weight": "400 g",
-              "description": "Flavorful curry served with steamed rice."
-            }
-          ],
-          "comments": [
-            { "id": 1, "comment": "Delicious and filling!", "userId": 106, "userName": "Priya Singh", "userImage": "https://example.com/priya.jpg" }
-          ]
-        }
-      ]      
+      {
+        id: 8,
+        name: 'pao-bhaaji',
+        title: 'Pao Bhaaji',
+        bestSeason: 'All',
+        isNonVeg: false,
+        ingredients: [
+          { id: 1, name: 'Potatoes', healthBenefits: 'Rich in carbohydrates' },
+          { id: 2, name: 'Tomatoes', healthBenefits: 'High in Vitamin C' },
+          { id: 3, name: 'Spices', healthBenefits: 'Boosts metabolism' },
+        ],
+        region: 'West India',
+        images: [
+          {
+            id: 2,
+            name: 'Pao Bhaaji Image',
+            url: 'assets/images/product/pao-bhaaji.jpg',
+          },
+        ],
+        description: 'A spicy and flavorful street food dish.',
+        category: 'snacks',
+        lifeInDays: 1,
+        flavourType: 'spicy',
+        createdOn: '2025-01-01T00:00:00.000Z',
+        isDeleted: false,
+        lastUpdatedOn: '2025-01-05T00:00:00.000Z',
+        size: 'LARGE',
+        price: 219,
+        quantity: null,
+        measurement: 'per plate',
+        addons: ['Extra Butter', 'Pav'],
+        discount: 5,
+        days: 'Tuesday',
+        type: 'Dish',
+        availableToday: 'true',
+        ratings: 4.7,
+        foodItems: [
+          {
+            id: 2,
+            name: 'Pao Bhaaji Plate',
+            quantity: null,
+            isRequired: true,
+            availableToday: 'true',
+            weight: '250 g',
+            description: 'Spicy Bhaaji served with buttery Pao.',
+          },
+        ],
+        comments: [
+          {
+            id: 1,
+            comment: 'Loved the buttery pao!',
+            userId: 103,
+            userName: 'Ravi Kumar',
+            userImage: 'https://example.com/ravi.jpg',
+          },
+        ],
+      },
+      {
+        id: 10,
+        name: 'matar-mashroom-meal',
+        title: 'Matar Mushroom Meal',
+        bestSeason: 'Winter',
+        isNonVeg: false,
+        ingredients: [
+          { id: 1, name: 'Mushrooms', healthBenefits: 'Rich in protein' },
+          { id: 2, name: 'Green Peas', healthBenefits: 'High in fiber' },
+          {
+            id: 3,
+            name: 'Rice',
+            healthBenefits: 'Good source of carbohydrates',
+          },
+        ],
+        region: 'North India',
+        images: [
+          {
+            id: 5,
+            name: 'Matar Mushroom Meal Image',
+            url: 'assets/images/product/matar-mushroom-meal.jpg',
+          },
+        ],
+        description: 'A hearty meal with mushrooms and peas in a creamy curry.',
+        category: 'thali',
+        lifeInDays: 1,
+        flavourType: 'spicy',
+        createdOn: '2025-01-01T00:00:00.000Z',
+        isDeleted: false,
+        lastUpdatedOn: '2025-01-05T00:00:00.000Z',
+        size: 'LARGE',
+        price: 239,
+        quantity: null,
+        measurement: 'per meal',
+        addons: ['Raita', 'Papad'],
+        discount: 12,
+        days: 'Friday',
+        type: 'Dish',
+        availableToday: 'true',
+        ratings: 4.6,
+        foodItems: [
+          {
+            id: 5,
+            name: 'Matar Mushroom Curry with Rice',
+            quantity: null,
+            isRequired: true,
+            availableToday: 'true',
+            weight: '400 g',
+            description: 'Flavorful curry served with steamed rice.',
+          },
+        ],
+        comments: [
+          {
+            id: 1,
+            comment: 'Delicious and filling!',
+            userId: 106,
+            userName: 'Priya Singh',
+            userImage: 'https://example.com/priya.jpg',
+          },
+        ],
+      },
+      {
+        "id": 12,
+        "name": "shahi-thali",
+        "title": "Shahi Thali",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Paneer", "healthBenefits": "Rich in protein and calcium" },
+          { "id": 2, "name": "Whole Wheat", "healthBenefits": "High in fiber" },
+          { "id": 3, "name": "Black Lentils", "healthBenefits": "Good source of iron and protein" },
+          { "id": 4, "name": "Butter", "healthBenefits": "Provides essential fats" },
+          { "id": 5, "name": "Onion", "healthBenefits": "Rich in antioxidants" },
+          { "id": 6, "name": "Spices", "healthBenefits": "Boosts metabolism" }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 6,
+            "name": "Shahi Thali Image",
+            "url": "assets/images/product/shahi-thali.jpg"
+          }
+        ],
+        "description": "A luxurious thali featuring stuffed parathas, creamy dal makhani, paneer curry, pickle, and accompaniments.",
+        "category": "thali",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-01T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
+        "size": "LARGE",
+        "price": 319,
+        "quantity": null,
+        "measurement": "per thali",
+        "addons": ["Extra Butter", "Raita"],
+        "discount": 10,
+        "days": "Sunday",
+        "type": "Dish",
+        "availableToday": "true",
+        "ratings": 4.7,
+        "foodItems": [
+          {
+            "id": 7,
+            "name": "Stuffed Paratha",
+            "quantity": "2 pieces",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "200 g",
+            "description": "Soft parathas stuffed with spiced fillings."
+          },
+          {
+            "id": 8,
+            "name": "Dal Makhani",
+            "quantity": "1 bowl",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "200 g",
+            "description": "Creamy and flavorful black lentil curry."
+          },
+          {
+            "id": 9,
+            "name": "Paneer Curry",
+            "quantity": "1 bowl",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "200 g",
+            "description": "Rich paneer curry with a spicy kick."
+          },
+          {
+            "id": 10,
+            "name": "Pickle & Onion",
+            "quantity": null,
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": null,
+            "description": "Traditional Indian pickle and fresh onion slices."
+          },
+          {
+            "id": 11,
+            "name": "Gulab Jamun",
+            "quantity": "1 piece",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "50 g",
+            "description": "A sweet and syrupy dessert."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Amazing thali, loved the parathas!",
+            "userId": 201,
+            "userName": "Amit Verma",
+            "userImage": "https://example.com/amit.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Perfect blend of flavors. Will order again.",
+            "userId": 202,
+            "userName": "Sneha Kapoor",
+            "userImage": "https://example.com/sneha.jpg"
+          }
+        ]
+      }, 
+      {
+        "id": 13,
+        "name": "aloo-matar-kachori",
+        "title": "Aloo Matar Kachori",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Potatoes", "healthBenefits": "Rich in carbohydrates and potassium" },
+          { "id": 2, "name": "Green Peas", "healthBenefits": "High in fiber and protein" },
+          { "id": 3, "name": "Whole Wheat Flour", "healthBenefits": "Rich in fiber and nutrients" },
+          { "id": 4, "name": "Spices", "healthBenefits": "Boosts digestion and adds flavor" },
+          { "id": 5, "name": "Oil", "healthBenefits": "Provides essential fats" }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 7,
+            "name": "Aloo Matar Kachori Image",
+            "url": "assets/images/product/aloo-matar-kachori.jpg"
+          }
+        ],
+        "description": "Crispy and flaky kachoris stuffed with a spicy potato and green pea mixture, served with chutney.",
+        "category": "snacks",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-01T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 189,
+        "quantity": 4,
+        "measurement": "per plate",
+        "addons": ["Extra Chutney", "Curd"],
+        "discount": 5,
+        "days": "Tuesday",
+        "type": "Dish",
+        "availableToday": "true",
+        "ratings": 4.5,
+        "foodItems": [
+          {
+            "id": 12,
+            "name": "Aloo Matar Kachori",
+            "quantity": "3 pieces",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "250 g",
+            "description": "Golden and crispy kachoris stuffed with a flavorful potato and pea mixture."
+          },
+          {
+            "id": 13,
+            "name": "Tamarind Chutney",
+            "quantity": "1 bowl",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "50 g",
+            "description": "Sweet and tangy tamarind chutney for dipping."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Perfectly crispy and tasty!",
+            "userId": 301,
+            "userName": "Ravi Sharma",
+            "userImage": "https://example.com/ravi.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Loved the stuffing, very flavorful.",
+            "userId": 302,
+            "userName": "Meera Jain",
+            "userImage": "https://example.com/meera.jpg"
+          }
+        ]
+      },  
+      {
+        "id": 14,
+        "name": "methi-dhaniya-paratha",
+        "title": "Methi Dhaniya Paratha",
+        "bestSeason": "Winter",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Fresh Fenugreek Leaves (Methi)", "healthBenefits": "Rich in vitamins and fiber" },
+          { "id": 2, "name": "Coriander Leaves (Dhaniya)", "healthBenefits": "Boosts immunity and adds freshness" },
+          { "id": 3, "name": "Whole Wheat Flour", "healthBenefits": "Rich in fiber and nutrients" },
+          { "id": 4, "name": "Spices", "healthBenefits": "Enhances flavor and aids digestion" },
+          { "id": 5, "name": "Ghee", "healthBenefits": "Boosts energy and adds flavor" }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 8,
+            "name": "Methi Dhaniya Paratha Image",
+            "url": "assets/images/product/methi-dhaniya-paratha.jpg"
+          }
+        ],
+        "description": "Soft and flavorful parathas made with fresh fenugreek and coriander leaves, served with creamy dahi.",
+        "category": "breakfast",
+        "lifeInDays": 1,
+        "flavourType": "mild spicy",
+        "createdOn": "2025-01-01T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
+        "size": "LARGE",
+        "price": 109,
+        "quantity": 2,
+        "measurement": "per plate",
+        "addons": ["Butter", "Pickle"],
+        "discount": 8,
+        "days": "Sunday",
+        "type": "Dish",
+        "availableToday": "true",
+        "ratings": 4.7,
+        "foodItems": [
+          {
+            "id": 14,
+            "name": "Methi Dhaniya Paratha",
+            "quantity": "2 pieces",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "200 g",
+            "description": "Freshly made parathas with the goodness of methi and dhaniya."
+          },
+          {
+            "id": 15,
+            "name": "Dahi (Yogurt)",
+            "quantity": "1 bowl",
+            "isRequired": true,
+            "availableToday": "true",
+            "weight": "100 g",
+            "description": "Thick and creamy yogurt served as a side."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Perfect winter breakfast, very fresh and tasty!",
+            "userId": 401,
+            "userName": "Anjali Verma",
+            "userImage": "https://example.com/anjali.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "The parathas were so soft and the dahi was creamy. Loved it!",
+            "userId": 402,
+            "userName": "Rahul Mehta",
+            "userImage": "https://example.com/rahul.jpg"
+          }
+        ]
+      }
+                   
+    ];
   }
 }
