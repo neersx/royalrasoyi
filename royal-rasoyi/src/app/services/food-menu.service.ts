@@ -35,7 +35,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Maharaja Laddoo Image',
-            url: 'assets/images/menu/maharaja-laddoo/thumbnail.webp',
+            url: 'assets/images/menu/maharaja-laddoo/thumbnail.jpg',
           },
         ],
         description: 'A rich and traditional Indian sweet.',
@@ -107,7 +107,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Chole Poori Image',
-            url: 'assets/images/menu/chole-poori/thumbnail.webp',
+            url: 'assets/images/menu/chole-poori/thumbnail.jpg',
           },
         ],
         description: `
@@ -182,7 +182,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Royal Thali Image',
-            url: 'assets/images/menu/royal-rajasthani-thali/thumbnail.webp',
+            url: 'assets/images/menu/royal-rajasthani-thali/thumbnail.jpg',
           },
         ],
         description: 'A grand and wholesome meal.',
@@ -277,7 +277,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Veg Appe Image',
-            url: 'assets/images/menu/veg-appe/thumbnail.webp',
+            url: 'assets/images/menu/veg-appe/thumbnail.jpg',
           },
         ],
         description: 'A healthy and tasty snack.',
@@ -339,7 +339,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Shahi Laddoo Image',
-            url: 'assets/images/menu/shahi-laddoo/thumbnail.webp',
+            url: 'assets/images/menu/shahi-laddoo/thumbnail.jpg',
           },
         ],
         description: 'A luxurious and healthy sweet.',
@@ -405,7 +405,7 @@ export class FoodMenuService {
           {
             id: 1,
             name: 'Veg Appe Image',
-            url: 'https://royalrasoyi.com/assets/images/menu/veg-sandwich/thumbnail.webp',
+            url: 'assets/images/menu/veg-sandwich/thumbnail.jpg',
           },
         ],
         description: 'A healthy and tasty snack.',
@@ -460,8 +460,8 @@ export class FoodMenuService {
       },
       {
         id: 7,
-        name: 'aloo-pyaz-paratha',
-        title: 'Aloo Pyaz Paratha',
+        name: 'aloo-pyaj-paratha',
+        title: 'Aloo Pyaj Paratha',
         bestSeason: 'All',
         isNonVeg: false,
         ingredients: [
@@ -472,7 +472,7 @@ export class FoodMenuService {
           },
           {
             id: 2,
-            name: 'Pyaz (Onion)',
+            name: 'Pyaj (Onion)',
             healthBenefits: 'Good source of antioxidants and fiber',
           },
           {
@@ -485,8 +485,8 @@ export class FoodMenuService {
         images: [
             {
               id: 1,
-              name: 'Allo Pyaaj Paratha',
-              url: 'https://royalrasoyi.com/assets/images/menu/aloo-pyaz-paratha.jpg',
+              name: 'Aloo Pyaaj Paratha',
+              url: 'assets/images/menu/aloo-pyaj-paratha/thumbnail.jpg',
             },
           ],
         description:
@@ -532,7 +532,7 @@ export class FoodMenuService {
           ],
           "region": "West India",
           "images": [
-            { "id": 2, "name": "Pao Bhaaji Image", "url": "assets/images/menu/pao-bhaaji/thumbnail.webp" }
+            { "id": 2, "name": "Pao Bhaaji Image", "url": "assets/images/menu/pao-bhaaji/thumbnail.jpg" }
           ],
           "description": "A spicy and flavorful street food dish.",
           "category": "snacks",
@@ -579,7 +579,7 @@ export class FoodMenuService {
           ],
           "region": "North India",
           "images": [
-            { "id": 3, "name": "Methi Dhaniya Paratha Image", "url": "assets/images/menu/methi-dhaniya-paratha/thumbnail.webp" }
+            { "id": 3, "name": "Methi Dhaniya Paratha Image", "url": "assets/images/menu/methi-dhaniya-paratha/thumbnail.jpg" }
           ],
           "description": "Healthy flatbread with fenugreek and coriander.",
           "category": "breakfast",
@@ -626,7 +626,7 @@ export class FoodMenuService {
           ],
           "region": "North India",
           "images": [
-            { "id": 5, "name": "Matar Mushroom Meal Image", "url": "assets/images/menu/matar-mushroom-meal/thumbnail.webp" }
+            { "id": 5, "name": "Matar Mushroom Meal Image", "url": "assets/images/menu/matar-mushroom-meal/thumbnail.jpg" }
           ],
           "description": "A hearty meal with mushrooms and peas in a creamy curry.",
           "category": "thali",
