@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { FoodMenuService } from '../../services/food-menu.service';
 import { CommonModule, NgFor } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MetaService } from '../../core/services/meta-tags.service';
 
 @Component({
   selector: 'app-food-menu',
-  imports: [CommonModule, NgFor],
+  imports: [CommonModule, NgFor, RouterModule],
   templateUrl: './food-menu.component.html',
   styleUrl: './food-menu.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -41,6 +41,6 @@ export class FoodMenuComponent implements OnInit {
 
   goToFoodDetails(name: any) {
     this.router.navigate(['food-details', name]);
-    this.cdr.detectChanges();
+
   }
 }

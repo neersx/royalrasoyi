@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit }
 import { MetaService } from '../../core/services/meta-tags.service';
 import { CommonModule, NgFor } from '@angular/common';
 import { FoodMenuService } from '../../services/food-menu.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, NgFor],
+  imports: [CommonModule, NgFor, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   providers: [MetaService],
