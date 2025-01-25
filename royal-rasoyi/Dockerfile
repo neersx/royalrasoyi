@@ -1,4 +1,5 @@
-FROM node:22.13-alpine
+# Use Node.js 22.13-bullseye as the base image (Debian-based, compatible with Ubuntu)
+FROM node:22.13-bullseye
 
 WORKDIR /app
 
