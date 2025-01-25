@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MetaService } from '../../core/services/meta-tags.service';
@@ -8,20 +8,21 @@ import { MetaService } from '../../core/services/meta-tags.service';
   selector: 'app-why-us',
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   templateUrl: './why-us.component.html',
-  styleUrl: './why-us.component.scss'
+  styleUrl: './why-us.component.scss',
+  standalone: true
 })
 export class WhyUsComponent {
 
-  constructor( private readonly metaService: MetaService, private readonly cdr: ChangeDetectorRef) {
+  constructor( private readonly metaService: MetaService) {
     const metaDetails = {
       title: 'Why choose our Royal रसोई ?  | The Taste you deserve',
       description: 'Experience the Royal रसोई difference today. Let’s make healthy eating a delicious journey!',
-      image: 'https://royalrasoyi.com/assets/images/why-us.jpg',
-      url: 'https://royalrasoyi.com/',
+      image: 'https://ucarecdn.com/e7306f47-376f-4c0b-9ea8-d6af7ee80e68/whyus.jpg',
+      url: 'https://royalrasoyi.com/why-us',
       type: 'website'
     };
   
-     this.metaService.updateMetaTags('WhyUs', metaDetails);
+     this.metaService.updateMetaTags('why-us', metaDetails);
   }
 
 }

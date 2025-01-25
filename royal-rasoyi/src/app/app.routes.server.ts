@@ -4,8 +4,8 @@ import { FoodMenuService } from './services/food-menu.service';
 
 export const serverRoutes: ServerRoute[] = [
   {
-    path: 'why-choose-us',
-    renderMode: RenderMode.Server
+    path: 'why-us',
+    renderMode: RenderMode.Prerender
   },
   {
     path: '**',

@@ -49,7 +49,7 @@ export const routes: Routes = [
     },
   },
     {
-      path: 'why-choose-us',
+      path: 'why-us',
       component: WhyUsComponent,
       data: {
         title: 'Why choose Royal रसोई?',
