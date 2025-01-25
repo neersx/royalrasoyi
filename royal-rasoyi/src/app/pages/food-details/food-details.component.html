@@ -40,7 +40,6 @@
                 <span class="currency">₹</span>  <span *ngIf="foodDetails.discount" class="pre-price">
                   {{ foodDetails.price || '0.00' }}
                 </span> {{ foodDetails.price  - (foodDetails.price/100 * foodDetails.discount) || '0.00' }} {{ foodDetails.measurement }}
-              
               </span>
 
               <div class="ratings mb-5" style="display: flex; align-items: center; gap: 10px;">

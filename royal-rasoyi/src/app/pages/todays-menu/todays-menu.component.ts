@@ -31,10 +31,10 @@ export class TodaysMenuComponent  implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getMenuList().subscribe((data: any) => {
-      this.foodMenu = data;
-      console.log(this.foodMenu);
-    });
+    // this.service.getMenuList().subscribe((data: any) => {
+    //   this.foodMenu = data;
+    //   console.log(this.foodMenu);
+    // });
     this.categories = [...new Set(this.foodMenu.map((food) => food.category))];
     this.cdr.detectChanges();
   }
