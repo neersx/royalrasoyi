@@ -9,8 +9,8 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm run build -c production
 
 EXPOSE 4000
 
-CMD ["npm", "run", "serve:ssr"]
+CMD ["node", "dist/server/server.mjs"]
