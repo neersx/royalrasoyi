@@ -85,6 +85,16 @@ export class FoodDetailsComponent {
     this.cdr.detectChanges();
   }
 
+  getFullStars(rating: number): number[] {
+    const fullStars = Math.floor(rating); // Get the integer part of the rating
+    return Array(fullStars).fill(0); // Create an array with `fullStars` elements
+  }
+  
+  getEmptyStars(rating: number): number[] {
+    const emptyStars = 5 - Math.floor(rating); // Calculate remaining stars
+    return Array(emptyStars).fill(0); // Create an array with `emptyStars` elements
+  }
+
   goToFoodDetails(name: any) {
     this.router.navigate(['food-details', name]);
     this.cdr.detectChanges();

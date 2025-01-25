@@ -41,9 +41,4 @@ getFoodByCategory(category: string): any[] {
   return this.foodMenu.filter((food) => food.category === category);
 }
 
-goToFoodDetails(name: any) {
-  this.router.navigate(['food-details', name]);
-  this.cdr.detectChanges();
-}
-
 }
