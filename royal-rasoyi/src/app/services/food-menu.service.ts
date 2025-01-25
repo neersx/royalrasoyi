@@ -224,11 +224,11 @@ export class FoodMenuService {
         "type": "Dish",
         "availableToday": true,
         "size": "MEDIUM",
-        "price": 329,
+        "price": 399,
         "quantity": 1,
         "measurement": "Plate",
         "addons": ["Extra Curry", "Dessert"],
-        "discount": 10,
+        "discount": 0,
         "days": "Wednesday",
         "ratings": 4.9,
         "foodItems": [
