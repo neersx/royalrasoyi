@@ -10,12 +10,13 @@ import { Observable } from 'rxjs';
 })
 export class FoodMenuService {
 
-  // constructor(private readonly http: HttpClient) {}
-  // jsonUrl = 'https://res.cloudinary.com/royalrasoyi2025/raw/upload/v1737802589/rr_menu/hkzhujnr9c3oxq7bgux2.json';
+  constructor(private readonly http: HttpClient) {}
+  jsonUrl = 'https://res.cloudinary.com/royalrasoyi2025/raw/upload/v1737802589/rr_menu/food-menu.json';
+  testUrl = 'https://res.cloudinary.com/royalrasoyi2025/raw/upload/v1737899156/rr_menu/test-menu.json';
 
-  // getMenuList(): Observable<any> {
-  //   return this.http.get(this.jsonUrl);
-  // }
+  getMenuList(): Observable<any> {
+    return this.http.get(this.jsonUrl);
+    }
 
   getFoodMenu(): any {
     return [

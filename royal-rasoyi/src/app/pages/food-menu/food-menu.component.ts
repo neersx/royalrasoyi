@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { FoodMenuService } from '../../services/food-menu.service';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { MetaService } from '../../core/services/meta-tags.service';
 import { MenuListComponent } from "../../components/shared/menu-list/menu-list.component";
 
 @Component({
   selector: 'app-food-menu',
-  imports: [CommonModule, NgFor, RouterModule, MenuListComponent],
+  imports: [CommonModule, RouterModule, MenuListComponent],
   templateUrl: './food-menu.component.html',
   styleUrl: './food-menu.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

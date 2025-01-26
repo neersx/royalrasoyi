@@ -10,7 +10,8 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, NgFor, RouterModule],
   templateUrl: './todays-menu.component.html',
   styleUrl: './todays-menu.component.scss',
-  standalone: true
+  standalone: true,
+  providers: [FoodMenuService],
 })
 export class TodaysMenuComponent  implements OnInit {
   foodMenu: any[] = [];
