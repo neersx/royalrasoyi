@@ -17,6 +17,7 @@ export class FoodDetailsComponent {
   foodMenuList = [];
   foodDetails : any;
   isBrowser = true;
+  Math = Math; 
 
   constructor(
     private readonly metaService: MetaService,
