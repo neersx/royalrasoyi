@@ -3,10 +3,11 @@ import { MetaService } from '../../core/services/meta-tags.service';
 import { CommonModule, NgFor } from '@angular/common';
 import { FoodMenuService } from '../../services/food-menu.service';
 import { Router, RouterModule } from '@angular/router';
+import { MenuListComponent } from "../../components/shared/menu-list/menu-list.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, NgFor, RouterModule],
+  imports: [CommonModule, NgFor, RouterModule, MenuListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   providers: [MetaService],
