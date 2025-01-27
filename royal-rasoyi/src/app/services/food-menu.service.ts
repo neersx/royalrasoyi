@@ -200,100 +200,100 @@ export class FoodMenuService {
       {
         "id": 3,
         "name": "royal-rajasthani-thali",
-        "title": "Royal Rajasthani Thali",
+        "title": "Spicy Chole Poori",
         "bestSeason": "All",
         "isNonVeg": false,
         "ingredients": [
-          { "id": 1, "name": "Mixed grains", "healthBenefits": "Rich carbs and Balanced meal" },
-          { "id": 2, "name": "Desi Ghee", "healthBenefits": "Good source of energy" },
-          { "id": 3, "name": "Rayta", "healthBenefits": "Provides vitamin C and increases immunity" }
+            {
+              "id": 1,
+              "name": "Chickpeas",
+              "healthBenefits": "High in protein and fiber"
+            },
+            {
+              "id": 2,
+              "name": "Olive Oil",
+              "healthBenefits": "Rich in healthy monounsaturated fats, reduces inflammation, and supports heart health"
+            },
+            {
+              "id": 3,
+              "name": "Oats",
+              "healthBenefits": "Rich in beta-glucan, lowers cholesterol, and aids digestion"
+            },
+            {
+              "id": 4,
+              "name": "Multi Grain Flour",
+              "healthBenefits": "Provides a mix of essential nutrients, boosts energy, and supports digestive health"
+            }
         ],
-        "region": "Pan India",
+        "region": "North India",
         "images": [
           {
             "id": 1,
-            "name": "Royal Thali Image",
-            "url": "https://ucarecdn.com/72fbb4ec-f4e9-468f-a6e8-3ea0353f5864/royalrajasthanithali.jpg"
+            "name": "Chole Poori Image",
+            "url": "https://ucarecdn.com/60a6c6b4-bc56-4ac1-a40b-071490c510a4/cholepoori.jpg"
           }
         ],
-        "description": "A grand and wholesome meal.",
-        "category": "thali",
+        "description": "🍛 Chole: Slow-cooked with aromatic spices, tangy tomatoes, and a hint of fresh coriander for a rich and hearty flavor. 🥙 Puri: Golden, fluffy, and perfectly crispy – made fresh with the finest whole wheat flour and fried in Olive Oil.",
+        "category": "breakfast",
         "lifeInDays": 1,
-        "flavourType": "non spicy",
-        "createdOn": "2025-01-03T00:00:00Z",
+        "flavourType": "spicy",
+        "createdOn": "2025-01-02T00:00:00.000Z",
         "isDeleted": false,
-        "lastUpdatedOn": "2025-01-05T00:00:00Z",
+        "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
+        "size": "Large",
+        "price": 190,
+        "quantity": 5,
+        "measurement": "Plate",
+        "addons": ["Pickle", "Curd"],
+        "discount": 10,
+        "days": "Tuesday",
         "type": "Dish",
        "availableToday": true,
-        "size": "MEDIUM",
-        "price": 450,
-        "quantity": 1,
-        "measurement": "Plate",
-        "addons": ["Extra Curry", "Dessert"],
-        "discount": 10,
-        "days": "Wednesday",
-        "ratings": 4.9,
+        "todayTime": "Breakfast",
+        "ratings": 5.0,
         "foodItems": [
           {
             "id": 1,
-            "name": "Arahar Daal Tadka",
+            "name": "Chole",
             "quantity": null,
-            "weight": "200ml",
             "isRequired": true,
             "availableToday": false,
-            "description": "Yummy Daal"
+            "weight": "300ml",
+            "description": "Spicy and flavorful soft chickpeas."
           },
           {
             "id": 2,
-            "name": "Veg or Boondi Rayta",
-            "quantity": null,
-            "weight": "180ml",
+            "name": "Poori : Fried in Olive Oil",
+            "quantity": 5,
             "isRequired": true,
             "availableToday": false,
-            "description": "Light and flavorful arahar/channa daal"
+            "weight": null,
+            "description": "Crispy and golden prepared with Oats and Multi grain flour Poori."
           },
           {
             "id": 3,
-            "name": "Baigan Ka Bharta",
+            "name": "Freshly cut Green Salad",
             "quantity": null,
-            "weight": "200g",
-            "isRequired": false,
+            "isRequired": true,
             "availableToday": false,
-            "description": "Steamed basmati rice."
-          },
-          {
-            "id": 4,
-            "name": "Desi Ghee Dipped Baati",
-            "quantity": 5,
             "weight": null,
-            "isRequired": true,
-            "availableToday": false,
-            "description": "Rounded crunchy baati, dipped in Ghee."
-          },
-          {
-            "id": 5,
-            "name": "Rajasthani Choorma",
-            "quantity": 4,
-            "weight": "100gm",
-            "isRequired": true,
-            "availableToday": false,
-            "description": "Rounded crunchy baati, dipped in Ghee."
+            "description": "Crispy and golden prepared with Oats and Multi grain flour Poori."
           }
         ],
         "comments": [
           {
             "id": 1,
-            "comment": "Perfect for a full meal!",
-            "userId": 105,
-            "userName": "Charlie Black",
-            "userImage": "https://example.com/charlie.jpg"
+            "comment": "Great taste and fresh!",
+            "userId": 103,
+            "userName": "Alice Brown",
+            "userImage": "https://example.com/alice.jpg"
           },
           {
             "id": 2,
-            "comment": "So many delicious dishes.",
-            "userId": 106,
-            "userName": "Diana White",
-            "userImage": "https://example.com/diana.jpg"
+            "comment": "Loved the spiciness.",
+            "userId": 104,
+            "userName": "Bob Green",
+            "userImage": "https://example.com/bob.jpg"
           }
         ]
       }
