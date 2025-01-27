@@ -1029,9 +1029,9 @@ export class FoodMenuService {
         "region": "Global",
         "images": [
           {
-            "id": 7,
-            "name": "Maharaja Thali Image",
-            "url": "https://ucarecdn.com/b6721501-6e51-4a40-ab9d-125446a1747e/maharajathali.jpg"
+            "id": 1,
+            "name": "Chole Poori Image",
+            "url": "https://ucarecdn.com/60a6c6b4-bc56-4ac1-a40b-071490c510a4/cholepoori.jpg"
           }
         ],
         "description": "A royal thali featuring: Kadhai Paneer cooked in Olive Oil, Laccha Paratha or Multigrain Roti, Arahar Dal in Desi Ghee Tadka or Mix Dal Fry, Matar Pulao, Fresh Green Salad, and Kesari Kheer.",
