@@ -1037,103 +1037,67 @@ export class FoodMenuService {
             "url": "https://ucarecdn.com/b6721501-6e51-4a40-ab9d-125446a1747e/maharajathali.jpg"
           }
         ],
-        "description": "A royal thali featuring: Kadhai Paneer cooked in Olive Oil, Laccha Paratha or Multigrain Roti, Arahar Dal in Desi Ghee Tadka or Mix Dal Fry, Matar Pulao, Fresh Green Salad, and Kesari Kheer.",
-        "category": "thali",
+        "description": "🍛 Chole: Slow-cooked with aromatic spices, tangy tomatoes, and a hint of fresh coriander for a rich and hearty flavor. 🥙 Puri: Golden, fluffy, and perfectly crispy – made fresh with the finest whole wheat flour and fried in Olive Oil.",
+        "category": "breakfast",
         "lifeInDays": 1,
         "flavourType": "spicy",
-        "createdOn": "2025-01-27T00:00:00.000Z",
+        "createdOn": "2025-01-02T00:00:00.000Z",
         "isDeleted": false,
-        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
-        "size": "LARGE",
-        "price": 490,
-        "quantity": null,
-        "measurement": "per thali",
-        "addons": ["Extra Ghee", "Raita"],
-        "discount": 15,
-        "days": "All Days",
+        "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
+        "size": "Large",
+        "price": 190,
+        "quantity": 5,
+        "measurement": "Plate",
+        "addons": ["Pickle", "Curd"],
+        "discount": 10,
+        "days": "Tuesday",
         "type": "Dish",
-        "availableToday": true,
-        "todayTime": "Lunch & Dinner",
-        "ratings": 5,
+       "availableToday": true,
+        "todayTime": "Breakfast",
+        "ratings": 5.0,
         "foodItems": [
           {
-            "id": 7,
-            "name": "Laccha Paratha",
-            "quantity": "2 pieces",
-            "isRequired": false,
-            "availableToday": true,
-            "weight": null,
-            "description": "Layered and flaky Indian flatbread, made with whole wheat flour and cooked on a tawa."
-          },
-          {
-            "id": 76,
-            "name": "Multi Grain Tawa Roti",
-            "quantity": "4 pieces",
-            "isRequired": false,
-            "availableToday": true,
-            "weight": null,
-            "description": "Soft and healthy tawa-cooked roti made with multigrain flour."
-          },
-          {
-            "id": 8,
-            "name": "Arahar Dal Tadka",
-            "quantity": "1 portion",
-            "isRequired": true,
-            "availableToday": true,
-            "weight": null,
-            "description": "Aromatic arahar daal tempered with desi cow ghee, spices, and herbs."
-          },
-          {
-            "id": 9,
-            "name": "Kadhayi Paneer",
-            "quantity": 1,
-            "isRequired": true,
-            "availableToday": true,
-            "weight": "200 g",
-            "description": "Rich paneer curry cooked in olive oil, with bold flavors of organic spices."
-          },
-          {
-            "id": 10,
-            "name": "Matar Pulao",
-            "quantity": "1 portion",
-            "isRequired": true,
-            "availableToday": true,
-            "weight": null,
-            "description": "Fragrant basmati rice cooked with fresh peas and spices."
-          },
-          {
-            "id": 11,
-            "name": "Freshly Cut Green Salad",
+            "id": 1,
+            "name": "Chole",
             "quantity": null,
             "isRequired": true,
-            "availableToday": true,
-            "weight": null,
-            "description": "A healthy mix of fresh cucumber, tomatoes, and carrots, garnished with lemon and herbs."
+            "availableToday": false,
+            "weight": "300ml",
+            "description": "Spicy and flavorful soft chickpeas."
           },
           {
-            "id": 12,
-            "name": "Kesari Kheer",
-            "quantity": "1 portion",
+            "id": 2,
+            "name": "Poori : Fried in Olive Oil",
+            "quantity": 5,
             "isRequired": true,
-            "availableToday": true,
+            "availableToday": false,
             "weight": null,
-            "description": "A rich and creamy rice pudding infused with saffron and garnished with nuts."
+            "description": "Crispy and golden prepared with Oats and Multi grain flour Poori."
+          },
+          {
+            "id": 3,
+            "name": "Freshly cut Green Salad",
+            "quantity": null,
+            "isRequired": true,
+            "availableToday": false,
+            "weight": null,
+            "description": "Crispy and golden prepared with Oats and Multi grain flour Poori."
           }
         ],
         "comments": [
           {
             "id": 1,
-            "comment": "Amazing thali, loved the parathas!",
-            "userId": 201,
-            "userName": "Amit Verma",
-            "userImage": "https://example.com/amit.jpg"
+            "comment": "Great taste and fresh!",
+            "userId": 103,
+            "userName": "Alice Brown",
+            "userImage": "https://example.com/alice.jpg"
           },
           {
             "id": 2,
-            "comment": "Perfect blend of flavors. Will order again.",
-            "userId": 202,
-            "userName": "Sneha Kapoor",
-            "userImage": "https://example.com/sneha.jpg"
+            "comment": "Loved the spiciness.",
+            "userId": 104,
+            "userName": "Bob Green",
+            "userImage": "https://example.com/bob.jpg"
           }
         ]
       },
