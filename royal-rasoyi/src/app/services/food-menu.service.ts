@@ -213,7 +213,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Royal Thali Image",
-            "url": "https://ucarecdn.com/72fbb4ec-f4e9-468f-a6e8-3ea0353f5864/royalrajasthanithali.jpg"
+            "url": "https://ucarecdn.com/72fbb4ec-f4e9-468f-a6e8-3ea0353f5864/-/preview/884x1000/"
           }
         ],
         "description": "A grand and wholesome meal.",
