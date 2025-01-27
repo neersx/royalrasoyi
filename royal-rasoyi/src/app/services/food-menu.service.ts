@@ -723,7 +723,7 @@ export class FoodMenuService {
         "id": 7,
         "name": "Laccha Paratha",
         "quantity": "2 pieces",
-        "isRequired": true,
+        "isRequired": false,
         "availableToday": true,
         "weight": null,
         "description": "Layered and flaky Indian flatbread, made with whole wheat flour and cooked on a tawa."
@@ -732,7 +732,7 @@ export class FoodMenuService {
         "id": 76,
         "name": "Multi Grain Tawa Roti",
         "quantity": "5 pieces",
-        "isRequired": true,
+        "isRequired": false,
         "availableToday": true,
         "weight": null,
         "description": "Soft and healthy tawa-cooked roti made with multigrain flour."
@@ -1014,7 +1014,372 @@ export class FoodMenuService {
           },
         ],
         "comments": []
-      }            
+      },  
+      {
+        "id": 16,
+        "name": "maharaja-thali",
+        "title": "Maharaja Thali",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Paneer", "healthBenefits": "Rich in protein and calcium. Good for instant energy with Paneer." },
+          { "id": 2, "name": "Multi Grain Flour", "healthBenefits": "High in fiber" },
+          { "id": 3, "name": "Arahar Daal", "healthBenefits": "Good source of iron and protein" },
+          { "id": 4, "name": "Desi Ghee", "healthBenefits": "Provides essential fats" },
+          { "id": 5, "name": "Olive Oil", "healthBenefits": "Rich in antioxidants" },
+          { "id": 6, "name": "Spices", "healthBenefits": "Boosts metabolism" }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 7,
+            "name": "Maharaja Thali Image",
+            "url": "https://ucarecdn.com/b6721501-6e51-4a40-ab9d-125446a1747e/maharajathali.jpg"
+          }
+        ],
+        "description": "A royal thali featuring: Kadhai Paneer cooked in Olive Oil, Laccha Paratha or Multigrain Roti, Arahar Dal in Desi Ghee Tadka or Mix Dal Fry, Matar Pulao, Fresh Green Salad, and Kesari Kheer.",
+        "category": "thali",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-27T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
+        "size": "LARGE",
+        "price": 490,
+        "quantity": null,
+        "measurement": "per thali",
+        "addons": ["Extra Ghee", "Raita"],
+        "discount": 15,
+        "days": "All Days",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch & Dinner",
+        "ratings": 5,
+        "foodItems": [
+          {
+            "id": 7,
+            "name": "Laccha Paratha",
+            "quantity": "2 pieces",
+            "isRequired": false,
+            "availableToday": true,
+            "weight": null,
+            "description": "Layered and flaky Indian flatbread, made with whole wheat flour and cooked on a tawa."
+          },
+          {
+            "id": 76,
+            "name": "Multi Grain Tawa Roti",
+            "quantity": "4 pieces",
+            "isRequired": false,
+            "availableToday": true,
+            "weight": null,
+            "description": "Soft and healthy tawa-cooked roti made with multigrain flour."
+          },
+          {
+            "id": 8,
+            "name": "Arahar Dal Tadka",
+            "quantity": "1 portion",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "Aromatic arahar daal tempered with desi cow ghee, spices, and herbs."
+          },
+          {
+            "id": 9,
+            "name": "Kadhayi Paneer",
+            "quantity": 1,
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "200 g",
+            "description": "Rich paneer curry cooked in olive oil, with bold flavors of organic spices."
+          },
+          {
+            "id": 10,
+            "name": "Matar Pulao",
+            "quantity": "1 portion",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "Fragrant basmati rice cooked with fresh peas and spices."
+          },
+          {
+            "id": 11,
+            "name": "Freshly Cut Green Salad",
+            "quantity": null,
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "A healthy mix of fresh cucumber, tomatoes, and carrots, garnished with lemon and herbs."
+          },
+          {
+            "id": 12,
+            "name": "Kesari Kheer",
+            "quantity": "1 portion",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "A rich and creamy rice pudding infused with saffron and garnished with nuts."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Amazing thali, loved the parathas!",
+            "userId": 201,
+            "userName": "Amit Verma",
+            "userImage": "https://example.com/amit.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Perfect blend of flavors. Will order again.",
+            "userId": 202,
+            "userName": "Sneha Kapoor",
+            "userImage": "https://example.com/sneha.jpg"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "veg-oats-tikki",
+        "title": "Veg Oats Tikki",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Oats", "healthBenefits": "Rich in fiber, helps in digestion and weight management." },
+          { "id": 2, "name": "Carrot", "healthBenefits": "Good source of Vitamin A and antioxidants." },
+          { "id": 3, "name": "Green Peas", "healthBenefits": "Rich in protein and fiber." },
+          { "id": 4, "name": "Paneer", "healthBenefits": "High in protein and calcium for strong bones." },
+          { "id": 5, "name": "Capsicum", "healthBenefits": "Loaded with vitamins and boosts immunity." },
+          { "id": 6, "name": "Coriander", "healthBenefits": "Helps in detoxification and digestion." },
+          { "id": 7, "name": "Garlic", "healthBenefits": "Boosts immunity and has anti-inflammatory properties." },
+          { "id": 8, "name": "Tomato", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 9, "name": "Green Chili", "healthBenefits": "Boosts metabolism and adds flavor." },
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 12,
+            "name": "Veg Oats Tikki Thumbnail",
+            "url": "https://ucarecdn.com/83d79d23-12f9-4f7e-a4c4-1157b875a7de/vegoatstikki.jpg"
+          },
+          {
+            "id": 13,
+            "name": "Veg Oats Tikki Dish",
+            "url": "https://example.com/veg-oats-tikki.jpg"
+          }
+        ],
+        "description": "A healthy and flavorful breakfast option made with oats, vegetables, and spices, served with mint chutney.",
+        "category": "breakfast",
+        "lifeInDays": 1,
+        "flavourType": "mildly spicy",
+        "createdOn": "2025-01-27T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 190,
+        "quantity": null,
+        "measurement": "per plate",
+        "addons": ["Mint Chutney", "Tomato Sauce"],
+        "discount": 10,
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Breakfast",
+        "ratings": 4.5,
+        "foodItems": [
+          {
+            "id": 12,
+            "name": "Oats Tikki",
+            "quantity": "6 pieces",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "Crispy on the outside and soft inside, made with fresh vegetables and oats."
+          },
+          {
+            "id": 13,
+            "name": "Mint Chutney",
+            "quantity": "1 small bowl",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "Refreshing chutney made with mint, coriander, and spices."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Perfect for a healthy breakfast!",
+            "userId": 301,
+            "userName": "Rajesh Sharma",
+            "userImage": "https://example.com/rajesh.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Loved the flavor and texture of these tikkis.",
+            "userId": 302,
+            "userName": "Priya Desai",
+            "userImage": "https://example.com/priya.jpg"
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "punjabi-chole",
+        "title": "Punjabi Chole",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Chickpeas", "healthBenefits": "Rich in protein, fiber, and essential vitamins." },
+          { "id": 2, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 3, "name": "Onions", "healthBenefits": "Supports immunity and rich in antioxidants." },
+          { "id": 4, "name": "Ginger", "healthBenefits": "Aids digestion and boosts immunity." },
+          { "id": 5, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
+          { "id": 6, "name": "Cumin", "healthBenefits": "Promotes digestion and improves immunity." },
+          { "id": 7, "name": "Coriander", "healthBenefits": "Rich in vitamins and aids detoxification." },
+          { "id": 8, "name": "Chole Masala", "healthBenefits": "Adds flavor and contains digestive spices." },
+          { "id": 9, "name": "Green Chilies", "healthBenefits": "Boosts metabolism and adds spice." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 14,
+            "name": "Punjabi Chole Thumbnail",
+            "url": "https://ucarecdn.com/54d958e5-d9dd-466a-abdb-5c2db68171cf/cholesabzi.jpg"
+          },
+          {
+            "id": 15,
+            "name": "Punjabi Chole Dish",
+            "url": "https://example.com/punjabi-chole.jpg"
+          }
+        ],
+        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
+        "category": "sabzi",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-27T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 250,
+        "quantity": null,
+        "measurement": "per bowl (500 gm)",
+        "addons": ["Extra Masala", "Onion Salad"],
+        "discount": 5,
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.7,
+        "foodItems": [
+          {
+            "id": 14,
+            "name": "Chole Sabzi",
+            "quantity": "500 gm",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "500 gm",
+            "description": "Flavorful and spicy Punjabi Chole served hot in a bowl."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "The taste reminded me of authentic dhaba-style Chole!",
+            "userId": 401,
+            "userName": "Amit Singh",
+            "userImage": "https://example.com/amit.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Perfect spice level and great portion size!",
+            "userId": 402,
+            "userName": "Nisha Gupta",
+            "userImage": "https://example.com/nisha.jpg"
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "gatte-ka-paratha",
+        "title": "Gatte Ka Paratha",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 2, "name": "Gatta Flour", "healthBenefits": " Rich in fiber and aids digestion. High in protein and gluten-free." },
+          { "id": 3, "name": "Mint", "healthBenefits": "Good source of probiotics and calcium. Also provides Vitamin C" },
+          { "id": 5, "name": "Coriander", "healthBenefits": "Rich in vitamins and supports detoxification." },
+          { "id": 7, "name": "Turmeric", "healthBenefits": "Anti-inflammatory and improves immunity." },
+          { "id": 8, "name": "Ghee", "healthBenefits": "Aids digestion and provides energy." }
+        ],
+        "region": "Rajasthan, North India",
+        "images": [
+          {
+            "id": 16,
+            "name": "Gatte Ka Paratha Thumbnail",
+            "url": "https://ucarecdn.com/487d7d1e-ed41-4315-9eb5-f4febe52b80f/gattekaparatha.jpg"
+          },
+          {
+            "id": 17,
+            "name": "Gatte Ka Paratha Dish",
+            "url": "https://example.com/gatte-ka-paratha.jpg"
+          }
+        ],
+        "description": "Healthy grain paratha stuffed with spiced Gatte (Gram Flour Dumplings). A wholesome and nutritious breakfast.",
+        "category": "breakfast",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-27T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 230,
+        "quantity": null,
+        "measurement": "per plate (2 Parathas)",
+        "addons": ["Extra Curd", "Mint Chutney", "Amla Chutney"],
+        "discount": 10,
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Breakfast",
+        "ratings": 5,
+        "foodItems": [
+          {
+            "id": 15,
+            "name": "Gatte Ka Paratha",
+            "quantity": "2 Parathas",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "350 gm",
+            "description": "Freshly prepared Gatte Ka Paratha served with amla-coriander chutney and an optional side of plain curd, enough for 1 adult and 2 kids."
+          },
+          {
+            "id": 15,
+            "name": "Amla Chutney",
+            "quantity": "1 Portion, small bowl",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "50 gm",
+            "description": "Freshly prepared Amla Chutney served with Gatte Ka Paratha."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Loved the stuffing, very healthy and filling!",
+            "userId": 501,
+            "userName": "Ravi Sharma",
+            "userImage": "https://example.com/ravi.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Perfectly cooked and great for kids' breakfast.",
+            "userId": 502,
+            "userName": "Pooja Mehra",
+            "userImage": "https://example.com/pooja.jpg"
+          }
+        ]
+      }        
     ];
   }
+  
 }

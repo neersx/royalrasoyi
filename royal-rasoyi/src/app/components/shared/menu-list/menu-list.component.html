@@ -59,7 +59,7 @@
                   </h4>
                   <ul class="check-list style-one">
                     <li *ngFor="let addon of item.foodItems">
-                      <i class="far fa-check-circle"></i> {{addon.quantity ?? addon.weight}} {{ addon.name }} 
+                      <i class="far fa-check-circle"></i> {{addon.quantity ?? addon.weight}} {{ addon.name }} {{ !addon.isRequired ? '(Optional)' : '' }}
                     </li>
                   </ul>
                   <a [routerLink]="['/food-details', item.name]" class="theme-btn style-two">

@@ -91,10 +91,10 @@
               <div class="foodix-tabs style-three mb-20">
                 <ul class="nav nav-tabs wow fadeInDown">
                   <li>
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#cat1">Item Details</button>
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#cat1">Ingredients</button>
                 </li>
                 <li>
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat2" >Ingredients</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat2" >Item Details</button>
                 </li>
                 <li>
                     <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat3">Reviews</button>
@@ -102,23 +102,23 @@
                 </ul>
               </div>
               <div class="tab-content">
-                <div class="tab-pane fade show active" id="cat1">
+                <div class="tab-pane fade  show active" id="cat1">
                   <div class="content-box">
-                    <h4>Food Items:</h4>
+                    <h4>Ingredients:</h4>
                     <ul class="check-list mb-30">
-                      <li *ngFor="let item of foodDetails.foodItems || []">
-                        {{ item.name }} ({{ item.quantity }} {{ item.weight }}):
-                        {{ item.description || 'No description available.' }}
+                      <li *ngFor="let ingredient of foodDetails.ingredients || []">
+                        {{ ingredient.name }} - {{ ingredient.healthBenefits }}
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="cat2">
                   <div class="content-box">
-                    <h4>Ingredients:</h4>
+                    <h4>Food Items:</h4>
                     <ul class="check-list mb-30">
-                      <li *ngFor="let ingredient of foodDetails.ingredients || []">
-                        {{ ingredient.name }} - {{ ingredient.healthBenefits }}
+                      <li *ngFor="let item of foodDetails.foodItems || []">
+                        {{ item.name }} ({{ item.quantity }} {{ item.weight }}):
+                        {{ item.description || 'No description available.' }}
                       </li>
                     </ul>
                   </div>
