@@ -148,7 +148,7 @@ export class FoodMenuService {
         "discount": 10,
         "days": "Tuesday",
         "type": "Dish",
-        "availableToday": true,
+       "availableToday": true,
         "todayTime": "Breakfast",
         "ratings": 5.0,
         "foodItems": [
@@ -224,7 +224,7 @@ export class FoodMenuService {
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00Z",
         "type": "Dish",
-        "availableToday": true,
+       "availableToday": true,
         "size": "MEDIUM",
         "price": 450,
         "quantity": 1,
@@ -457,7 +457,7 @@ export class FoodMenuService {
         "type": "Dish",
         "availableToday": false,
         "todayTime": "Breakfast",
-        "ratings": 4.6,
+        "ratings": 4.8,
         "foodItems": [
           {
             "id": 1,
@@ -715,7 +715,7 @@ export class FoodMenuService {
         "discount": 20,
         "days": "Sunday",
         "type": "Dish",
-        "availableToday": true,
+       "availableToday": true,
         "todayTime": "Lunch",
         "ratings": 4.7,
        "foodItems": [
@@ -724,7 +724,7 @@ export class FoodMenuService {
         "name": "Laccha Paratha",
         "quantity": "2 pieces",
         "isRequired": true,
-        "availableToday": "true",
+        "availableToday": true,
         "weight": null,
         "description": "Layered and flaky Indian flatbread, made with whole wheat flour and cooked on a tawa."
       },
@@ -733,7 +733,7 @@ export class FoodMenuService {
         "name": "Multi Grain Tawa Roti",
         "quantity": "5 pieces",
         "isRequired": true,
-        "availableToday": "true",
+        "availableToday": true,
         "weight": null,
         "description": "Soft and healthy tawa-cooked roti made with multigrain flour."
       },
@@ -742,16 +742,16 @@ export class FoodMenuService {
         "name": "Arahar Dal Tadka",
         "quantity": "1 portion",
         "isRequired": true,
-        "availableToday": "true",
+        "availableToday": true,
         "weight": null,
-        "description": "Aromatic lentil curry tempered with desi cow ghee, spices, and herbs."
+        "description": "Aromatic arahar daal tempered with desi cow ghee, spices, and herbs."
       },
       {
         "id": 9,
         "name": "Kadhayi Paneer",
-        "quantity": "1 portion",
+        "quantity": 1,
         "isRequired": true,
-        "availableToday": "true",
+        "availableToday": true,
         "weight": "200 g",
         "description": "Rich paneer curry cooked in olive oil, with bold flavors of organic spices."
       },
@@ -760,7 +760,7 @@ export class FoodMenuService {
         "name": "Freshly Cut Green Salad",
         "quantity": null,
         "isRequired": true,
-        "availableToday": "true",
+       "availableToday": true,
         "weight": null,
         "description": "A healthy mix of fresh cucumber, tomatoes, and carrots, garnished with lemon and herbs."
       },
@@ -769,7 +769,7 @@ export class FoodMenuService {
     "name": "Any Sweet or Laddoo",
     "quantity": "1 piece",
     "isRequired": true,
-    "availableToday": "true",
+    "availableToday": true,
     "weight": null,
     "description": "A delicious dessert made with dry fruits and desi ghee, prepared without refined sugar."
   }
@@ -827,26 +827,23 @@ export class FoodMenuService {
         "discount": 5,
         "days": "Tuesday",
         "type": "Dish",
-        "availableToday": "true",
+        "availableToday": true,
         "ratings": 4.5,
         "foodItems": [
           {
             "id": 12,
             "name": "Aloo Matar Kachori",
-            "quantity": "3 pieces",
+            "quantity": 3,
             "isRequired": true,
-            "availableToday": "true",
-            "weight": "250 g",
+            "weight": null,
             "description": "Golden and crispy kachoris stuffed with a flavorful potato and pea mixture."
           },
           {
             "id": 13,
-            "name": "Tamarind Chutney",
-            "quantity": "1 bowl",
-            "isRequired": true,
-            "availableToday": "true",
+            "name": "Amla Chutney",
+            "quantity": null,
             "weight": "50 g",
-            "description": "Sweet and tangy tamarind chutney for dipping."
+            "description": "Sweet and tangy amla chutney for dipping."
           }
         ],
         "comments": [
@@ -889,28 +886,29 @@ export class FoodMenuService {
         ],
         "description": "Soft and flavorful parathas made with fresh fenugreek and coriander leaves, served with creamy dahi.",
         "category": "breakfast",
-        "lifeInDays": 1,
-        "flavourType": "mild spicy",
-        "createdOn": "2025-01-01T00:00:00.000Z",
+        "lifeInDays": 2,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-04T00:00:00.000Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-        "size": "LARGE",
-        "price": 120,
-        "quantity": 2,
-        "measurement": "per plate",
-        "addons": ["Butter", "Pickle"],
-        "discount": 10,
-        "days": "Sunday",
+        "size": "MEDIUM",
+        "price": 160,
+        "quantity": 4,
+        "measurement": "Per Plate",
+        "addons": ["Chutney"],
+        "discount": 5,
+        "days": "Thursday",
         "type": "Dish",
-        "availableToday": "true",
-        "ratings": 4.7,
+        "availableToday": false,
+        "todayTime": "Breakfast",
+        "ratings": 4.8,
         "foodItems": [
           {
             "id": 14,
             "name": "Methi Dhaniya Paratha",
             "quantity": "2 pieces",
             "isRequired": true,
-            "availableToday": "true",
+            "availableToday": true,
             "weight": "200 g",
             "description": "Freshly made parathas with the goodness of methi and dhaniya."
           },
@@ -919,7 +917,7 @@ export class FoodMenuService {
             "name": "Dahi (Yogurt)",
             "quantity": "1 bowl",
             "isRequired": true,
-            "availableToday": "true",
+            "availableToday": true,
             "weight": "100 g",
             "description": "Thick and creamy yogurt served as a side."
           }
@@ -992,7 +990,7 @@ export class FoodMenuService {
         "discount": 10,
         "days": "Monday",
         "type": "Dish",
-        "availableToday": true,
+       "availableToday": true,
         "todayTime": "Dinner",
         "ratings": 5.0,
         "foodItems": [
@@ -1010,7 +1008,7 @@ export class FoodMenuService {
             "name": "Paneer Cubes",
             "quantity": 6,
             "isRequired": true,
-            "availableToday": true,
+           "availableToday": true,
             "weight": null,
             "description": "Soft and fresh paneer cubes for garnish."
           },
