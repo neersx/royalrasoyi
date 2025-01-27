@@ -3,7 +3,7 @@
  */
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,8 @@ export class FoodMenuService {
   testUrl = 'https://res.cloudinary.com/royalrasoyi2025/raw/upload/v1737899156/rr_menu/test-menu.json';
 
   getMenuList(): Observable<any> {
-    return this.http.get(this.jsonUrl);
+    //return this.http.get(this.jsonUrl);
+    return of(this.getFoodMenu());
     }
 
   getFoodMenu(): any {
@@ -449,7 +450,7 @@ export class FoodMenuService {
         "size": "MEDIUM",
         "price": 160,
         "quantity": 4,
-        "measurement": "Plate",
+        "measurement": "Per Plate",
         "addons": ["Chutney"],
         "discount": 5,
         "days": "Thursday",
@@ -531,11 +532,19 @@ export class FoodMenuService {
             "id": 1,
             "name": "Paratha",
             "quantity": 2,
-            "weight": "200g",
+            "weight": "",
             "description": "Soft, flaky parathas with a savory potato and onion filling."
           }
         ],
-        "comments": []
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Perfect paratha!",
+            "userId": 107,
+            "userName": "Rajni Sahu",
+            "userImage": "https://example.com/eve.jpg"
+          },
+        ]
       },
       {
         "id": 8,
