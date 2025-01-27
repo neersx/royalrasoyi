@@ -99,7 +99,7 @@ export class FoodMenuService {
       },
       {
         "id": 2,
-        "name": "royal-rajasthani-thali",
+        "name": "chole-poori",
         "title": "Spicy Chole Poori",
         "bestSeason": "All",
         "isNonVeg": false,
@@ -199,7 +199,7 @@ export class FoodMenuService {
       },
       {
         "id": 3,
-        "name": "royal-rajasthani-thali",
+        "name": "rajasthani-thali",
         "title": "Royal Rajasthani Thali",
         "bestSeason": "All",
         "isNonVeg": false,
