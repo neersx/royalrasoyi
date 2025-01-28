@@ -31,11 +31,12 @@ export class FoodDetailsComponent {
     this.isBrowser = isPlatformBrowser(platformId);
 
     const request = inject(REQUEST);
-    console.log(request?.url);
+    console.log('<<< request  >>>', request?.url);
   }
 
   ngOnInit(): void {
     this.foodName = this.route.snapshot.paramMap.get('name'); 
+    console.log('<<<   foodName   >>>', this.foodName);
     this.foodMenuList = this.service.getFoodMenu();
     this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
     if(!this.foodDetails) return;
