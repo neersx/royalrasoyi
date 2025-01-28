@@ -40,7 +40,7 @@ export class FoodDetailsComponent {
     this.foodMenuList = this.service.getFoodMenu();
     this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
     if(!this.foodDetails) return;
-    this.updateMetaTags(this.foodDetails);
+    // this.updateMetaTags(this.foodDetails);
     this.foodDetails.relatedItems = this.getRelatedFoods(this.foodDetails?.id);
   
     this.cdr.detectChanges();
@@ -74,14 +74,12 @@ export class FoodDetailsComponent {
     // Generate the product page URL only in the browser
     if (window?.location) {
       productPageUrl = `${window.location?.origin}${this.router.url}`;
-      console.log('productPageUrl', productPageUrl);
     }
     const metaDetails = {
       title: product.title,
       description: product.description,
       image: product.images[0].url,
-      url: productPageUrl,
-      type: 'website'
+      url: productPageUrl
     };
 
     this.metaService.updateMetaTags(product.title, metaDetails);

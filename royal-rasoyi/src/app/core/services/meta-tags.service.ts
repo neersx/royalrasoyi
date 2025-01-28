@@ -45,8 +45,6 @@ export class MetaService {
         this.meta.updateTag(tag);
         this.transferState.set(META_KEY, tags);
       });
-  
-    console.log(`<<< Meta tags updated for page >>>: ${pageName}`);
   }
 
 }
