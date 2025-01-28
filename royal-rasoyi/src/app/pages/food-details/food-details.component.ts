@@ -39,8 +39,9 @@ export class FoodDetailsComponent {
     this.foodMenuList = this.service.getFoodMenu();
     this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
     if(!this.foodDetails) return;
-    this.foodDetails.relatedItems = this.getRelatedFoods(this.foodDetails?.id);
     this.updateMetaTags(this.foodDetails);
+    this.foodDetails.relatedItems = this.getRelatedFoods(this.foodDetails?.id);
+  
     this.cdr.detectChanges();
   }
 
@@ -70,8 +71,9 @@ export class FoodDetailsComponent {
     let productPageUrl = '';
 
     // Generate the product page URL only in the browser
-    if (this.isBrowser) {
-      productPageUrl = `${window.location.origin}${this.router.url}`;
+    if (window?.location) {
+      productPageUrl = `${window.location?.origin}${this.router.url}`;
+      console.log('productPageUrl', productPageUrl);
     }
     const metaDetails = {
       title: product.title,
@@ -80,7 +82,6 @@ export class FoodDetailsComponent {
       url: productPageUrl,
       type: 'website'
     };
-    console.log(metaDetails);
 
     this.metaService.updateMetaTags(product.title, metaDetails);
     this.cdr.detectChanges();
