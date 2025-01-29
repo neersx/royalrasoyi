@@ -37,13 +37,17 @@ export class FoodDetailsComponent {
   ngOnInit(): void {
     this.foodName = this.route.snapshot.paramMap.get('name'); 
     console.log('<<<   foodName   >>>', this.foodName);
-    this.foodMenuList = this.service.getFoodMenu();
-    this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
-    if(!this.foodDetails) return;
-    // this.updateMetaTags(this.foodDetails);
-    this.foodDetails.relatedItems = this.getRelatedFoods(this.foodDetails?.id);
-  
-    this.cdr.detectChanges();
+    this.service.getMenuList().subscribe((data: any) => {    
+      this.foodMenuList = data;
+      this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
+      if(!this.foodDetails) return;
+      
+      this.updateMetaTags(this.foodDetails);
+      this.foodDetails.relatedItems = this.getRelatedFoods(this.foodDetails?.id);
+    
+      this.cdr.detectChanges();
+    });
+   
   }
 
 

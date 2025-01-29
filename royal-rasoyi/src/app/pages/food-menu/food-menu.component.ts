@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
-import { FoodMenuService } from '../../services/food-menu.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { MetaService } from '../../core/services/meta-tags.service';
@@ -18,7 +17,7 @@ export class FoodMenuComponent implements OnInit {
 
   private readonly router = inject(Router);
   
-  constructor(private readonly service: FoodMenuService, private readonly metaService: MetaService, private readonly cdr: ChangeDetectorRef) {
+  constructor( private readonly metaService: MetaService, private readonly cdr: ChangeDetectorRef) {
     const metaDetails = {
       title: 'Authentic Indian Homemade Dishes from Royal रसोई  | The Taste you deserve',
       description: 'Try our Maharaj Thali Shahi Thali, Aloo Pyaz Sandwich, or Sabudana Khichdi today! ',
@@ -31,8 +30,6 @@ export class FoodMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.foodMenu = this.service.getFoodMenu();
-    this.categories = [...new Set(this.foodMenu.map((food) => food.category))];
     this.cdr.detectChanges();
   }
 
