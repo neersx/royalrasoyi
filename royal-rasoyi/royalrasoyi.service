@@ -1,63 +1,54 @@
 #!/bin/bash
 
 # Define variables
-REPO_DIR="/var/source/royal-rasoyi/royal-rasoyi/"
+REPO_DIR="/var/source/royalrasoyi/royal-rasoyi/"
 IMAGE_NAME="neers/royalrasoyi"
 TAG_PREFIX="v"
-CONTAINER_NAME="royalrasoyi”
+CONTAINER_NAME="royalrasoyi"
+
+# Function to exit with an error message
+exit_with_error() {
+    echo "$1"
+    exit 1
+}
 
 # Go to the repository directory
-cd "$REPO_DIR" || { echo "Directory $REPO_DIR not found! Exiting."; exit 1; }
+cd "$REPO_DIR" || exit_with_error "Directory $REPO_DIR not found! Exiting."
 
 # Fetch and rebase from origin/master
 echo "Fetching and rebasing from origin/master..."
-git fetch && git rebase origin/master || { echo "Git operation failed! Exiting."; exit 1; }
+git fetch && git rebase origin/master || exit_with_error "Git operation failed! Exiting."
 
 # Check if Dockerfile exists
 if [ ! -f Dockerfile ]; then
-    echo "Dockerfile not found! Exiting."
-    exit 1
+    exit_with_error "Dockerfile not found! Exiting."
 fi
 
 # Generate a new tag for the image
-NEW_TAG="${TAG_PREFIX}$(date +%m%d%H)"
+NEW_TAG="${TAG_PREFIX}$(date +%Y%m%d%H%M%S)"
 
 # Build the Docker image
 echo "Building Docker image ${IMAGE_NAME}:${NEW_TAG}..."
-docker build -t "${IMAGE_NAME}:${NEW_TAG}" . || { echo "Docker build failed! Exiting."; exit 1; }
+docker build -t "${IMAGE_NAME}:${NEW_TAG}" . || exit_with_error "Docker build failed! Exiting."
 
-# Stop the existing container
-echo "Stopping existing container ${CONTAINER_NAME}..."
-docker stop "${CONTAINER_NAME}" 2>/dev/null || echo "No running container to stop."
+# Stop the existing container if running
+if docker ps -q --filter "name=${CONTAINER_NAME}" | grep -q .; then
+    echo "Stopping existing container ${CONTAINER_NAME}..."
+    docker stop "${CONTAINER_NAME}" || exit_with_error "Failed to stop container ${CONTAINER_NAME}!"
+else
+    echo "No running container found with the name ${CONTAINER_NAME}."
+fi
 
-# Remove the existing container
-echo "Removing existing container ${CONTAINER_NAME}..."
-docker rm "${CONTAINER_NAME}" 2>/dev/null || echo "No container to remove."
+# Remove the existing container if it exists
+if docker ps -a -q --filter "name=${CONTAINER_NAME}" | grep -q .; then
+    echo "Removing existing container ${CONTAINER_NAME}..."
+    docker rm "${CONTAINER_NAME}" || exit_with_error "Failed to remove container ${CONTAINER_NAME}!"
+else
+    echo "No container found with the name ${CONTAINER_NAME}."
+fi
 
 # Run the container with the new image
 echo "Running container ${CONTAINER_NAME} with image ${IMAGE_NAME}:${NEW_TAG}..."
-docker run --name "${CONTAINER_NAME}" -p 4000:4000 --restart unless-stopped -d   "${IMAGE_NAME}:${NEW_TAG}" || { echo "Failed to start container! Exiting."; exit 1; }
+docker run --name "${CONTAINER_NAME}" -p 4000:4000 --restart unless-stopped -d "${IMAGE_NAME}:${NEW_TAG}" || exit_with_error "Failed to start container! Exiting."
 
 echo "Service completed successfully!"
-
-- [ ] sudo chmod +x /usr/local/bin/royalrasoyi.sh
-
-[Unit]
-Description=Royal Rasoyi Git Update and Docker Service
-After=network.target
-
-[Service]
-ExecStart=/usr/local/bin/royalrasoyi.sh
-Restart=on-failure
-User=root
-WorkingDirectory=/var/source/royal-rasoyi/royal-rasoyi/
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-
-[Install]
-WantedBy=multi-user.target
-
-- [ ] sudo systemctl daemon-reload
-- [ ] sudo systemctl enable royalrasoyi.service
-- [ ] sudo systemctl start royalrasoyi.service
-- [ ] sudo systemctl status royalrasoyi.service
-- [ ] sudo journalctl -u royalrasoyi.service -f
