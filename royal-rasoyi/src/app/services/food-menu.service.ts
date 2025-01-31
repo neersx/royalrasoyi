@@ -1378,7 +1378,174 @@ export class FoodMenuService {
             "userImage": "https://example.com/pooja.jpg"
           }
         ]
-      }        
+      },
+      {
+        "id": 21,
+        "name": "idli-sambhar-combo",
+        "title": "Idli Sambhar Combo",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Rice",
+            "healthBenefits": "Good source of energy and easily digestible"
+          },
+          {
+            "id": 2,
+            "name": "Urad Dal",
+            "healthBenefits": "Rich in protein and good for digestion"
+          },
+          {
+            "id": 3,
+            "name": "Coconut",
+            "healthBenefits": "Boosts immunity and aids digestion"
+          },
+          {
+            "id": 4,
+            "name": "Spices",
+            "healthBenefits": "Enhances metabolism and adds flavor"
+          }
+        ],
+        "region": "South India",
+        "images": [
+          {
+            "id": 1,
+            "name": "Idli Sambhar Image",
+            "url": "https://ucarecdn.com/2737a737-ac7a-44b9-8191-fb029ca2c630/idli.jpg"
+          }
+        ],
+        "description": "A classic South Indian breakfast combo featuring soft idlis served with flavorful sambhar and fresh coconut chutney.",
+        "category": "breakfast",
+        "lifeInDays": 1,
+        "flavourType": "mild spicy",
+        "createdOn": "2025-02-01T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-02-01T00:00:00.000Z",
+        "size": "STANDARD",
+        "price": 190,
+        "quantity": null,
+        "measurement": "per serving",
+        "addons": ["Extra Sambhar", "Extra Chutney"],
+        "discount": 10,
+        "days": "All Days",
+        "type": "Dish",
+        "availableToday": true,
+        "ratings": 4.9,
+        "foodItems": [
+          {
+            "id": 1,
+            "name": "Idli",
+            "quantity": "4 pieces",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "Soft and fluffy steamed rice cakes."
+          },
+          {
+            "id": 2,
+            "name": "Sambhar",
+            "quantity": "1 bowl",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "250 ml",
+            "description": "A flavorful lentil-based curry with vegetables and spices."
+          },
+          {
+            "id": 3,
+            "name": "Coconut Chutney",
+            "quantity": "1 portion",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "50 ml",
+            "description": "A refreshing chutney made from fresh coconut and mild spices."
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "uttapam-sambhar-combo",
+        "title": "Uttapam Sambhar Combo",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Rice",
+            "healthBenefits": "Good source of energy and easily digestible"
+          },
+          {
+            "id": 2,
+            "name": "Urad Dal",
+            "healthBenefits": "Rich in protein and good for digestion"
+          },
+          {
+            "id": 3,
+            "name": "Vegetables",
+            "healthBenefits": "High in fiber and essential vitamins"
+          },
+          {
+            "id": 4,
+            "name": "Spices",
+            "healthBenefits": "Enhances metabolism and adds flavor"
+          }
+        ],
+        "region": "South India",
+        "images": [
+          {
+            "id": 1,
+            "name": "Uttapam Sambhar Image",
+            "url": "https://ucarecdn.com/07976124-ea86-40b0-933b-6b20ba78fa97/uttapam.jpg"
+          }
+        ],
+        "description": "A delicious South Indian breakfast featuring crispy vegetable uttapam served with aromatic sambhar and coconut chutney.",
+        "category": "breakfast",
+        "lifeInDays": 1,
+        "flavourType": "mild spicy",
+        "createdOn": "2025-02-01T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-02-01T00:00:00.000Z",
+        "size": "STANDARD",
+        "price": 109,
+        "quantity": null,
+        "measurement": "per piece",
+        "addons": ["Extra Sambhar", "Extra Chutney"],
+        "discount": 10,
+        "days": "All Days",
+        "type": "Dish",
+        "availableToday": true,
+        "ratings": 4.8,
+        "foodItems": [
+          {
+            "id": 1,
+            "name": "Uttapam",
+            "quantity": "1 piece",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": null,
+            "description": "A thick, savory pancake topped with fresh vegetables and cooked to perfection."
+          },
+          {
+            "id": 2,
+            "name": "Sambhar",
+            "quantity": "1 bowl",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "250 ml",
+            "description": "A flavorful lentil-based curry with vegetables and spices."
+          },
+          {
+            "id": 3,
+            "name": "Coconut Chutney",
+            "quantity": "1 portion",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "50 ml",
+            "description": "A refreshing chutney made from fresh coconut and mild spices."
+          }
+        ]
+      }
+
     ];
   }
   
