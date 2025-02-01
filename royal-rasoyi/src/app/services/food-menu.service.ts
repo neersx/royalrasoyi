@@ -1389,7 +1389,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Rice",
-            "healthBenefits": "Good source of energy and easily digestible"
+            "healthBenefits": "Rich in carbohydrates and provides energy"
           },
           {
             "id": 2,
@@ -1405,6 +1405,11 @@ export class FoodMenuService {
             "id": 4,
             "name": "Spices",
             "healthBenefits": "Enhances metabolism and adds flavor"
+          },
+          {
+            "id": 5,
+            "name": "Vegetables",
+            "healthBenefits": "Capsicum (Vitamin C), Onion (anti-inflammatory), Carrot (High in beta-carotene), and Coriander (natural detoxifier)."
           }
         ],
         "region": "South India",
@@ -1471,8 +1476,8 @@ export class FoodMenuService {
         "ingredients": [
           {
             "id": 1,
-            "name": "Rice",
-            "healthBenefits": "Good source of energy and easily digestible"
+            "name": "Sooji (Semolina)",
+            "healthBenefits": "It is light on the stomach and contains dietary fiber, which promotes better digestion and prevents constipation."
           },
           {
             "id": 2,
