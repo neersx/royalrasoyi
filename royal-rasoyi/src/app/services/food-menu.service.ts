@@ -1300,31 +1300,26 @@ export class FoodMenuService {
       },
       {
         "id": 20,
-        "name": "gatte-ka-paratha",
-        "title": "Gatte Ka Paratha",
+        "name": "raagi-ka-chilla",
+        "title": "Raagi Ka Chilla",
         "bestSeason": "All Seasons",
         "isNonVeg": false,
         "ingredients": [
-          { "id": 2, "name": "Gatta Flour", "healthBenefits": " Rich in fiber and aids digestion. High in protein and gluten-free." },
-          { "id": 3, "name": "Mint", "healthBenefits": "Good source of probiotics and calcium. Also provides Vitamin C" },
-          { "id": 5, "name": "Coriander", "healthBenefits": "Rich in vitamins and supports detoxification." },
-          { "id": 7, "name": "Turmeric", "healthBenefits": "Anti-inflammatory and improves immunity." },
-          { "id": 8, "name": "Ghee", "healthBenefits": "Aids digestion and provides energy." }
+          { "id": 2, "name": "Raagi (Finger Millet)", "healthBenefits": " Rich in calcium, strengthens bones. High in fiber, aids digestion and weight management. Regulates blood sugar levels, good for diabetics. Packed with iron, helps prevent anemia." },
+          { "id": 3, "name": "Vegs", "healthBenefits": "Good source of probiotics and calcium. High in antioxidants, protects cells.  Also source of multiple Vitamins" },
+          { "id": 5, "name": "Coriander", "healthBenefits": "Rich in vitamins and supports detoxification. Rich in Vitamin K, supports bone health" },
+          { "id": 7, "name": "Amla (Indian Gooseberry)", "healthBenefits": "Richest natural source of Vitamin C, boosts immunity. Improves digestion, reduces acidity. Good for skin & hair, promotes anti-aging." },
+          { "id": 8, "name": "Desi Ghee", "healthBenefits": "Aids digestion and provides energy." }
         ],
         "region": "Rajasthan, North India",
         "images": [
           {
             "id": 16,
-            "name": "Gatte Ka Paratha Thumbnail",
+            "name": "Raagi Ka Chilla Thumbnail",
             "url": "https://ucarecdn.com/487d7d1e-ed41-4315-9eb5-f4febe52b80f/gattekaparatha.jpg"
-          },
-          {
-            "id": 17,
-            "name": "Gatte Ka Paratha Dish",
-            "url": "https://example.com/gatte-ka-paratha.jpg"
           }
         ],
-        "description": "Healthy grain paratha stuffed with spiced Gatte (Gram Flour Dumplings). A wholesome and nutritious breakfast.",
+        "description": "Start your day with a protein-packed, gluten-free breakfast that’s as nutritious as it is delicious! 💪✨ Made with Raagi (Finger Millet) flour, fresh veggies, and aromatic spices, this crispy chilla is rich in calcium, fiber, and essential nutrients. Paired with our tangy Amla Chutney, loaded with Vitamin C & antioxidants, it’s the perfect immunity booster! 🍋",
         "category": "breakfast",
         "lifeInDays": 1,
         "flavourType": "spicy",
@@ -1345,11 +1340,11 @@ export class FoodMenuService {
         "foodItems": [
           {
             "id": 15,
-            "name": "Gatte Ka Paratha",
-            "quantity": "2 Parathas",
+            "name": "Raagi Ka Chilla",
+            "quantity": "2",
             "isRequired": true,
             "availableToday": true,
-            "weight": "350 gm",
+            "weight": null,
             "description": "Freshly prepared Gatte Ka Paratha served with amla-coriander chutney and an optional side of plain curd, enough for 1 adult and 2 kids."
           },
           {
