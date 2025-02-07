@@ -1576,7 +1576,7 @@ export class FoodMenuService {
         "type": "Dish",
         "availableToday": true,
         "todayTime": "Lunch, Dinner",
-        "ratings": 4.7,
+        "ratings": 5.0,
         "foodItems": [
           {
             "id": 14,
@@ -1700,7 +1700,7 @@ export class FoodMenuService {
         "type": "Dish",
         "availableToday": true,
         "todayTime": "Lunch, Dinner",
-        "ratings": 4.7,
+        "ratings": 4.9,
         "foodItems": [
           {
             "id": 14,
@@ -1710,6 +1710,61 @@ export class FoodMenuService {
             "availableToday": true,
             "weight": "500 gm",
             "description": "Flavorful and spicy Punjabi Tadka Daal served hot in a bowl."
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "mix-veg",
+        "title": "Mix Veg",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 3, "name": "Green Peas", "healthBenefits": "Rich in protein and fiber." },
+          { "id": 4, "name": "Paneer", "healthBenefits": "High in protein and calcium for strong bones." },
+          { "id": 5, "name": "Capsicum", "healthBenefits": "Loaded with vitamins and boosts immunity." },
+          { "id": 6, "name": "Coriander", "healthBenefits": "Helps in detoxification and digestion." },
+          { "id": 2, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 3, "name": "Onions", "healthBenefits": "Supports immunity and rich in antioxidants." },
+          { "id": 4, "name": "Ginger", "healthBenefits": "Aids digestion and boosts immunity." },
+          { "id": 7, "name": "Coriander", "healthBenefits": "Rich in vitamins and aids detoxification." },
+          { "id": 9, "name": "Green Chilies", "healthBenefits": "Boosts metabolism and adds spice." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 14,
+            "name": "Mix Veg",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738948248/gj8b01eglno7oo4dmtin.jpg"
+          }
+        ],
+        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
+        "category": "ala-carte",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-27T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 250,
+        "quantity": null,
+        "measurement": "per bowl (500 gm)",
+        "addons": ["Extra Masala", "Onion Salad"],
+        "discount": 10,
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.9,
+        "foodItems": [
+          {
+            "id": 14,
+            "name": "Mix Veg Bowl",
+            "quantity": null,
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "500 g",
+            "description": "Flavorful and spicy Mix Veg served in a bowl."
           }
         ]
       },
