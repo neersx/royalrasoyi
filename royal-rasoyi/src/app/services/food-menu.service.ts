@@ -49,7 +49,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Maharaja Laddoo Image",
-            "url": "https://ucarecdn.com/10f12f9d-f272-448c-96e5-e2caa40572cb/maharajaladdoo.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782652/rr_menu/or6d4zjxurnuqp3z0ian.jpg"
           }
         ],
         "description": "A rich and traditional Indian sweet.",
@@ -130,7 +130,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Chole Poori Image",
-            "url": "https://ucarecdn.com/60a6c6b4-bc56-4ac1-a40b-071490c510a4/cholepoori.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782651/rr_menu/txa4ox02itqjbtsbgo2w.jpg"
           }
         ],
         "description": "🍛 Chole: Slow-cooked with aromatic spices, tangy tomatoes, and a hint of fresh coriander for a rich and hearty flavor. 🥙 Puri: Golden, fluffy, and perfectly crispy – made fresh with the finest whole wheat flour and fried in Olive Oil.",
@@ -213,7 +213,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Royal Thali Image",
-            "url": "https://ucarecdn.com/72fbb4ec-f4e9-468f-a6e8-3ea0353f5864/royalrajasthanithali.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782653/rr_menu/jfaccbzcx4cebixeggxy.jpg"
           }
         ],
         "description": "A grand and wholesome meal.",
@@ -313,7 +313,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Veg Appe Image",
-            "url": "https://ucarecdn.com/1e25a2ea-fd56-4c37-92ab-b3a403757abc/vegappe.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782654/rr_menu/bdi521ige3rhpdbvhyjm.jpg"
           }
         ],
         "description": "A healthy and tasty snack.",
@@ -375,7 +375,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Shahi Laddoo Image",
-            "url": "https://ucarecdn.com/652c4869-4145-467b-bdbe-19d7e8f99f52/shahiladdoo.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782654/rr_menu/w9bn1hqociqrrxiihspz.jpg"
           }
         ],
         "description": "A luxurious and healthy sweet.",
@@ -437,7 +437,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Veg Sandwich Image",
-            "url": "https://ucarecdn.com/219dfed1-3fe4-4498-9ef2-e3ddfffdf44f/vegsandwich.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782655/rr_menu/xggbegbf7x3sfh5nqqbe.jpg"
           }
         ],
         "description": "A healthy and tasty snack.",
@@ -507,7 +507,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Aloo Pyaaj Paratha",
-            "url": "https://ucarecdn.com/47e824fa-cb5a-4a5c-bc26-577de5d2fd9b/aloopyajparatha.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782651/rr_menu/iukoaywzcsdfs6a0sx2l.jpg"
           }
         ],
         "description": "Traditional North Indian delight made with love and fresh ingredients, perfect for breakfast or evening snacks.",
@@ -562,7 +562,7 @@ export class FoodMenuService {
           {
             "id": 2,
             "name": "Pao Bhaaji Image",
-            "url": "https://ucarecdn.com/3fc61ce7-d5bb-4517-a20e-c72f3b260b85/paobhaaji.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782653/rr_menu/wpkn59vwdisd7bvkx2wn.jpg"
           }
         ],
         "description": "A spicy and flavorful street food dish.",
@@ -619,7 +619,7 @@ export class FoodMenuService {
           {
             "id": 5,
             "name": "Matar Mushroom Meal Image",
-            "url": "https://ucarecdn.com/b3d6c8a2-1ccf-48c6-b618-dcf8fe3163a9/matarmushroommeal.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782652/rr_menu/ezsadwil8c91k4qdburt.jpg"
           }
         ],
         "description": "A hearty meal with mushrooms and peas in a creamy curry.",
@@ -697,7 +697,7 @@ export class FoodMenuService {
           {
             "id": 6,
             "name": "Shahi Thali Image",
-            "url": "https://ucarecdn.com/35ef19d9-b73f-4470-939d-ddf8aa1e0699/shahithali.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782654/rr_menu/jdddhvkpcd5whcqiig0e.jpg"
           }
         ],
         "description": "A luxurious thali featuring stuffed parathas, creamy dal makhani, paneer curry, pickle, and accompaniments.",
@@ -809,7 +809,7 @@ export class FoodMenuService {
           {
             "id": 7,
             "name": "Aloo Matar Kachori Image",
-            "url": "https://ucarecdn.com/931e3ccd-2d20-4883-a925-6b4df3d07471/aloomatarkachori.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738946198/ekrolg1ztei2igoirfay.jpg"
           }
         ],
         "description": "Crispy and flaky kachoris stuffed with a spicy potato and green pea mixture, served with chutney.",
@@ -881,7 +881,7 @@ export class FoodMenuService {
           {
             "id": 8,
             "name": "Methi Dhaniya Paratha Image",
-            "url": "https://ucarecdn.com/87e0654b-9059-4141-b385-b21360e41603/methidhaniyaparatha.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782652/rr_menu/cd63gwqrjqetbe51lbu7.jpg"
           }
         ],
         "description": "Soft and flavorful parathas made with fresh fenugreek and coriander leaves, served with creamy dahi.",
@@ -972,7 +972,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Royal Red Soup Image",
-            "url": "https://ucarecdn.com/5c77db5a-1797-4454-8ef1-da22da31d90e/royalredsoup.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782653/rr_menu/vsoqossvbeiqciwuuxfi.jpg"
           }
         ],
         "description": "A vibrant and nutritious soup made with fresh beetroots, carrots, and tomatoes, garnished with paneer cubes and coriander leaves.",
@@ -1034,7 +1034,7 @@ export class FoodMenuService {
           {
             "id": 7,
             "name": "Maharaja Thali Image",
-            "url": "https://ucarecdn.com/b6721501-6e51-4a40-ab9d-125446a1747e/maharajathali.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1737782652/rr_menu/rk14rzv9idygqwgdqvld.jpg"
           }
         ],
         "description": "A royal thali featuring: Kadhai Paneer cooked in Olive Oil, Laccha Paratha or Multigrain Roti, Arahar Dal in Desi Ghee Tadka or Mix Dal Fry, Matar Pulao, Fresh Green Salad, and Kesari Kheer.",
@@ -1159,12 +1159,7 @@ export class FoodMenuService {
           {
             "id": 12,
             "name": "Veg Oats Tikki Thumbnail",
-            "url": "https://ucarecdn.com/83d79d23-12f9-4f7e-a4c4-1157b875a7de/vegoatstikki.jpg"
-          },
-          {
-            "id": 13,
-            "name": "Veg Oats Tikki Dish",
-            "url": "https://example.com/veg-oats-tikki.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943601/yc4wy3f6yw7z0gmfjlok.jpg"
           }
         ],
         "description": "A healthy and flavorful breakfast option made with oats, vegetables, and spices, served with mint chutney.",
@@ -1244,16 +1239,11 @@ export class FoodMenuService {
           {
             "id": 14,
             "name": "Punjabi Chole Thumbnail",
-            "url": "https://ucarecdn.com/54d958e5-d9dd-466a-abdb-5c2db68171cf/cholesabzi.jpg"
-          },
-          {
-            "id": 15,
-            "name": "Punjabi Chole Dish",
-            "url": "https://example.com/punjabi-chole.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943543/vghm2j06xzgeavosh6bz.jpg"
           }
         ],
         "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
-        "category": "sabzi",
+        "category": "ala-carte",
         "lifeInDays": 1,
         "flavourType": "spicy",
         "createdOn": "2025-01-27T00:00:00.000Z",
@@ -1300,8 +1290,8 @@ export class FoodMenuService {
       },
       {
         "id": 20,
-        "name": "raagi-ka-chilla",
-        "title": "Raagi Ka Chilla",
+        "name": "raagi-chilla",
+        "title": "Raagi Chilla",
         "bestSeason": "All Seasons",
         "isNonVeg": false,
         "ingredients": [
@@ -1316,7 +1306,7 @@ export class FoodMenuService {
           {
             "id": 16,
             "name": "Raagi Ka Chilla Thumbnail",
-            "url": "https://ucarecdn.com/487d7d1e-ed41-4315-9eb5-f4febe52b80f/gattekaparatha.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943560/riw6s4eb1setvyyvcjha.jpg"
           }
         ],
         "description": "Start your day with a protein-packed, gluten-free breakfast that’s as nutritious as it is delicious! 💪✨ Made with Raagi (Finger Millet) flour, fresh veggies, and aromatic spices, this crispy chilla is rich in calcium, fiber, and essential nutrients. Paired with our tangy Amla Chutney, loaded with Vitamin C & antioxidants, it’s the perfect immunity booster! 🍋",
@@ -1412,7 +1402,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Idli Sambhar Image",
-            "url": "https://ucarecdn.com/2737a737-ac7a-44b9-8191-fb029ca2c630/idli.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943544/wytmnog4ib159gxf9itl.jpg"
           }
         ],
         "description": "A classic South Indian breakfast combo featuring soft idlis served with flavorful sambhar and fresh coconut chutney.",
@@ -1495,7 +1485,7 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Uttapam Sambhar Image",
-            "url": "https://ucarecdn.com/07976124-ea86-40b0-933b-6b20ba78fa97/uttapam.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738946684/eayiciz9vj78jcwahaik.jpg"
           }
         ],
         "description": "A delicious South Indian breakfast featuring crispy vegetable uttapam served with aromatic sambhar and coconut chutney.",
@@ -1544,9 +1534,187 @@ export class FoodMenuService {
             "description": "A refreshing chutney made from fresh coconut and mild spices."
           }
         ]
-      }
-
+      },
+      {
+        "id": 23,
+        "name": "shahi-paneer",
+        "title": "Shahi Paneer",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Paneer", "healthBenefits": "Rich in protein, fiber, and essential vitamins." },
+          { "id": 2, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 3, "name": "Onions", "healthBenefits": "Supports immunity and rich in antioxidants." },
+          { "id": 4, "name": "Ginger", "healthBenefits": "Aids digestion and boosts immunity." },
+          { "id": 5, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
+          { "id": 6, "name": "Cumin", "healthBenefits": "Promotes digestion and improves immunity." },
+          { "id": 7, "name": "Coriander", "healthBenefits": "Rich in vitamins and aids detoxification." },
+          { "id": 9, "name": "Green Chilies", "healthBenefits": "Boosts metabolism and adds spice." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 14,
+            "name": "Punjabi Chole Thumbnail",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943550/asn6ricnzytijx8ceayh.jpg"
+          }
+        ],
+        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
+        "category": "ala-carte",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-27T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 250,
+        "quantity": null,
+        "measurement": "per bowl (500 gm)",
+        "addons": ["Extra Masala", "Onion Salad"],
+        "discount": 5,
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.7,
+        "foodItems": [
+          {
+            "id": 14,
+            "name": "Shahi Paneer",
+            "quantity": "500 gm",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "500 gm",
+            "description": "Flavorful and spicy Punjabi Chole served hot in a bowl."
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "kheer-kesari",
+        "title": "Kheer Kesari",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          {
+            "id": 1,
+            "name": "Rice",
+            "healthBenefits": "Rich in protein and fiber"
+          },
+          {
+            "id": 14,
+            "name": "Kesar",
+            "healthBenefits": "Provides oxidation in cells"
+          },
+          {
+            "id": 2,
+            "name": "Milk",
+            "healthBenefits": "Boosts energy and aids digestion"
+          },
+          {
+            "id": 3,
+            "name": "Dry Fruits",
+            "healthBenefits": "Provides quick energy"
+          },
+          {
+            "id": 4,
+            "name": "White Sugar",
+            "healthBenefits": "Provides quick energy"
+          }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 1,
+            "name": "Kheer Kesari",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943545/qgtfiw17ihgjhx94jwla.jpg"
+          }
+        ],
+        "description": "A rich and traditional Indian sweet.",
+        "category": "sweets",
+        "lifeInDays": 15,
+        "flavourType": "non spicy",
+        "createdOn": "2025-01-01T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 200,
+        "quantity": null,
+        "measurement": "per 200 g",
+        "addons": ["Extra Ghee", "Dry Fruits"],
+        "discount": 10,
+        "days": "Monday",
+        "type": "Dish",
+        "availableToday": false,
+        "ratings": 4.8,
+        "foodItems": [
+          {
+            "id": 1,
+            "name": "Kheer",
+            "quantity": null,
+            "isRequired": true,
+            "availableToday": false,
+            "weight": "1 Kg",
+            "description": "Soft and rich mild sweet kheer."
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "daal-tadka",
+        "title": "Daal Tadka",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Arahar Daal", "healthBenefits": "Rich in protein, fiber, and essential vitamins." },
+          { "id": 2, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 3, "name": "Onions", "healthBenefits": "Supports immunity and rich in antioxidants." },
+          { "id": 4, "name": "Ginger", "healthBenefits": "Aids digestion and boosts immunity." },
+          { "id": 5, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
+          { "id": 6, "name": "Cumin", "healthBenefits": "Promotes digestion and improves immunity." },
+          { "id": 7, "name": "Coriander", "healthBenefits": "Rich in vitamins and aids detoxification." },
+          { "id": 9, "name": "Green Chilies", "healthBenefits": "Boosts metabolism and adds spice." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 14,
+            "name": "Punjabi Daal Tadka",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738947865/rycjzsmty1qljk5bqjsx.jpg"
+          }
+        ],
+        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
+        "category": "ala-carte",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-01-27T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 290,
+        "quantity": null,
+        "measurement": "per bowl (500 gm)",
+        "addons": ["Extra Masala", "Onion Salad"],
+        "discount": 5,
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.7,
+        "foodItems": [
+          {
+            "id": 14,
+            "name": "Arahar Tadka Daal",
+            "quantity": null,
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "500 gm",
+            "description": "Flavorful and spicy Punjabi Tadka Daal served hot in a bowl."
+          }
+        ]
+      },
     ];
   }
+  
   
 }
