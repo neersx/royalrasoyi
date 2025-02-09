@@ -76,7 +76,7 @@ export class FoodDetailsComponent {
     let productPageUrl = '';
 
     // Generate the product page URL only in the browser
-    if (window?.location) {
+    if (window && window?.location) {
       productPageUrl = `${window.location?.origin}${this.router.url}`;
     }
     const metaDetails = {

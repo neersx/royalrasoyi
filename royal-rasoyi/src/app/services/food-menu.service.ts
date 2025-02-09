@@ -206,7 +206,9 @@ export class FoodMenuService {
         "ingredients": [
           { "id": 1, "name": "Mixed grains", "healthBenefits": "Rich carbs and Balanced meal" },
           { "id": 2, "name": "Desi Ghee", "healthBenefits": "Good source of energy" },
-          { "id": 3, "name": "Rayta", "healthBenefits": "Provides vitamin C and increases immunity" }
+          { "id": 11, "name": "Paneer", "healthBenefits": "Rich in protein and calcium" },
+          { "id": 3, "name": "Raita", "healthBenefits": "Provides vitamin C and increases immunity" },
+          { "id": 4, "name": "Multiple Pulses", "healthBenefits": "Rich Protien and high fibers" },
         ],
         "region": "Pan India",
         "images": [
@@ -224,19 +226,19 @@ export class FoodMenuService {
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00Z",
         "type": "Dish",
-       "availableToday": true,
+        "availableToday": true,
         "size": "MEDIUM",
         "price": 450,
         "quantity": 1,
         "measurement": "Plate",
         "addons": ["Extra Curry", "Dessert"],
-        "discount": 10,
+        "discount": 0,
         "days": "Wednesday",
         "ratings": 4.9,
         "foodItems": [
           {
             "id": 1,
-            "name": "Arahar Daal Tadka",
+            "name": "Mix Daal Tadka",
             "quantity": null,
             "weight": "200ml",
             "isRequired": true,
@@ -245,7 +247,7 @@ export class FoodMenuService {
           },
           {
             "id": 2,
-            "name": "Veg or Boondi Rayta",
+            "name": "Veg or Boondi Raita",
             "quantity": null,
             "weight": "180ml",
             "isRequired": true,
@@ -263,7 +265,7 @@ export class FoodMenuService {
           },
           {
             "id": 4,
-            "name": "Desi Ghee Dipped Baati",
+            "name": "Stuffed with Paneer and dipped in Cow desi Ghee",
             "quantity": 5,
             "weight": null,
             "isRequired": true,
@@ -273,7 +275,7 @@ export class FoodMenuService {
           {
             "id": 5,
             "name": "Rajasthani Choorma",
-            "quantity": 4,
+            "quantity": null,
             "weight": "100gm",
             "isRequired": true,
             "availableToday": false,
@@ -1025,7 +1027,9 @@ export class FoodMenuService {
           { "id": 1, "name": "Paneer", "healthBenefits": "Rich in protein and calcium. Good for instant energy with Paneer." },
           { "id": 2, "name": "Multi Grain Flour", "healthBenefits": "High in fiber" },
           { "id": 3, "name": "Arahar Daal", "healthBenefits": "Good source of iron and protein" },
+          { "id": 11, "name": "Paneer", "healthBenefits": "Rich in protein and calcium" },
           { "id": 4, "name": "Desi Ghee", "healthBenefits": "Provides essential fats" },
+          { "id": 13, "name": "Mix Daal", "healthBenefits": "Good source of iron and protein" },
           { "id": 5, "name": "Olive Oil", "healthBenefits": "Rich in antioxidants" },
           { "id": 6, "name": "Spices", "healthBenefits": "Boosts metabolism" }
         ],
@@ -1242,7 +1246,7 @@ export class FoodMenuService {
             "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943543/vghm2j06xzgeavosh6bz.jpg"
           }
         ],
-        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
+        "description": "Indulge in the rich, aromatic, and authentic flavors of Punjabi Chole, slow-cooked with a blend of traditional spices, tomatoes, and onions for that perfect, tangy kick. 🌶️✨ This hearty and protein-packed dish pairs beautifully with fluffy bhature, soft rotis, or fragrant rice, making every bite a true delight! 😍",
         "category": "ala-carte",
         "lifeInDays": 1,
         "flavourType": "spicy",
@@ -1559,7 +1563,7 @@ export class FoodMenuService {
             "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738943550/asn6ricnzytijx8ceayh.jpg"
           }
         ],
-        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
+        "description": "Experience the rich, creamy, and royal taste of Shahi Paneer, made with a luscious blend of paneer cubes simmered in a velvety, aromatic gravy of cashews, cream, and exotic spices. 🌿🍛 Perfectly balanced with mild sweetness & rich flavors, this Mughlai delicacy is a must-try for all paneer lovers! Pair it with soft rotis or fragrant rice for a truly regal meal. 👑💛",
         "category": "ala-carte",
         "lifeInDays": 1,
         "flavourType": "spicy",
@@ -1567,9 +1571,9 @@ export class FoodMenuService {
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
         "size": "MEDIUM",
-        "price": 350,
+        "price": 290,
         "quantity": null,
-        "measurement": "per bowl (500 gm)",
+        "measurement": "per 300 ml",
         "addons": ["Extra Masala", "Onion Salad"],
         "discount": 10,
         "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
@@ -1581,10 +1585,10 @@ export class FoodMenuService {
           {
             "id": 14,
             "name": "Shahi Paneer",
-            "quantity": "500 gm",
+            "quantity": null,
             "isRequired": true,
             "availableToday": true,
-            "weight": "500 gm",
+            "weight": "300 ml",
             "description": "Flavorful and spicy Punjabi Chole served hot in a bowl."
           }
         ]
@@ -1654,62 +1658,8 @@ export class FoodMenuService {
             "quantity": null,
             "isRequired": true,
             "availableToday": false,
-            "weight": "1 Kg",
+            "weight": "200 g",
             "description": "Soft and rich mild sweet kheer."
-          }
-        ]
-      },
-      {
-        "id": 25,
-        "name": "daal-tadka",
-        "title": "Daal Tadka",
-        "bestSeason": "All Seasons",
-        "isNonVeg": false,
-        "ingredients": [
-          { "id": 1, "name": "Arahar Daal", "healthBenefits": "Rich in protein, fiber, and essential vitamins." },
-          { "id": 2, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
-          { "id": 3, "name": "Onions", "healthBenefits": "Supports immunity and rich in antioxidants." },
-          { "id": 4, "name": "Ginger", "healthBenefits": "Aids digestion and boosts immunity." },
-          { "id": 5, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
-          { "id": 6, "name": "Cumin", "healthBenefits": "Promotes digestion and improves immunity." },
-          { "id": 7, "name": "Coriander", "healthBenefits": "Rich in vitamins and aids detoxification." },
-          { "id": 9, "name": "Green Chilies", "healthBenefits": "Boosts metabolism and adds spice." }
-        ],
-        "region": "North India",
-        "images": [
-          {
-            "id": 14,
-            "name": "Punjabi Daal Tadka",
-            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738947865/rycjzsmty1qljk5bqjsx.jpg"
-          }
-        ],
-        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
-        "category": "ala-carte",
-        "lifeInDays": 1,
-        "flavourType": "spicy",
-        "createdOn": "2025-01-27T00:00:00.000Z",
-        "isDeleted": false,
-        "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
-        "size": "MEDIUM",
-        "price": 290,
-        "quantity": null,
-        "measurement": "per bowl (500 gm)",
-        "addons": ["Extra Masala", "Onion Salad"],
-        "discount": 5,
-        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
-        "type": "Dish",
-        "availableToday": true,
-        "todayTime": "Lunch, Dinner",
-        "ratings": 4.9,
-        "foodItems": [
-          {
-            "id": 14,
-            "name": "Arahar Tadka Daal",
-            "quantity": null,
-            "isRequired": true,
-            "availableToday": true,
-            "weight": "500 gm",
-            "description": "Flavorful and spicy Punjabi Tadka Daal served hot in a bowl."
           }
         ]
       },
@@ -1738,7 +1688,7 @@ export class FoodMenuService {
             "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1738948248/gj8b01eglno7oo4dmtin.jpg"
           }
         ],
-        "description": "Authentic Punjabi-style Chole, slow-cooked with aromatic spices and served hot.",
+        "description": "Enjoy a delicious and wholesome bowl of Mix Veg, made with a medley of fresh, seasonal vegetables cooked in a rich, flavorful gravy. 🌿🥕🌽 Each bite is packed with nutrients, vibrant colors, and authentic Indian spices, making it a perfect balance of taste and health.",
         "category": "ala-carte",
         "lifeInDays": 1,
         "flavourType": "spicy",
@@ -1768,6 +1718,351 @@ export class FoodMenuService {
           }
         ]
       },
+      {
+        "id": 27,
+        "name": "sunahari-gujiya",
+        "title": "Sunahari Gujiya",
+        "bestSeason": "Holi & Festivals",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Maida (Refined Flour)", "healthBenefits": "Provides energy and texture" },
+          { "id": 2, "name": "Khoya (Mawa)", "healthBenefits": "Rich in proteins and calcium" },
+          { "id": 3, "name": "Dry Fruits", "healthBenefits": "Loaded with vitamins and minerals" },
+          { "id": 4, "name": "Sugar", "healthBenefits": "Instant energy booster" },
+          { "id": 5, "name": "Cardamom", "healthBenefits": "Aids digestion and adds aroma" }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 1,
+            "name": "Gujiya Image",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1739112098/rndankhjradxzz6v7kxt.jpg"
+          }
+        ],
+        "description": "A crispy and delicious festive sweet filled with rich khoya and dry fruits, deep-fried to perfection.",
+        "category": "sweets",
+        "lifeInDays": 15,
+        "flavourType": "sweet",
+        "size": "MEDIUM",
+        "price": 345,
+        "measurement": "per 500g",
+        "addons": ["Extra Dry Fruits", "Saffron Topping"],
+        "discount": 10,
+        "days": "Available on Festivals",
+        "type": "Dish",
+        "availableToday": "false",
+        "ratings": 4.8,
+        "foodItems": [
+          {
+            "id": 1,
+            "name": "Gujiya Piece",
+            "quantity": null,
+            "weight": "500 g",
+            "description": "Golden crispy gujiya stuffed with rich khoya and nuts."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Absolutely delicious and fresh!",
+            "userId": 201,
+            "userName": "Amit Sharma",
+            "userImage": "https://example.com/amit.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Best Gujiya I’ve had in a long time!",
+            "userId": 202,
+            "userName": "Priya Mehta",
+            "userImage": "https://example.com/priya.jpg"
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "soya-masala-chaap",
+        "title": "Soya Masala Chaap",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Soya Chaap", "healthBenefits": "High in protein and a great meat alternative." },
+          { "id": 3, "name": "Tomatoes", "healthBenefits": "Rich in Vitamin C and antioxidants." },
+          { "id": 4, "name": "Onions", "healthBenefits": "Supports immunity and adds natural sweetness." },
+          { "id": 5, "name": "Ginger", "healthBenefits": "Boosts digestion and immunity." },
+          { "id": 6, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
+          { "id": 7, "name": "Coriander", "healthBenefits": "Rich in vitamins and aids detoxification." },
+          { "id": 8, "name": "Garam Masala", "healthBenefits": "Enhances flavor and boosts metabolism." },
+          { "id": 9, "name": "Green Chilies", "healthBenefits": "Boosts metabolism and adds spice." },
+          { "id": 10, "name": "Olive Oil", "healthBenefits": "Supports heart health and digestion." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 15,
+            "name": "Soya Masala Chaap Thumbnail",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1739112103/fok8r20edpc42ckqwzso.jpg"
+          }
+        ],
+        "description": "Enjoy the smoky, spicy, and mouthwatering flavors of **Soya Masala Chaap**, marinated in rich Indian spices and cooked to perfection. 🌶️🔥 This protein-rich delight is perfect as a main course or starter, best paired with naan, roti, or fragrant rice. 😍",
+        "category": "ala-carte",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-02-08T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-02-08T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 388,
+        "quantity": null,
+        "measurement": "per bowl (500 gm)",
+        "addons": ["Extra Masala", "Mint Chutney"],
+        "discount": 0,
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.8,
+        "foodItems": [
+          {
+            "id": 15,
+            "name": "Soya Masala Chaap Sabzi",
+            "quantity": "500 gm",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "500 gm",
+            "description": "Tender and spicy soya chaap cooked in a rich masala gravy."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Absolutely loved the smoky and spicy flavors! 😍",
+            "userId": 501,
+            "userName": "Rahul Verma",
+            "userImage": "https://example.com/rahul.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Best veg alternative to chicken tikka! 🔥",
+            "userId": 502,
+            "userName": "Sneha Kapoor",
+            "userImage": "https://example.com/sneha.jpg"
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "kadhayi-paneer",
+        "title": "Kadhayi Paneer",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Paneer (Cottage Cheese)", "healthBenefits": "Rich in protein and calcium." },
+          { "id": 2, "name": "Capsicum", "healthBenefits": "Loaded with antioxidants and Vitamin C." },
+          { "id": 3, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 4, "name": "Onions", "healthBenefits": "Supports immunity and adds natural sweetness." },
+          { "id": 5, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
+          { "id": 6, "name": "Ginger", "healthBenefits": "Aids digestion and boosts immunity." },
+          { "id": 7, "name": "Kadhayi Masala", "healthBenefits": "Aromatic blend of spices that enhances flavor." },
+          { "id": 8, "name": "Butter", "healthBenefits": "Adds richness and healthy fats." },
+          { "id": 9, "name": "Coriander", "healthBenefits": "Aids digestion and detoxifies the body." },
+          { "id": 10, "name": "Kasuri Methi", "healthBenefits": "Adds aroma and helps with digestion." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 16,
+            "name": "Kadhayi Paneer Thumbnail",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1739116952/kadhaai-paneer.jpg"
+          }
+        ],
+        "description": "A rich and flavorful North Indian delicacy, Kadhayi Paneer is made with succulent paneer cubes tossed in a spicy, tangy tomato-based gravy with capsicum, onions, and aromatic spices. 🌶️🧀 Best enjoyed with naan, roti, or steamed rice for a fulfilling meal. 🍽️",
+        "category": "ala-carte",
+        "lifeInDays": 1,
+        "flavourType": "spicy",
+        "createdOn": "2025-02-08T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-02-08T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 277, 
+        "discount": 10,
+        "finalPrice": 249,
+        "measurement": "per 300 ml",
+        "addons": ["Extra Paneer", "Butter Topping"],
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.8,
+        "foodItems": [
+          {
+            "id": 16,
+            "name": "Kadhayi Paneer Sabzi",
+            "quantity": null,
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "300 ml",
+            "description": "Spicy and flavorful paneer dish cooked with capsicum and onions in a rich masala gravy."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Perfectly spiced and delicious! Loved the smoky flavor. 😋",
+            "userId": 601,
+            "userName": "Vikas Sharma",
+            "userImage": "https://example.com/vikas.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "One of the best Kadhayi Paneer dishes I’ve had! 🔥",
+            "userId": 602,
+            "userName": "Ritu Verma",
+            "userImage": "https://example.com/ritu.jpg"
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "rajma",
+        "title": "Rajma",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Kidney Beans (Rajma)", "healthBenefits": "Rich in protein and fiber, supports heart health." },
+          { "id": 2, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 3, "name": "Onions", "healthBenefits": "Supports immunity and enhances flavor." },
+          { "id": 4, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
+          { "id": 5, "name": "Ginger", "healthBenefits": "Aids digestion and boosts immunity." },
+          { "id": 6, "name": "Rajma Masala", "healthBenefits": "Aromatic spice blend that enhances taste and digestion." },
+          { "id": 7, "name": "Cumin", "healthBenefits": "Promotes digestion and boosts metabolism." },
+          { "id": 8, "name": "Butter", "healthBenefits": "Adds richness and healthy fats." },
+          { "id": 9, "name": "Coriander", "healthBenefits": "Aids digestion and detoxifies the body." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 17,
+            "name": "Rajma Thumbnail",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1739116667/mcsh07c2vcichtwbi1vn.jpg"
+          }
+        ],
+        "description": "A North Indian favorite, **Rajma** is a comforting and flavorful dish made with slow-cooked kidney beans in a rich tomato-onion gravy, seasoned with aromatic spices. 🍛❤️ Best enjoyed with steamed rice or roti for a wholesome and satisfying meal. 🍽️",
+        "category": "ala-carte",
+        "lifeInDays": 1,
+        "flavourType": "mild spicy",
+        "createdOn": "2025-02-08T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-02-08T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 149,
+        "discount": 0,
+        "finalPrice": 149,
+        "measurement": "per bowl (300 ml)",
+        "addons": ["Extra Butter", "Onion Salad"],
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.7,
+        "foodItems": [
+          {
+            "id": 17,
+            "name": "Rajma Sabzi",
+            "quantity": "300 ml",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "300 ml",
+            "description": "Delicious and comforting rajma cooked in a rich and aromatic gravy."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Tastes just like home! Perfectly cooked rajma with rich flavors. 😋",
+            "userId": 701,
+            "userName": "Ramesh Kumar",
+            "userImage": "https://example.com/ramesh.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "A must-try! Goes perfectly with rice. ❤️",
+            "userId": 702,
+            "userName": "Pooja Mehta",
+            "userImage": "https://example.com/pooja.jpg"
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "arhar-daal-tadka",
+        "title": "Arhar Dal Tadka",
+        "bestSeason": "All Seasons",
+        "isNonVeg": false,
+        "ingredients": [
+          { "id": 1, "name": "Arhar Dal (Toor Dal)", "healthBenefits": "Rich in protein and fiber, supports digestion." },
+          { "id": 2, "name": "Ghee", "healthBenefits": "Boosts immunity and enhances digestion." },
+          { "id": 3, "name": "Garlic", "healthBenefits": "Has anti-inflammatory and antimicrobial properties." },
+          { "id": 4, "name": "Tomatoes", "healthBenefits": "Good source of Vitamin C and antioxidants." },
+          { "id": 5, "name": "Onions", "healthBenefits": "Rich in antioxidants and supports immunity." },
+          { "id": 6, "name": "Cumin", "healthBenefits": "Promotes digestion and boosts metabolism." },
+          { "id": 7, "name": "Mustard Seeds", "healthBenefits": "Good for digestion and rich in minerals." },
+          { "id": 8, "name": "Curry Leaves", "healthBenefits": "Rich in antioxidants and aids in weight management." },
+          { "id": 9, "name": "Turmeric", "healthBenefits": "Natural anti-inflammatory and boosts immunity." }
+        ],
+        "region": "North India",
+        "images": [
+          {
+            "id": 18,
+            "name": "Arhar Dal Tadka Thumbnail",
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1739116671/somzwtjmvme5au9dapv9.jpg"
+          }
+        ],
+        "description": "Savor the comforting and flavorful **Arhar Dal Tadka**, made with protein-rich toor dal, slow-cooked and tempered with aromatic spices, ghee, garlic, and mustard seeds for a delicious and homely taste. 🍛✨ Best paired with rice or roti for a wholesome meal! 😍",
+        "category": "ala-carte",
+        "lifeInDays": 1,
+        "flavourType": "mild spicy",
+        "createdOn": "2025-02-08T00:00:00.000Z",
+        "isDeleted": false,
+        "lastUpdatedOn": "2025-02-08T00:00:00.000Z",
+        "size": "MEDIUM",
+        "price": 165,
+        "discount": 10,
+        "finalPrice": 149,
+        "measurement": "per bowl (300 ml)",
+        "addons": ["Extra Ghee", "Onion Salad"],
+        "days": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+        "type": "Dish",
+        "availableToday": true,
+        "todayTime": "Lunch, Dinner",
+        "ratings": 4.8,
+        "foodItems": [
+          {
+            "id": 18,
+            "name": "Arhar Dal Tadka",
+            "quantity": "300 ml",
+            "isRequired": true,
+            "availableToday": true,
+            "weight": "300 ml",
+            "description": "Delicious and comforting arhar dal, tempered with ghee, garlic, and spices."
+          }
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "comment": "Tastes just like home-cooked dal! So comforting. 😍",
+            "userId": 801,
+            "userName": "Vikram Sharma",
+            "userImage": "https://example.com/vikram.jpg"
+          },
+          {
+            "id": 2,
+            "comment": "Perfect balance of flavors, loved the ghee tadka! ❤️",
+            "userId": 802,
+            "userName": "Ritu Verma",
+            "userImage": "https://example.com/ritu.jpg"
+          }
+        ]
+      }
     ];
   }
   
