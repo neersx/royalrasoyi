@@ -4,6 +4,8 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FoodMenuService } from '../../services/food-menu.service';
 import { MetaService } from '../../core/services/meta-tags.service';
+import { MEASUREMENT_UNIT } from '../../core/constants/food-measurement.constants';
+import { MeasurementUnitService } from '../../core/services/measurement-unit.service';
 
 @Component({
   selector: 'app-food-details',
@@ -18,6 +20,7 @@ export class FoodDetailsComponent {
   foodDetails : any;
   isBrowser = true;
   Math = Math; 
+  measurementUnit = MEASUREMENT_UNIT; // Assign constant to a variable for template access
 
   constructor(
     private readonly metaService: MetaService,
@@ -25,6 +28,7 @@ export class FoodDetailsComponent {
     private readonly route: ActivatedRoute,
     private readonly service: FoodMenuService,
     private readonly cdr: ChangeDetectorRef,
+    private readonly measurementUnitService: MeasurementUnitService,
     @Inject(PLATFORM_ID) private readonly platformId: Object
   ) {
     // Check if the platform is browser
@@ -36,7 +40,6 @@ export class FoodDetailsComponent {
 
   ngOnInit(): void {
     this.foodName = this.route.snapshot.paramMap.get('name'); 
-    console.log('<<<   foodName   >>>', this.foodName);
     this.service.getMenuList().subscribe((data: any) => {    
       this.foodMenuList = data;
       this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
@@ -48,6 +51,10 @@ export class FoodDetailsComponent {
       this.cdr.detectChanges();
     });
    
+  }
+
+  getMeasurementLabel(key: string): string {
+    return this.measurementUnitService.getMeasurementLabel(key);
   }
 
 

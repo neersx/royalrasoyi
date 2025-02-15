@@ -39,9 +39,30 @@
               <span class="price">
                 <span class="currency">₹</span>  <span *ngIf="foodDetails.discount" class="pre-price">
                   {{ foodDetails.price || '0.00' }}
-                </span> {{ foodDetails.price - Math.floor((foodDetails.price / 100 * foodDetails.discount)) || '0.00' }} {{ foodDetails.measurement }}
+                </span> {{ foodDetails.price - Math.floor((foodDetails.price / 100 * foodDetails.discount)) || '0.00' }} {{ getMeasurementLabel(foodDetails.measurement) }}
               </span>
-
+              <div class="product-cart-variation">
+                <ul>
+                    <li>
+                        <div class="quantity-input">
+                            <button class="quantity-down"><i class="far fa-minus"></i></button>
+                            <input class="quantity" type="text" value="1" name="quantity">
+                            <button class="quantity-up"><i class="far fa-plus"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <select class="wide">
+                            <option data-display="Large">Large</option>
+                            <option>Medium</option>
+                            <option>Small</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="add-to-cart mb-5">
+              <button class="theme-btn style-one">Add To Cart</button>
+           </div>
+           
               <div class="ratings mb-5" style="display: flex; align-items: center; gap: 10px;">
                 Ratings:
                 <ul class="ratings" style="display: flex; list-style: none; padding: 0; margin: 0; gap: 5px;">
@@ -74,11 +95,6 @@
                     </li>
                   </ul>
                 </div> -->
-              </div>
-              <div class="add-to-cart">
-                <div class="nav-button ">
-                  <a href="tel:+919005483732" class="theme-btn style-one">Call Now</a>
-              </div>
               </div>
           
             </div>

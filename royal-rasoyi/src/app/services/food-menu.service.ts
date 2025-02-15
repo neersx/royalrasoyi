@@ -61,8 +61,9 @@ export class FoodMenuService {
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
         "size": "SMALL",
         "price": 1200,
+        "prices": [{"size": "Small", "quantity": 250, "price": 360}, {"size": "Medium", "quantity": 500, "price": 700}, {"size": "Large", "quantity": 1000, "price": 1200}],
         "quantity": null,
-        "measurement": "per Kg",
+        "measurement": "gm",
         "addons": ["Extra Ghee", "Dry Fruits"],
         "discount": 10,
         "days": "Monday",
@@ -78,22 +79,6 @@ export class FoodMenuService {
             "availableToday": false,
             "weight": "1 Kg",
             "description": "Soft and rich laddoo pieces."
-          }
-        ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Absolutely delicious!",
-            "userId": 101,
-            "userName": "John Doe",
-            "userImage": "https://example.com/john.jpg"
-          },
-          {
-            "id": 2,
-            "comment": "Perfect for festivals.",
-            "userId": 102,
-            "userName": "Jane Smith",
-            "userImage": "https://example.com/jane.jpg"
           }
         ]
       },
@@ -142,13 +127,14 @@ export class FoodMenuService {
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
         "size": "Large",
         "price": 190,
-        "quantity": 5,
-        "measurement": "Plate",
+        "prices": [],
+        "quantity": 1,
+        "measurement": "plate",
         "addons": ["Pickle", "Curd"],
         "discount": 10,
         "days": "Tuesday",
         "type": "Dish",
-       "availableToday": true,
+        "availableToday": true,
         "todayTime": "Breakfast",
         "ratings": 5.0,
         "foodItems": [
@@ -178,22 +164,6 @@ export class FoodMenuService {
             "availableToday": false,
             "weight": null,
             "description": "Crispy and golden prepared with Oats and Multi grain flour Poori."
-          }
-        ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Great taste and fresh!",
-            "userId": 103,
-            "userName": "Alice Brown",
-            "userImage": "https://example.com/alice.jpg"
-          },
-          {
-            "id": 2,
-            "comment": "Loved the spiciness.",
-            "userId": 104,
-            "userName": "Bob Green",
-            "userImage": "https://example.com/bob.jpg"
           }
         ]
       },
@@ -229,8 +199,9 @@ export class FoodMenuService {
         "availableToday": true,
         "size": "MEDIUM",
         "price": 450,
+        "prices": [],
         "quantity": 1,
-        "measurement": "Plate",
+        "measurement": "plate",
         "addons": ["Extra Curry", "Dessert"],
         "discount": 0,
         "days": "Wednesday",
@@ -281,22 +252,6 @@ export class FoodMenuService {
             "availableToday": false,
             "description": "Rounded crunchy baati, dipped in Ghee."
           }
-        ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Perfect for a full meal!",
-            "userId": 105,
-            "userName": "Charlie Black",
-            "userImage": "https://example.com/charlie.jpg"
-          },
-          {
-            "id": 2,
-            "comment": "So many delicious dishes.",
-            "userId": 106,
-            "userName": "Diana White",
-            "userImage": "https://example.com/diana.jpg"
-          }
         ]
       },
       {
@@ -325,8 +280,9 @@ export class FoodMenuService {
         "createdOn": "2025-01-04T00:00:00Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00Z",
-        "size": "SMALL",
+        "size": "MEDIUM",
         "price": 150,
+        "prices": [],
         "quantity": 12,
         "measurement": "Plate",
         "addons": ["Coconut Chutney", "Sambar"],
@@ -344,22 +300,6 @@ export class FoodMenuService {
             "description": "Crispy and healthy snack."
           }
         ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Perfect snack!",
-            "userId": 107,
-            "userName": "Eve Blue",
-            "userImage": "https://example.com/eve.jpg"
-          },
-          {
-            "id": 2,
-            "comment": "Loved the chutney.",
-            "userId": 108,
-            "userName": "Frank Red",
-            "userImage": "https://example.com/frank.jpg"
-          }
-        ]
       },
       {
         "id": 5,
@@ -389,14 +329,15 @@ export class FoodMenuService {
         "lastUpdatedOn": "2025-01-05T00:00:00Z",
         "size": "LARGE",
         "price": 1500,
+        "prices": [{"size": "Small", "quantity": 250, "price": 510}, {"size": "Medium", "quantity": 500, "price": 820}, {"size": "Large", "quantity": 1000, "price": 1500}],
         "quantity": 1,
-        "measurement": "per Kg",
+        "measurement": "gm",
         "addons": ["Extra Honey", "Dry Fruits"],
         "type": "Dish",
         "availableToday": false,
-        "discount": 15,
+        "discount": 5,
         "days": "Friday",
-        "ratings": 4.6,
+        "ratings": 5.0,
         "foodItems": [
           {
             "id": 1,
@@ -406,22 +347,6 @@ export class FoodMenuService {
             "description": "Crispy and healthy snack."
           }
         ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Perfect snack!",
-            "userId": 107,
-            "userName": "Eve Blue",
-            "userImage": "https://example.com/eve.jpg"
-          },
-          {
-            "id": 2,
-            "comment": "Loved the chutney.",
-            "userId": 108,
-            "userName": "Frank Red",
-            "userImage": "https://example.com/frank.jpg"
-          }
-        ]
       },
       {
         "id": 6,
@@ -451,8 +376,9 @@ export class FoodMenuService {
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
         "size": "MEDIUM",
         "price": 160,
+        "prices": [{"size": "Small", "quantity": 2, "price": 90}, {"size": "Medium", "quantity": 4, "price": 180}, {"size": "Large", "quantity": 8, "price": 295}],
         "quantity": 4,
-        "measurement": "Per Plate",
+        "measurement": "piece",
         "addons": ["Chutney"],
         "discount": 5,
         "days": "Thursday",
