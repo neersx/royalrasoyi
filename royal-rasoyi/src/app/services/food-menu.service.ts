@@ -59,9 +59,9 @@ export class FoodMenuService {
         "createdOn": "2025-01-01T00:00:00.000Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-        "size": "SMALL",
+        "defaultSize": "Small",
         "price": 1200,
-        "prices": [{"size": "Small", "quantity": 250, "price": 360}, {"size": "Medium", "quantity": 500, "price": 700}, {"size": "Large", "quantity": 1000, "price": 1200}],
+        "prices": [{"size": "Small", "quantity": 250, "price": 360}, {"size": "Medium", "quantity": 500, "price": 700 }, {"size": "Large", "quantity": 1000, "price": 1200}],
         "quantity": null,
         "measurement": "gm",
         "addons": ["Extra Ghee", "Dry Fruits"],
@@ -327,7 +327,7 @@ export class FoodMenuService {
         "createdOn": "2025-01-04T00:00:00Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00Z",
-        "size": "LARGE",
+        "defaultSize": "Medium",
         "price": 1500,
         "prices": [{"size": "Small", "quantity": 250, "price": 510}, {"size": "Medium", "quantity": 500, "price": 820}, {"size": "Large", "quantity": 1000, "price": 1500}],
         "quantity": 1,
@@ -375,12 +375,12 @@ export class FoodMenuService {
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
         "size": "MEDIUM",
-        "price": 160,
+        "price": 180,
         "prices": [{"size": "Small", "quantity": 2, "price": 90}, {"size": "Medium", "quantity": 4, "price": 180}, {"size": "Large", "quantity": 8, "price": 295}],
         "quantity": 4,
         "measurement": "piece",
         "addons": ["Chutney"],
-        "discount": 5,
+        "discount": 10,
         "days": "Thursday",
         "type": "Dish",
         "availableToday": false,
@@ -402,22 +402,6 @@ export class FoodMenuService {
             "description": "Crispy and healthy snack."
           }
         ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Perfect snack!",
-            "userId": 107,
-            "userName": "Eve Blue",
-            "userImage": "https://example.com/eve.jpg"
-          },
-          {
-            "id": 2,
-            "comment": "Loved the chutney.",
-            "userId": 108,
-            "userName": "Frank Red",
-            "userImage": "https://example.com/frank.jpg"
-          }
-        ]
       },
       {
         "id": 7,
@@ -445,10 +429,11 @@ export class FoodMenuService {
         "createdOn": "2025-01-05T00:00:00.000Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-        "size": "LARGE",
-        "price": 129,
+        "defaultSize": "Medium",
+        "price": 180,
+        "prices": [{"size": "Small", "quantity": 2, "price": 90}, {"size": "Medium", "quantity": 4, "price": 180}, {"size": "Large", "quantity": 8, "price": 295}],
+        "measurement": "plate",
         "quantity": 2,
-        "measurement": "Per Plate",
         "addons": ["Red Sweet Chutney", "Green Spicy Chutney"],
         "discount": 0,
         "type": "Dish",
@@ -464,15 +449,6 @@ export class FoodMenuService {
             "description": "Soft, flaky parathas with a savory potato and onion filling."
           }
         ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Perfect paratha!",
-            "userId": 107,
-            "userName": "Rajni Sahu",
-            "userImage": "https://example.com/eve.jpg"
-          },
-        ]
       },
       {
         "id": 8,
@@ -500,7 +476,7 @@ export class FoodMenuService {
         "createdOn": "2025-01-01T00:00:00.000Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-        "size": "LARGE",
+        "defaultSize": "Medium",
         "price": 245,
         "quantity": null,
         "measurement": "per plate",
@@ -521,15 +497,6 @@ export class FoodMenuService {
             "description": "Spicy Bhaaji served with buttery Pao."
           }
         ],
-        "comments": [
-          {
-            "id": 1,
-            "comment": "Loved the buttery pao!",
-            "userId": 103,
-            "userName": "Ravi Kumar",
-            "userImage": "https://example.com/ravi.jpg"
-          }
-        ]
       },
       {
         "id": 9,
@@ -557,7 +524,7 @@ export class FoodMenuService {
         "createdOn": "2025-01-01T00:00:00.000Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-        "size": "LARGE",
+        "defaultSize": "Medium",
         "price": 260,
         "quantity": null,
         "measurement": "per meal",
@@ -635,7 +602,7 @@ export class FoodMenuService {
         "createdOn": "2025-01-01T00:00:00.000Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-05T00:00:00.000Z",
-        "size": "LARGE",
+        "defaultSize": "Medium",
         "price": 410,
         "quantity": null,
         "measurement": "per thali",
@@ -974,7 +941,7 @@ export class FoodMenuService {
         "createdOn": "2025-01-27T00:00:00.000Z",
         "isDeleted": false,
         "lastUpdatedOn": "2025-01-27T00:00:00.000Z",
-        "size": "LARGE",
+        "defaultSize": "Medium",
         "price": 490,
         "quantity": null,
         "measurement": "per thali",

@@ -20,6 +20,11 @@ export class FoodDetailsComponent {
   foodDetails : any;
   isBrowser = true;
   Math = Math; 
+
+  selectedSize = 'Medium';
+  selectedPrice : {size:string, quantity: number, price: number} = {size: 'Medium', quantity: 0, price: 0};
+  selectedQuantity = 1;
+
   measurementUnit = MEASUREMENT_UNIT; // Assign constant to a variable for template access
 
   constructor(
@@ -45,6 +50,11 @@ export class FoodDetailsComponent {
       this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
       if(!this.foodDetails) return;
       
+      this.selectedSize = this.foodDetails.size; // Initialize with default size
+      this.selectedPrice = this.foodDetails.prices.find((item: any) => item.size === this.foodDetails.defaultSize);
+      this.getMeasurementLabel(this.selectedPrice.quantity);
+      this.selectedQuantity = 1;
+
       this.updateMetaTags(this.foodDetails);
       this.foodDetails.relatedItems = this.getRelatedFoods(this.foodDetails?.id);
     
@@ -53,8 +63,43 @@ export class FoodDetailsComponent {
    
   }
 
-  getMeasurementLabel(key: string): string {
-    return this.measurementUnitService.getMeasurementLabel(key);
+  // Function to update price based on selected size
+  updatePrice(size: string) {
+    console.log(size);
+    const selectedItem = this.foodDetails.prices.find((item: any) => item.size === size);
+    if (selectedItem) {
+      this.selectedPrice.price = selectedItem.price;
+      this.getMeasurementLabel(selectedItem.quantity);
+    }
+    this.calculateTotalPrice();
+  }
+
+  // Function to calculate total price based on selected quantity
+  calculateTotalPrice() {
+    const selectedItem = this.foodDetails.prices.find((item: any) => item.size === this.selectedSize);
+    if (selectedItem) {
+      this.selectedPrice.price = selectedItem.price * this.selectedQuantity;
+      this.getMeasurementLabel(selectedItem.quantity);
+    }
+  }
+
+  // Function to increment quantity
+  incrementQuantity() {
+    this.selectedQuantity++;
+    this.calculateTotalPrice();
+  }
+
+  // Function to decrement quantity (minimum 1)
+  decrementQuantity() {
+    if (this.selectedQuantity > 1) {
+      this.selectedQuantity--;
+      this.calculateTotalPrice();
+    }
+  }
+
+  getMeasurementLabel(quantity: number = 0): string {
+
+    return this.measurementUnitService.getMeasurementLabel(this.foodDetails.measurement, this.selectedPrice.quantity);
   }
 
 
@@ -83,9 +128,9 @@ export class FoodDetailsComponent {
     let productPageUrl = '';
 
     // Generate the product page URL only in the browser
-    if (window && window?.location) {
-      productPageUrl = `${window.location?.origin}${this.router.url}`;
-    }
+    // if (window && window?.location) {
+    //   productPageUrl = `${window.location?.origin}${this.router.url}`;
+    // }
     const metaDetails = {
       title: product.title,
       description: product.description,
