@@ -40,10 +40,10 @@
               <span class="price">
                 <span class="currency">₹</span>
                 <span *ngIf="foodDetails.discount" class="pre-price">
-                  {{ selectedPrice.price || '0.00' }}
+                  {{ totalAmount || '0.00' }}
                 </span>
-                {{ selectedPrice.price - Math.floor((selectedPrice.price / 100 * foodDetails.discount)) || '0.00' }} per
-                {{ getMeasurementLabel(foodDetails.measurement) }}
+                {{ totalAmount - Math.floor((totalAmount / 100 * foodDetails.discount)) || '0.00' }} per
+                {{ getMeasurementLabel() }}
               </span>
             
               <div class="product-cart-variation">

@@ -24,6 +24,7 @@ export class FoodDetailsComponent {
   selectedSize = 'Medium';
   selectedPrice : {size:string, quantity: number, price: number} = {size: 'Medium', quantity: 0, price: 0};
   selectedQuantity = 1;
+  totalAmount = 0;
 
   measurementUnit = MEASUREMENT_UNIT; // Assign constant to a variable for template access
 
@@ -50,8 +51,9 @@ export class FoodDetailsComponent {
       this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
       if(!this.foodDetails) return;
       
-      this.selectedSize = this.foodDetails.size; // Initialize with default size
+      this.selectedSize = this.foodDetails.defaultSize; // Initialize with default size
       this.selectedPrice = this.foodDetails.prices.find((item: any) => item.size === this.foodDetails.defaultSize);
+      this.totalAmount = this.selectedPrice.price;
       this.getMeasurementLabel(this.selectedPrice.quantity);
       this.selectedQuantity = 1;
 
@@ -68,7 +70,7 @@ export class FoodDetailsComponent {
     console.log(size);
     const selectedItem = this.foodDetails.prices.find((item: any) => item.size === size);
     if (selectedItem) {
-      this.selectedPrice.price = selectedItem.price;
+      this.selectedPrice = selectedItem;
       this.getMeasurementLabel(selectedItem.quantity);
     }
     this.calculateTotalPrice();
@@ -78,7 +80,7 @@ export class FoodDetailsComponent {
   calculateTotalPrice() {
     const selectedItem = this.foodDetails.prices.find((item: any) => item.size === this.selectedSize);
     if (selectedItem) {
-      this.selectedPrice.price = selectedItem.price * this.selectedQuantity;
+      this.totalAmount = selectedItem.price * this.selectedQuantity;
       this.getMeasurementLabel(selectedItem.quantity);
     }
   }
