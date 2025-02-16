@@ -61,7 +61,7 @@
                   </li>
                   <li>
                     <select class="wide" [(ngModel)]="selectedSize" (change)="updatePrice(selectedSize)">
-                      <option *ngFor="let item of foodDetails.prices" [value]="item.size">
+                      <option class="wide nice-select" *ngFor="let item of foodDetails.prices" [value]="item.size">
                         {{ item.size }}
                       </option>
                     </select>
@@ -69,8 +69,11 @@
                 </ul>
               </div>
             
-              <div class="add-to-cart mb-5">
-                <button class="theme-btn style-one">Add To Cart</button>
+              <div *ngIf="!isAddedToCart" class="add-to-cart mb-5">
+                <button class="theme-btn style-one" (click)="addToCart()">Add To Cart</button>
+              </div>
+              <div *ngIf="isAddedToCart" class="cart-button mb-5">
+                <button class="theme-btn style-one cart-button" (click)="goToCart()">Go To Cart >></button>
               </div>
             </div>
             
@@ -172,7 +175,7 @@
                 </div>
                 <div class="menu-info">
                   <h4 class="title">
-                    <a target="_blank" routerLink="/food-details/{{ relatedItem.name }}">
+                    <a  routerLink="/food-details/{{ relatedItem.name }}">
                       {{ relatedItem.title || 'Unknown Dish' }}
                     </a>
                   </h4>

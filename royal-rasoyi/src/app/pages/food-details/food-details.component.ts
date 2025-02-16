@@ -6,6 +6,7 @@ import { FoodMenuService } from '../../services/food-menu.service';
 import { MetaService } from '../../core/services/meta-tags.service';
 import { MEASUREMENT_UNIT } from '../../core/constants/food-measurement.constants';
 import { MeasurementUnitService } from '../../core/services/measurement-unit.service';
+import { CartService } from '../../core/services/cart.service';
 
 @Component({
   selector: 'app-food-details',
@@ -25,6 +26,7 @@ export class FoodDetailsComponent {
   selectedPrice : {size:string, quantity: number, price: number} = {size: 'Medium', quantity: 0, price: 0};
   selectedQuantity = 1;
   totalAmount = 0;
+  isAddedToCart = false;
 
   measurementUnit = MEASUREMENT_UNIT; // Assign constant to a variable for template access
 
@@ -33,6 +35,7 @@ export class FoodDetailsComponent {
     private readonly router: Router,
     private readonly route: ActivatedRoute,
     private readonly service: FoodMenuService,
+    private readonly cartService: CartService,
     private readonly cdr: ChangeDetectorRef,
     private readonly measurementUnitService: MeasurementUnitService,
     @Inject(PLATFORM_ID) private readonly platformId: Object
@@ -83,6 +86,17 @@ export class FoodDetailsComponent {
       this.totalAmount = selectedItem.price * this.selectedQuantity;
       this.getMeasurementLabel(selectedItem.quantity);
     }
+  }
+
+
+  addToCart() {
+    const foodItem = { id: this.foodDetails.id, quantity: this.selectedQuantity, price: this.totalAmount }; // Example item
+    this.cartService.addToCart(foodItem);
+    this.isAddedToCart = true;
+  }
+
+  goToCart() {
+    this.router.navigate(['cart']);
   }
 
   // Function to increment quantity
@@ -159,15 +173,4 @@ export class FoodDetailsComponent {
     this.cdr.detectChanges();
   }
 
-  increaseQuantity(): any {
-    console.log('increased');
-  }
-
-  decreaseQuantity(): any {
-    console.log('increased');
-  }
-
-  addToCart(food: any): any {
-    console.log('add to cart', food);
-  }
 }

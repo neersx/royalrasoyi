@@ -100,7 +100,9 @@
                                 </div>
                                 <div class="cart-button">
                                     <i class="far fa-shopping-cart"></i>
-                                </div>
+                                    <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+                                  </div>
+                                  
                                 <div class="navbar-toggler">
                                     <span></span>
                                     <span></span>
