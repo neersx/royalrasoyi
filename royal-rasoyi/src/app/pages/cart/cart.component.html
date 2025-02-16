@@ -1,1 +1,87 @@
-<p>cart works!</p>
+<!--====== Start Cart Section ======-->
+<section class="cart-section pt-130 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8">
+                <!--=== Cart Wrapper ===-->
+                <div class="cart-wrapper wow fadeInUp">
+                    <!--=== Cart Table ===-->
+                    <div class="cart-table table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let item of cartItems">
+                                    <td class="thumbnail-title">
+                                        <img [src]="item.image?.url" [alt]="item.image.name">
+                                        <span class="title"><a href="menu-details.html">{{ item.name }}</a></span>
+                                    </td>
+                                    <td class="price">₹{{ item.price }}</td>
+                                    <td class="quantity">
+                                        <div class="quantity-input">
+                                            <button class="quantity-down" (click)="decreaseQuantity(item)">
+                                                <i class="far fa-minus"></i>
+                                            </button>
+                                            <input class="quantity" type="text" [(ngModel)]="item.quantity">
+                                            <button class="quantity-up" (click)="increaseQuantity(item)">
+                                                <i class="far fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="subtotal">₹{{ item.quantity * item.price }}</td>
+                                    <td class="remove">
+                                        <a href="#" (click)="removeItem(item)"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--=== Cart Middle ===-->
+                <div class="cart-middle mt-40 wow fadeInUp">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="coupon-box mb-30">
+                                <form>
+                                    <div class="form_group">
+                                        <input type="text" class="form_control" placeholder="Coupon Code">
+                                        <button class="theme-btn style-one">Apply Coupon</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="update-cart float-lg-right mb-30">
+                                <button class="theme-btn style-one">Update Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <!--=== Shopping Cart Total ===-->
+                <div class="shopping-cart-total mb-30 wow fadeInUp">
+                    <h4 class="title">Cart Totals</h4>
+                    <table class="table mb-25">
+                        <tbody>
+                            <tr>
+                                <td>Cart Subtotal</td>
+                                <td class="price">₹{{ cartTotal }}</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping Fee</td>
+                                <td class="price">₹{{ shippingFee }}</td>
+                            </tr>
+                            <tr>
+                                <td class="total"><span>Order Total</span></td>
+                                <td class="total price"><span>₹{{ cartTotal + shippingFee }}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="theme-btn style-one">Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== End Cart Section ======-->

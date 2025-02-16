@@ -8,11 +8,12 @@ import { BehaviorSubject } from "rxjs";
 export class CartService {
   constructor() {}
   measurementUnits = MEASUREMENT_UNIT;
+  
 
   private readonly cartCount = new BehaviorSubject<number>(0); // Observable cart count
   cartCount$ = this.cartCount.asObservable(); 
 
-  private readonly cartItems: any[] = [];
+  private cartItems: any[] = [];
 
   addToCart(item: any) {
     this.cartItems.push(item);
@@ -21,5 +22,15 @@ export class CartService {
 
   getCartCount(): number {
     return this.cartItems.length;
+  }
+
+  getCartItems() {
+    return this.cartItems;
+  }
+
+  removeFromCart(itemId: number) {
+    this.cartItems = this.cartItems.filter(item => item.id !== itemId);
+    this.cartCount.next(this.cartItems.length);
+    return this.cartItems;
   }
 }

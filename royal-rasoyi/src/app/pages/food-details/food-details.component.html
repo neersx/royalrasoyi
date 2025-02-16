@@ -72,9 +72,10 @@
               <div *ngIf="!isAddedToCart" class="add-to-cart mb-5">
                 <button class="theme-btn style-one" (click)="addToCart()">Add To Cart</button>
               </div>
-              <div *ngIf="isAddedToCart" class="cart-button mb-5">
-                <button class="theme-btn style-one cart-button" (click)="goToCart()">Go To Cart >></button>
-              </div>
+              <button *ngIf="isAddedToCart" routerLink="/cart" class="theme-btn style-one">
+                <i class="fas fa-shopping-cart"></i> View Cart
+              </button>
+              
             </div>
             
           </div>

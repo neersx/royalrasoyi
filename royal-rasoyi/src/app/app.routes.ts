@@ -5,6 +5,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { FoodDetailsComponent } from './pages/food-details/food-details.component';
 import { WhyUsComponent } from './pages/why-us/why-us.component';
 import { NgModule } from '@angular/core';
+import { CartComponent } from './pages/cart/cart.component';
 
 export const routes: Routes = [
   {
@@ -29,6 +30,7 @@ export const routes: Routes = [
     path: 'food-details/:name',
     component: FoodDetailsComponent,
   },
+  { path: 'cart', component: CartComponent },
   {
     path: 'about-us',
     component: AboutComponent,

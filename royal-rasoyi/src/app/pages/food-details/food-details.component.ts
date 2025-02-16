@@ -90,7 +90,7 @@ export class FoodDetailsComponent {
 
 
   addToCart() {
-    const foodItem = { id: this.foodDetails.id, quantity: this.selectedQuantity, price: this.totalAmount }; // Example item
+    const foodItem = { id: this.foodDetails.id, image: this.foodDetails.images[0], name: this.foodDetails.title, quantity: this.selectedQuantity, price: this.totalAmount }; // Example item
     this.cartService.addToCart(foodItem);
     this.isAddedToCart = true;
   }
