@@ -6,6 +6,7 @@ import { FoodDetailsComponent } from './pages/food-details/food-details.componen
 import { WhyUsComponent } from './pages/why-us/why-us.component';
 import { NgModule } from '@angular/core';
 import { CartComponent } from './pages/cart/cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +32,7 @@ export const routes: Routes = [
     component: FoodDetailsComponent,
   },
   { path: 'cart', component: CartComponent },
+  { path: 'checkout', component: CheckoutComponent },
   {
     path: 'about-us',
     component: AboutComponent,

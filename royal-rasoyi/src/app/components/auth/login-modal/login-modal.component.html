@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Login</h2>
+<div mat-dialog-content>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Mobile Number</mat-label>
+      <input matInput type="email" formControlName="phoneNumber" required />
+      <mat-error *ngIf="loginForm.controls['phoneNumber'].invalid && loginForm.controls['phoneNumber'].touched">
+        Enter a valid 10 digit Mobile Number
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required />
+      <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+        Password must be at least 6 characters
+      </mat-error>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="rememberMe">Remember Me</mat-checkbox>
+
+    <p *ngIf="errorMessage" class="error-text">{{ errorMessage }}</p>
+
+    <div class="button-group">
+      <button mat-button class="theme-btn style-one" (click)="close()">Cancel</button>
+      <button mat-flat-button class="theme-btn style-one" color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+    </div>
+  </form>
+</div>
