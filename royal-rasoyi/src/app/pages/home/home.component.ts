@@ -22,6 +22,7 @@ import { LocationService } from '../../core/services/location.service';
 export class HomeComponent implements OnInit {
   foodMenu: any[] = [];
   categories: string[] = [];
+  address?: string;
   latitude?: number;
   longitude?: number;
   locationError: string = '';
@@ -53,6 +54,15 @@ export class HomeComponent implements OnInit {
       .then((coords) => {
         this.latitude = coords.latitude;
         this.longitude = coords.longitude;
+           // Get Address from Google API
+           this.locationService.getAddressFromCoordinates(this.latitude, this.longitude)
+           .then((address) => {
+             this.address = address;
+             console.log('Address:', this.address);
+           })
+           .catch((error) => {
+             this.locationError = error;
+           });
       })
       .catch((error) => {
         this.locationError = error.message;
