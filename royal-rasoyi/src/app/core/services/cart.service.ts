@@ -18,6 +18,12 @@ export class CartService {
   addToCart(item: any) {
     this.cartItems.push(item);
     this.cartCount.next(this.cartItems.length); // Update count
+    this.setCartItems(this.cartItems);
+  }
+
+  setCartItems(items: any) {
+    localStorage.removeItem("cartItems");
+    localStorage.setItem("cartItems", JSON.stringify(items));
   }
 
   getCartCount(): number {

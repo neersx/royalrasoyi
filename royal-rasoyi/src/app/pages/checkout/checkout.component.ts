@@ -11,8 +11,11 @@ import { AuthService } from '../../core/services/auth.service';
   styleUrl: './checkout.component.scss'
 })
 export class CheckoutComponent implements OnInit {
-
+  cartItems: any[] = [];
   user: any = null;
+  cartSubtotal: number = 0;
+  shippingFee: number = 20; // Fixed shipping fee
+  orderTotal: number = 0;
   checkoutForm: FormGroup;
 
   constructor(private readonly dialog: MatDialog, private readonly fb: FormBuilder,
@@ -26,8 +29,10 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const storedCart = localStorage.getItem("cartItems");
+    this.cartItems = storedCart ? JSON.parse(storedCart) : [];
+    this.calculateTotals();
     this.checkUserLogin();
-  
   }
 
   checkUserLogin() {
@@ -38,6 +43,11 @@ export class CheckoutComponent implements OnInit {
       this.user = JSON.parse(localStorage.getItem('user') || '{}');
       this.prefillUserDetails();
     }
+  }
+
+  calculateTotals() {
+    this.cartSubtotal = this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+    this.orderTotal = this.cartSubtotal + this.shippingFee;
   }
 
   prefillUserDetails() {

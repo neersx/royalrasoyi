@@ -99,8 +99,10 @@
                                     <a href="tel:+919005483732" class="theme-btn style-one">Call Now</a>
                                 </div>
                                 <div class="cart-button">
-                                    <i class="far fa-shopping-cart"></i>
-                                    <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+                                    <a (click)="goToCart()">
+                                        <i class="far fa-shopping-cart"></i>
+                                        <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+                                    </a>
                                   </div>
                                   
                                 <div class="navbar-toggler">

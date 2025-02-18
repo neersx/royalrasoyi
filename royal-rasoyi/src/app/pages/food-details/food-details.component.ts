@@ -70,11 +70,11 @@ export class FoodDetailsComponent {
 
   // Function to update price based on selected size
   updatePrice(size: string) {
-    console.log(size);
     const selectedItem = this.foodDetails.prices.find((item: any) => item.size === size);
     if (selectedItem) {
       this.selectedPrice = selectedItem;
       this.getMeasurementLabel(selectedItem.quantity);
+      this.isAddedToCart = !this.isAddedToCart;
     }
     this.calculateTotalPrice();
   }

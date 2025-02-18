@@ -84,15 +84,15 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>Cart Subtotal</td>
-                                                        <td class="price">$270</td>
+                                                        <td class="price">₹{{ cartSubtotal }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Shipping Fee</td>
-                                                        <td class="price">$50</td>
+                                                        <td class="price">₹{{ shippingFee }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="total"><span>Order Total</span></td>
-                                                        <td class="total price"><span>$320</span></td>
+                                                        <td class="total price"><span>₹{{ orderTotal }}</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2" class="accordion-td">
@@ -108,6 +108,7 @@
                                             </table>
                                             <button class="theme-btn style-one">Proceed to checkout</button>
                                         </div>
+                                        
                                     </div>
                                     <!--=== Payment Method ===-->
                                     <div class="payment-method mb-30 wow fadeInDown">
