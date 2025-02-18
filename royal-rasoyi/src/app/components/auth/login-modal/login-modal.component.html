@@ -3,8 +3,8 @@
   <form [formGroup]="loginForm" (ngSubmit)="login()">
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Mobile Number</mat-label>
-      <input matInput type="email" formControlName="phoneNumber" required />
-      <mat-error *ngIf="loginForm.controls['phoneNumber'].invalid && loginForm.controls['phoneNumber'].touched">
+      <input matInput type="text" formControlName="username" required />
+      <mat-error *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched">
         Enter a valid 10 digit Mobile Number
       </mat-error>
     </mat-form-field>

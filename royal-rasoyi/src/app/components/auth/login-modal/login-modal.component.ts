@@ -23,7 +23,7 @@ export class LoginModalComponent {
     private readonly authService: AuthService
   ) {
     this.loginForm = this.fb.group({
-      phoneNumber: ['', [Validators.required, Validators.minLength(10)]],
+      username: ['', [Validators.required, Validators.minLength(10)]],
       password: ['', [Validators.required, Validators.minLength(4)]]
     });
   }
@@ -36,9 +36,9 @@ export class LoginModalComponent {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe({
         next: (response: any) => {
-          localStorage.setItem('token', response.token);
-          localStorage.setItem('user', JSON.stringify(response.user));
-          this.dialogRef.close(response.user);
+          localStorage.setItem('token', response.result?.token);
+          localStorage.setItem('user', JSON.stringify(response.result?.user));
+          this.dialogRef.close(response.result?.user);
         },
         error: (err) => {
           this.errorMessage = err.error.message || 'Login failed!';
