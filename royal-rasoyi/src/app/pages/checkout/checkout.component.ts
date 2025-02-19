@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { AuthService } from '../../core/services/auth.service';
 import { LocationService } from '../../core/services/location.service';
 import { Address } from '../../models/address.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-checkout',
@@ -22,8 +23,11 @@ export class CheckoutComponent implements OnInit {
   checkoutForm: FormGroup;
   location: string | null = '';
 
+  private readonly razorpayKey = 'rzp_test_M381HyyPR09sGM';
+
+
   constructor(private readonly dialog: MatDialog, private readonly fb: FormBuilder,
-    private readonly locationService: LocationService) {
+    private readonly locationService: LocationService, private readonly http: HttpClient) {
 
     const location = localStorage.getItem("address");
     if (location) {
@@ -75,6 +79,34 @@ export class CheckoutComponent implements OnInit {
         zip: this.address?.pinCode || ''
       });
     }
+  }
+
+  async initiatePayment() {
+    const options = {
+      description: 'Sample Razorpay demo',
+      currency: 'INR',
+      amount: 100000,
+      name: 'DreamWedds',
+      key: 'rzp_test_RtmdXBzTJo1SCO',
+      orderId: '67yuhjy8uhj',  
+      image: 'https://i.imgur.com/FApqk3D.jpeg',
+      prefill: {
+        name: 'dream wedds',
+        email: 'sai@gmail.com',
+        phone: '9898989898'
+      },
+      theme: {
+        color: '#6466e3'
+      },
+      modal: {
+        ondismiss:  () => {
+          console.log('dismissed')
+        }
+      }
+    };
+
+    const razorpay = new (window as any).Razorpay(options);
+    razorpay.open();
   }
 
   openLoginModal() {
