@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { MenuListComponent } from '../../components/shared/menu-list/menu-list.component';
 import { LocationService } from '../../core/services/location.service';
+import { Address } from '../../models/address.model';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,7 @@ import { LocationService } from '../../core/services/location.service';
 export class HomeComponent implements OnInit {
   foodMenu: any[] = [];
   categories: string[] = [];
-  address?: string;
+  address?: Address;
   latitude?: number;
   longitude?: number;
   locationError: string = '';
@@ -56,8 +57,9 @@ export class HomeComponent implements OnInit {
         this.longitude = coords.longitude;
            // Get Address from Google API
            this.locationService.getAddressFromCoordinates(this.latitude, this.longitude)
-           .then((address) => {
+           .then((address: any) => {
              this.address = address;
+             localStorage.setItem("address", JSON.stringify(this.address));
              console.log('Address:', this.address);
            })
            .catch((error) => {

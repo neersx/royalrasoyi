@@ -3,43 +3,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!--===  Checkout Faqs  ===-->
-                    <div class="checkout-faqs wow fadeInUp" id="checkout-faq">
-                        <div class="alert gray-bg">
-                            <h6>Returning customer? <button class="collapsed card-header" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse0">Click here</button></h6>
-                            <div id="collapse3" class="collapse" data-bs-parent="checkout-faq">
-                                <form>
-                                    <p>Please login your accont.</p>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="email" id="email-address" name="email-address" class="form_control" value="" placeholder="Your Email Address" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="password" id="password" name="password" class="form_control" value="" placeholder="Your Password" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-footer d-flex align-items-center">
-                                        <button type="submit" class="theme-btn style-one">login</button>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="loss-passowrd">
-                                            <label class="form-check-label" for="loss-passowrd">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <a href="checkout.html" class="cl-pass">Lost your password?</a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
                     <!--=== Checkout Wrapper ===-->
                     <div class="checkout-wrapper mt-50 wow fadeInUp">
                         <!--=== Checkout Form ===-->
@@ -48,32 +11,54 @@
                                 <div class="col-xl-8">
                                     <h4 class="title mb-15">Billing Details</h4>
                                     <div class="row">
-                                      <div class="col-lg-8">
-                                        <div class="form_group">
-                                          <label>Name*</label>
-                                          <input type="text" class="form_control" placeholder="Full Name" formControlName="name" required>
+                                        <div class="col-lg-6">
+                                            <div class="form_group">
+                                                <label>Name*</label>
+                                                <input type="text" class="form_control" placeholder="Full Name" formControlName="name" required>
+                                            </div>
                                         </div>
-                                      </div>
-                                      <div class="col-lg-4">
-                                        <div class="form_group">
-                                          <label>Zip Code*</label>
-                                          <input type="text" class="form_control" placeholder="Postcode / Zip" formControlName="zip" required>
+                                
+                                        <!-- House No., Floor, Tower in the same row on Mobile -->
+                                        <div class="col-lg-3 col-sm-4 col-4">
+                                            <div class="form_group">
+                                                <label>House No.</label>
+                                                <input type="text" class="form_control" placeholder="House Number" formControlName="houseNo" required>
+                                            </div>
                                         </div>
-                                      </div>
-                                      <div class="col-lg-12">
-                                        <div class="form_group">
-                                          <label>Address*</label>
-                                          <input type="text" class="form_control" placeholder="Street Address" formControlName="address" required>
+                                        <div class="col-lg-3 col-sm-4 col-4">
+                                            <div class="form_group">
+                                                <label>Floor</label>
+                                                <input type="text" class="form_control" placeholder="Floor No" formControlName="floor" required>
+                                            </div>
                                         </div>
-                                      </div>
-                                      <div class="col-lg-12">
-                                        <div class="form_group">
-                                          <label>Order Notes (optional)</label>
-                                          <textarea class="form_control" placeholder="Notes about your order" formControlName="orderNotes"></textarea>
+                                        <div class="col-lg-4 col-sm-4 col-4">
+                                            <div class="form_group">
+                                                <label>Tower</label>
+                                                <input type="text" class="form_control" placeholder="Tower / Block" formControlName="tower" required>
+                                            </div>
                                         </div>
-                                      </div>
+                                
+                                        <div class="col-lg-8">
+                                            <div class="form_group">
+                                                <label>Location*</label>
+                                                <input type="text" class="form_control" placeholder="Apartment / Street Address" formControlName="location" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="form_group">
+                                                <label>Zip Code*</label>
+                                                <input type="text" class="form_control" placeholder="Zip" formControlName="zip" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form_group">
+                                                <label>Order Notes (optional)</label>
+                                                <textarea class="form_control" placeholder="Notes about your order" formControlName="orderNotes"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
+                                </div>
+                                
                                   
                                 <div class="col-xl-4">
                                     <!--===  Shopping Cart Area  ===-->
