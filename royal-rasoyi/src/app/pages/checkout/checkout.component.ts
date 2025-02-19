@@ -23,7 +23,7 @@ export class CheckoutComponent implements OnInit {
   checkoutForm: FormGroup;
   location: string | null = '';
 
-  private readonly razorpayKey = 'rzp_test_M381HyyPR09sGM';
+  private readonly razorpayKey = 'rzp_test_RtmdXBzTJo1SCO';
 
 
   constructor(private readonly dialog: MatDialog, private readonly fb: FormBuilder,
@@ -75,28 +75,28 @@ export class CheckoutComponent implements OnInit {
       this.checkoutForm.patchValue({
         name: this.user.name || '',
         address: this.user.address || '',
-        city: this.address?.city || '',
-        zip: this.address?.pinCode || ''
+        city: this.address?.city ?? '',
+        zip: this.address?.pinCode ?? ''
       });
     }
   }
 
-  async initiatePayment() {
+  async initiatePayment(orderId: string) {
     const options = {
-      description: 'Sample Razorpay demo',
+      description: 'Hassle free and secure payment using Razorpay at Royal रसोई to complete your order.',
       currency: 'INR',
-      amount: 100000,
-      name: 'DreamWedds',
-      key: 'rzp_test_RtmdXBzTJo1SCO',
-      orderId: '67yuhjy8uhj',  
-      image: 'https://i.imgur.com/FApqk3D.jpeg',
+      amount: this.orderTotal * 100,
+      name: 'Royal रसोई',
+      key: this.razorpayKey,
+      orderId: orderId,  
+      image: 'https://res.cloudinary.com/royalrasoyi2025/image/upload/t_Profile/v1739982172/qdkcfno8o6ydp2jeiurh.png',
       prefill: {
-        name: 'dream wedds',
-        email: 'sai@gmail.com',
-        phone: '9898989898'
+        name: this.user?.name,
+        email: this.user.email,
+        phone: this.user.phone
       },
       theme: {
-        color: '#6466e3'
+        color: '#e35e17'
       },
       modal: {
         ondismiss:  () => {
