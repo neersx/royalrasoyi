@@ -19,6 +19,9 @@ export class CheckoutComponent implements OnInit {
   address: Address | null = null;
   cartSubtotal: number = 0;
   shippingFee: number = 20;
+  totalGst: number = 0;
+  couponDiscount: number = 0;
+  discount = 0;
   orderTotal: number = 0;
   checkoutForm: FormGroup;
   location: string | null = '';
@@ -68,7 +71,10 @@ export class CheckoutComponent implements OnInit {
 
   calculateTotals() {
     this.cartSubtotal = this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-    this.orderTotal = this.cartSubtotal + this.shippingFee;
+    this.totalGst = this.cartSubtotal * 0.05;
+    this.couponDiscount = this.totalGst;
+    this.orderTotal = this.cartSubtotal + this.shippingFee + this.totalGst - this.couponDiscount;
+    
   }
 
   prefillUserDetails() {
@@ -80,6 +86,16 @@ export class CheckoutComponent implements OnInit {
         zip: this.address?.pinCode ?? ''
       });
     }
+  }
+
+  getUserAddress() {
+    // this.locationService.getUserLocation().subscribe((address: Address) => {
+    //   this.address = address;
+    // });
+  }
+
+  createOrder() : void {
+
   }
 
   async initiatePayment() {

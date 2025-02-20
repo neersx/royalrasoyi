@@ -57,8 +57,6 @@ export class LoginModalComponent {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe({
         next: (response: any) => {
-          localStorage.setItem('token', response.result?.token);
-          localStorage.setItem('user', JSON.stringify(response.result?.user));
           this.dialogRef.close(response.result?.user);
         },
         error: (err) => {

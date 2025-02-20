@@ -43,8 +43,6 @@ export class RegisterModalComponent {
           // Auto-login after registration
           this.authService.login(loginForm).subscribe({
             next: (loginResponse: any) => {
-              localStorage.setItem('token', loginResponse.result?.token);
-              localStorage.setItem('user', JSON.stringify(loginResponse.result?.user));
               this.dialogRef.close(loginResponse.result?.user);
             },
             error: () => {

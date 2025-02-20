@@ -9,7 +9,7 @@
           Name is required
         </mat-error>
       </mat-form-field>
-      
+
     <mat-form-field appearance="outline" class="form-control">
       <mat-label>Mobile Number</mat-label>
       <input matInput type="text" formControlName="phoneNumber" required />
@@ -29,7 +29,7 @@
     <p *ngIf="errorMessage" class="error-text">{{ errorMessage }}</p>
 
     <div class="button-group">
-      <button mat-button class="theme-btn style-one" (click)="close()">Cancel</button>
+      <button mat-button class="theme-btn style-two" (click)="close()">Cancel</button>
       <button mat-flat-button class="theme-btn style-one" color="primary" type="submit" [disabled]="registerForm.invalid">Register</button>
     </div>
   </form>

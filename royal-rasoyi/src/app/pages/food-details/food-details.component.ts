@@ -74,7 +74,7 @@ export class FoodDetailsComponent {
     if (selectedItem) {
       this.selectedPrice = selectedItem;
       this.getMeasurementLabel(selectedItem.quantity);
-      this.isAddedToCart = !this.isAddedToCart;
+      this.isAddedToCart = this.isAddedToCart ? false : this.isAddedToCart;
     }
     this.calculateTotalPrice();
   }

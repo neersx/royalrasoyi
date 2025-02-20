@@ -86,24 +86,40 @@
                                         </li>
                                         
                                         <li class="menu-item"><a href="tel:+919005483732">Contact</a></li>
+                                        <li *ngIf="!isUserLoggedIn" class="menu-item has-children"><a (click)="checkUserLogin()">Login</a>
+                                            <ul class="sub-menu">
+                                                <li><a (click)="openRegistration()">Register</a></li>
+                                            </ul>
+                                        </li>
+                                        <li *ngIf="isUserLoggedIn" class="menu-item has-children"><a>{{user?.name}}</a>
+                                            <ul class="sub-menu">
+                                                <li><a (click)="logout()">Log Out</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </nav>
                                 <!--=== Nav Button ===-->
-                                <div class="nav-button mt-50 d-block d-xl-none  text-center">
+                                <!-- <div class="nav-button mt-50 d-block d-xl-none  text-center">
                                     <a href="tel:+919005483732" class="theme-btn style-one">Call Now</a>
-                                </div>
+                                </div> -->
                             </div>
                             <!--=== Nav Right Item ===-->
                             <div class="nav-right-item">
-                                <div class="nav-button d-none d-xl-block">
+                                <!-- <div class="nav-button d-none d-xl-block">
                                     <a href="tel:+919005483732" class="theme-btn style-one">Call Now</a>
-                                </div>
+                                </div> -->
                                 <div class="cart-button">
                                     <a (click)="goToCart()">
                                         <i class="far fa-shopping-cart"></i>
                                         <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
                                     </a>
-                                  </div>
+                                </div>
+                                
+                                <div *ngIf="isUserLoggedIn" class="cart-button">
+                                    <a (click)="checkUserLogin()">
+                                        <i class="far fa-user"></i>
+                                    </a>
+                                </div>
                                   
                                 <div class="navbar-toggler">
                                     <span></span>

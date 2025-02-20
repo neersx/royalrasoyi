@@ -4,14 +4,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!--=== Checkout Wrapper ===-->
-                    <div class="checkout-wrapper mt-50 wow fadeInUp">
+                    <div class="checkout-wrapper mt-10 wow fadeInUp">
                         <!--=== Checkout Form ===-->
                         <form [formGroup]="checkoutForm" class="checkout-form">
                             <div class="row">
                                 <div class="col-xl-8">
-                                    <h4 class="title mb-15">Billing Details</h4>
+                                    <h4 class="title mb-15">Delivery Details</h4>
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6" style="display: none;">
                                             <div class="form_group">
                                                 <label>Name*</label>
                                                 <input type="text" class="form_control" placeholder="Full Name" formControlName="name" required>
@@ -44,7 +44,7 @@
                                                 <input type="text" class="form_control" placeholder="Apartment / Street Address" formControlName="location" required>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-8" style="display: none;">
                                             <div class="form_group">
                                                 <label>Zip Code*</label>
                                                 <input type="text" class="form_control" placeholder="Zip" formControlName="zip" required>
@@ -63,7 +63,7 @@
                                 <div class="col-xl-4">
                                     <!--===  Shopping Cart Area  ===-->
                                     <div class="shopping-cart-area mb-50 wow fadeInDown">
-                                        <h4 class="title mb-15">Your order</h4>
+                                        <h4 class="title mb-15">Billing  Summary</h4>
                                         <div class="shopping-cart-total">
                                             <table class="table">
                                                 <tbody>
@@ -76,30 +76,38 @@
                                                         <td class="price">₹{{ shippingFee }}</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>GST</td>
+                                                        <td class="price">₹{{ totalGst }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Coupon Offer</td>
+                                                        <td class="price">₹{{ couponDiscount }}</td>
+                                                    </tr>
+                                                    <tr>
                                                         <td class="total"><span>Order Total</span></td>
                                                         <td class="total price"><span>₹{{ orderTotal }}</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2" class="accordion-td">
                                                             <div class="form_group" id="accordion-coupon">
-                                                                <label data-bs-toggle="collapse" data-bs-target="#collapse01">Have A Coupon ?</label>
-                                                                <div id="collapse01" class="collapse" data-bs-parent="#paymentMethod">
-                                                                    <input type="text" class="form_control" placeholder="Coupon Code">
+                                                                <label data-bs-toggle="collapse" data-bs-target="#collapse01">Coupon Applied </label>
+                                                                <div id="collapse01" class="" data-bs-parent="#paymentMethod">
+                                                                    <input type="text" disabled class="form_control" placeholder="Coupon Code" value="GSTFREE">
                                                                 </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            <button (click)="initiatePayment()" class="theme-btn style-one">Proceed to checkout</button>
+                                            <button (click)="initiatePayment()" class="theme-btn style-one">Place Order</button>
                                         </div>
                                         
                                     </div>
                                     <!--=== Payment Method ===-->
-                                    <div class="payment-method mb-30 wow fadeInDown">
+                                    <!-- <div class="payment-method mb-30 wow fadeInDown">
                                         <h4 class="title mb-20">Payment Method</h4>
                                         <ul id="paymentMethod" class="mb-20">
-                                            <!-- Default unchecked -->
+                                          
                                             <li class="form-check">
                                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="method1" checked>
                                                 <label class="form-check-label" for="method1" data-bs-toggle="collapse" data-bs-target="#collapse0">Cash On Delivery</label>
@@ -107,7 +115,7 @@
                                                     <p>Pay with cash remains a simple and reliable choice, transcending the complexities of modern finance.</p>
                                                 </div>
                                             </li>
-                                            <!-- Default unchecked -->
+                                          
                                             <li class="form-check">
                                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="method2">
                                                 <label class="form-check-label" for="method2" data-bs-toggle="collapse" data-bs-target="#collapse1">Direct Bank Transfer</label>
@@ -115,7 +123,7 @@
                                                     <p>Please proceed with your payment directly into our bank account. Kindly use your Order ID as the payment reference. Your order will be processed once the payment reflects in our account.</p>
                                                 </div>
                                             </li>
-                                            <!-- Default unchecked -->
+                                            
                                             <li class="form-check">
                                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="method3">
                                                 <label class="form-check-label" for="method3" data-bs-toggle="collapse" data-bs-target="#collapse2">Paypal</label>
@@ -126,7 +134,7 @@
                                         </ul>
                                         <p>We will utilize your personal data to process your order, enhance your experience on our website, and for other purposes outlined in our <a href="#">privacy policy</a>.</p>
                                         <button class="theme-btn style-one">Place Order</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </form>
