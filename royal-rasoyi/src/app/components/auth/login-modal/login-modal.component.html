@@ -17,12 +17,12 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-checkbox formControlName="rememberMe">Remember Me</mat-checkbox>
+    <!-- <mat-checkbox formControlName="rememberMe">Remember Me</mat-checkbox> -->
 
     <p *ngIf="errorMessage" class="error-text">{{ errorMessage }}</p>
 
     <div class="button-group">
-      <button mat-button class="theme-btn style-one" (click)="close()">Cancel</button>
+      <button mat-button class="theme-btn style-one" (click)="register()">Register</button>
       <button mat-flat-button class="theme-btn style-one" color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
     </div>
   </form>

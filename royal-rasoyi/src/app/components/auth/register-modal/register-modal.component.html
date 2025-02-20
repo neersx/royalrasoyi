@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Register</h2>
+<div mat-dialog-content>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+    <mat-form-field appearance="outline" class=" form-control">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" required />
+        <mat-error *ngIf="registerForm.controls['name'].invalid && registerForm.controls['name'].touched">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+      
+    <mat-form-field appearance="outline" class="form-control">
+      <mat-label>Mobile Number</mat-label>
+      <input matInput type="text" formControlName="phoneNumber" required />
+      <mat-error *ngIf="registerForm.controls['phoneNumber'].invalid && registerForm.controls['phoneNumber'].touched">
+        Enter a valid 10-digit Mobile Number
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width form-control">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required />
+      <mat-error *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+        Password must be at least 6 characters
+      </mat-error>
+    </mat-form-field>
+
+    <p *ngIf="errorMessage" class="error-text">{{ errorMessage }}</p>
+
+    <div class="button-group">
+      <button mat-button class="theme-btn style-one" (click)="close()">Cancel</button>
+      <button mat-flat-button class="theme-btn style-one" color="primary" type="submit" [disabled]="registerForm.invalid">Register</button>
+    </div>
+  </form>
+</div>

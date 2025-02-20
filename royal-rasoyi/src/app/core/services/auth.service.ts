@@ -6,12 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private readonly apiUrl = 'http://strikeminds.com/auth/api/auth/login'; // Replace with actual API URL
+  private readonly apiUrl = 'http://strikeminds.com/auth/api/auth'; // Replace with actual API URL
 
   constructor(private readonly http: HttpClient) {}
 
-  login(credentials: { phoneNumber: string; password: string }): Observable<any> {
-    return this.http.post<any>(this.apiUrl, credentials);
+  login(credentials: { username: string; password: string }): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/login`, credentials);
+  }
+
+  register(credentials: { phoneNumber: string; password: string; name: string }): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/register`, credentials);
   }
 
   getToken(): string | null {

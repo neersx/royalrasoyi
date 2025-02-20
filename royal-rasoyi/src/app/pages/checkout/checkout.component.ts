@@ -22,6 +22,7 @@ export class CheckoutComponent implements OnInit {
   orderTotal: number = 0;
   checkoutForm: FormGroup;
   location: string | null = '';
+  orderid: string | null = '';
 
   private readonly razorpayKey = 'rzp_test_RtmdXBzTJo1SCO';
 
@@ -48,10 +49,10 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.checkUserLogin();
     const storedCart = localStorage.getItem("cartItems");
     this.cartItems = storedCart ? JSON.parse(storedCart) : [];
     this.calculateTotals();
-    this.checkUserLogin();
   }
   
 
@@ -81,14 +82,14 @@ export class CheckoutComponent implements OnInit {
     }
   }
 
-  async initiatePayment(orderId: string) {
+  async initiatePayment() {
     const options = {
       description: 'Hassle free and secure payment using Razorpay at Royal रसोई to complete your order.',
       currency: 'INR',
       amount: this.orderTotal * 100,
       name: 'Royal रसोई',
       key: this.razorpayKey,
-      orderId: orderId,  
+      orderId: this.orderid,  
       image: 'https://res.cloudinary.com/royalrasoyi2025/image/upload/t_Profile/v1739982172/qdkcfno8o6ydp2jeiurh.png',
       prefill: {
         name: this.user?.name,

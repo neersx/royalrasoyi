@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogRef, MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService } from '../../../core/services/auth.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { RegisterModalComponent } from '../register-modal/register-modal.component';
 
 
 @Component({
@@ -16,10 +18,12 @@ import { AuthService } from '../../../core/services/auth.service';
 export class LoginModalComponent {
   loginForm: FormGroup;
   errorMessage: string = '';
+  user: any;
 
   constructor(
     private readonly dialogRef: MatDialogRef<LoginModalComponent>,
     private readonly fb: FormBuilder,
+    private readonly dialog: MatDialog,
     private readonly authService: AuthService
   ) {
     this.loginForm = this.fb.group({
@@ -30,6 +34,23 @@ export class LoginModalComponent {
 
   close() {
     this.dialogRef.close();
+  }
+
+  register() {
+    this.dialogRef.close('login');
+    this.openRegisterModal();
+  }
+
+  openRegisterModal() {
+    const dialogRef = this.dialog.open(RegisterModalComponent, {
+      width: '600px'
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      if (result) {
+        this.user = result;
+      }
+    });
   }
 
   login() {
