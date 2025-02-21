@@ -1,7 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { LoginModalComponent } from '../../components/auth/login-modal/login-modal.component';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { AuthService } from '../../core/services/auth.service';
 import { LocationService } from '../../core/services/location.service';
 import { Address } from '../../models/address.model';
@@ -11,53 +17,65 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-checkout',
   imports: [MatDialogModule, FormsModule, ReactiveFormsModule],
   templateUrl: './checkout.component.html',
-  styleUrl: './checkout.component.scss'
+  styleUrl: './checkout.component.scss',
 })
-export class CheckoutComponent implements OnInit {
+export class CheckoutComponent implements OnInit, AfterViewInit {
   cartItems: any[] = [];
   user: any = null;
   address: Address | null = null;
   cartSubtotal: number = 0;
-  shippingFee: number = 20;
+  shippingFee: number = 0;
   totalGst: number = 0;
   couponDiscount: number = 0;
   discount = 0;
   orderTotal: number = 0;
-  checkoutForm: FormGroup;
+  addressForm: FormGroup;
   location: string | null = '';
   orderid: string | null = '';
 
   private readonly razorpayKey = 'rzp_test_RtmdXBzTJo1SCO';
 
-
-  constructor(private readonly dialog: MatDialog, private readonly fb: FormBuilder,
-    private readonly locationService: LocationService, private readonly http: HttpClient) {
-
-    const location = localStorage.getItem("address");
+  constructor(
+    private readonly dialog: MatDialog,
+    private readonly fb: FormBuilder,
+    private readonly locationService: LocationService,
+    private readonly http: HttpClient
+  ) {
+    const location = localStorage.getItem('address');
     if (location) {
       this.address = JSON.parse(location);
       this.location = `${this.address?.premise}, ${this.address?.street}, ${this.address?.locality}, ${this.address?.city}`;
       console.log(this.address);
     }
 
-    this.checkoutForm = this.fb.group({
+    this.addressForm = this.fb.group({
       name: ['', Validators.required],
       houseNo: ['', Validators.required],
-      floor: ['', Validators.required],
+      floor: [''],
       tower: ['', Validators.required],
       location: [this.location, Validators.required],
       zip: [this.address?.pinCode, Validators.required],
-      orderNotes: ['']
+      orderNotes: [''],
     });
   }
 
   ngOnInit(): void {
     this.checkUserLogin();
-    const storedCart = localStorage.getItem("cartItems");
+    const storedCart = localStorage.getItem('cartItems');
     this.cartItems = storedCart ? JSON.parse(storedCart) : [];
     this.calculateTotals();
   }
-  
+
+  ngAfterViewInit(): void {
+    this.addressForm.valueChanges.subscribe((values) => {
+      if (values) {
+        localStorage.setItem(
+          'userAddress',
+          JSON.stringify(this.addressForm.value)
+        );
+      }
+    });
+  }
 
   checkUserLogin() {
     const token = localStorage.getItem('token');
@@ -70,56 +88,61 @@ export class CheckoutComponent implements OnInit {
   }
 
   calculateTotals() {
-    this.cartSubtotal = this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+    this.cartSubtotal = this.cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
     this.totalGst = this.cartSubtotal * 0.05;
     this.couponDiscount = this.totalGst;
-    this.orderTotal = this.cartSubtotal + this.shippingFee + this.totalGst - this.couponDiscount;
-    
+    this.orderTotal =
+      this.cartSubtotal +
+      this.shippingFee +
+      this.totalGst -
+      this.couponDiscount;
   }
 
   prefillUserDetails() {
     if (this.user) {
-      this.checkoutForm.patchValue({
+      const userAddress = localStorage.getItem('userAddress');
+      const formValues = JSON.parse(userAddress ?? '{}');
+
+      // Patch the values into the form
+      this.addressForm.patchValue(formValues);
+      this.addressForm.patchValue({
         name: this.user.name || '',
         address: this.user.address || '',
         city: this.address?.city ?? '',
-        zip: this.address?.pinCode ?? ''
+        zip: this.address?.pinCode ?? '',
       });
     }
   }
 
-  getUserAddress() {
-    // this.locationService.getUserLocation().subscribe((address: Address) => {
-    //   this.address = address;
-    // });
-  }
-
-  createOrder() : void {
-
-  }
+  createOrder(): void {}
 
   async initiatePayment() {
     const options = {
-      description: 'Hassle free and secure payment using Razorpay at Royal रसोई to complete your order.',
+      description:
+        'Hassle free and secure payment using Razorpay at Royal रसोई to complete your order.',
       currency: 'INR',
       amount: this.orderTotal * 100,
       name: 'Royal रसोई',
       key: this.razorpayKey,
-      orderId: this.orderid,  
-      image: 'https://res.cloudinary.com/royalrasoyi2025/image/upload/t_Profile/v1739982172/qdkcfno8o6ydp2jeiurh.png',
+      orderId: this.orderid,
+      image:
+        'https://res.cloudinary.com/royalrasoyi2025/image/upload/t_Profile/v1739982172/qdkcfno8o6ydp2jeiurh.png',
       prefill: {
         name: this.user?.name,
         email: this.user.email,
-        phone: this.user.phone
+        phone: this.user.phone,
       },
       theme: {
-        color: '#e35e17'
+        color: '#e35e17',
       },
       modal: {
-        ondismiss:  () => {
-          console.log('dismissed')
-        }
-      }
+        ondismiss: () => {
+          console.log('dismissed');
+        },
+      },
     };
 
     const razorpay = new (window as any).Razorpay(options);
@@ -128,14 +151,13 @@ export class CheckoutComponent implements OnInit {
 
   openLoginModal() {
     const dialogRef = this.dialog.open(LoginModalComponent, {
-      width: '400px'
+      width: '400px',
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.user = result;
       }
     });
   }
-
 }

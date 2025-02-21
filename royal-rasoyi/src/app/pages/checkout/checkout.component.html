@@ -6,7 +6,7 @@
                     <!--=== Checkout Wrapper ===-->
                     <div class="checkout-wrapper mt-10 wow fadeInUp">
                         <!--=== Checkout Form ===-->
-                        <form [formGroup]="checkoutForm" class="checkout-form">
+                        <form [formGroup]="addressForm" class="checkout-form">
                             <div class="row">
                                 <div class="col-xl-8">
                                     <h4 class="title mb-15">Delivery Details</h4>
@@ -90,7 +90,7 @@
                                                     <tr>
                                                         <td colspan="2" class="accordion-td">
                                                             <div class="form_group" id="accordion-coupon">
-                                                                <label data-bs-toggle="collapse" data-bs-target="#collapse01">Coupon Applied </label>
+                                                                <label data-bs-toggle="collapse" data-bs-target="#collapse01">Default Coupon Applied </label>
                                                                 <div id="collapse01" class="" data-bs-parent="#paymentMethod">
                                                                     <input type="text" disabled class="form_control" placeholder="Coupon Code" value="GSTFREE">
                                                                 </div>
