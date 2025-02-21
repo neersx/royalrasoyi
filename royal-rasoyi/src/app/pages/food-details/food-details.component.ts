@@ -54,10 +54,13 @@ export class FoodDetailsComponent {
       this.foodDetails = this.foodMenuList.filter((f: any) => f.name === this.foodName)[0];
       if(!this.foodDetails) return;
       
+
       this.selectedSize = this.foodDetails.defaultSize; // Initialize with default size
-      this.selectedPrice = this.foodDetails.prices.find((item: any) => item.size === this.foodDetails.defaultSize);
-      this.totalAmount = this.selectedPrice.price;
-      this.getMeasurementLabel(this.selectedPrice.quantity);
+        this.selectedPrice = this.foodDetails.prices.find((item: any) => item.size === this.foodDetails.defaultSize);
+        this.totalAmount = this.selectedPrice.price;
+        this.getMeasurementLabel(this.selectedPrice.quantity);
+     
+     
       this.selectedQuantity = 1;
 
       this.updateMetaTags(this.foodDetails);

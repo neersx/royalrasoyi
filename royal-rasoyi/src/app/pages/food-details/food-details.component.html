@@ -59,7 +59,7 @@
                       </button>
                     </div>
                   </li>
-                  <li>
+                  <li *ngIf="selectedSize">
                     <select class="wide" [(ngModel)]="selectedSize" (change)="updatePrice(selectedSize)">
                       <option class="wide nice-select" *ngFor="let item of foodDetails.prices" [value]="item.size">
                         {{ item.size }}

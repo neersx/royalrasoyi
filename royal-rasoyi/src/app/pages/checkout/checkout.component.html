@@ -72,16 +72,16 @@
                                                         <td class="price">₹{{ cartSubtotal }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Shipping Fee</td>
-                                                        <td class="price">₹{{ shippingFee }}</td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>GST</td>
                                                         <td class="price">₹{{ totalGst }}</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>Shipping Fee</td>
+                                                        <td class="price">₹{{ shippingFee }}</td>
+                                                    </tr>
+                                                    <tr>
                                                         <td>Coupon Offer</td>
-                                                        <td class="price">₹{{ couponDiscount }}</td>
+                                                        <td class="price">- ₹{{ couponDiscount }}</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="total"><span>Order Total</span></td>
@@ -99,7 +99,8 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            <button (click)="initiatePayment()" class="theme-btn style-one">Place Order</button>
+                                            <p>Place Order is not yet implemented. Come back again tomorrow, we are working on it. Thanks</p>
+                                            <button  class="theme-btn style-one">Place Order</button>
                                         </div>
                                         
                                     </div>

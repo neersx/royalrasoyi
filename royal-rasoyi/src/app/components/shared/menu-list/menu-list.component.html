@@ -48,7 +48,7 @@
                       color: rgba(0, 0, 0, 0.4);
                       margin-left: 10px;" class="pre-price">
                         {{ item.price || '0.00' }}
-                      </span> {{ item.price - Math.floor((item.price / 100 * item.discount)) || '0.00' }} {{ item.measurement }}
+                      </span> {{ item.price - Math.floor((item.price / 100 * item.discount)) || '0.00' }} 
                     </span>
                     <span class="rating">
                       <i class="fas fa-star"></i><a href="#">{{ item.ratings }}</a>

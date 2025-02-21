@@ -197,9 +197,9 @@ export class FoodMenuService {
         "lastUpdatedOn": "2025-01-05T00:00:00Z",
         "type": "Dish",
         "availableToday": true,
-        "size": "MEDIUM",
+        "defaultSize": null,
         "price": 450,
-        "prices": [],
+        "prices": [{"size": null, "quantity": 1, "price": 450}],
         "quantity": 1,
         "measurement": "plate",
         "addons": ["Extra Curry", "Dessert"],
@@ -1613,15 +1613,15 @@ export class FoodMenuService {
       },
       {
         "id": 27,
-        "name": "sunahari-gujiya",
-        "title": "Sunahari Gujiya",
+        "name": "jagery-gujiya",
+        "title": "Jagery Gujiya",
         "bestSeason": "Holi & Festivals",
         "isNonVeg": false,
         "ingredients": [
           { "id": 1, "name": "Maida (Refined Flour)", "healthBenefits": "Provides energy and texture" },
           { "id": 2, "name": "Khoya (Mawa)", "healthBenefits": "Rich in proteins and calcium" },
           { "id": 3, "name": "Dry Fruits", "healthBenefits": "Loaded with vitamins and minerals" },
-          { "id": 4, "name": "Sugar", "healthBenefits": "Instant energy booster" },
+          { "id": 4, "name": "Jagery", "healthBenefits": "Instant energy booster and natural sweetner" },
           { "id": 5, "name": "Cardamom", "healthBenefits": "Aids digestion and adds aroma" }
         ],
         "region": "North India",
@@ -1629,16 +1629,18 @@ export class FoodMenuService {
           {
             "id": 1,
             "name": "Gujiya Image",
-            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1739112098/rndankhjradxzz6v7kxt.jpg"
+            "url": "https://res.cloudinary.com/royalrasoyi2025/image/upload/v1740162446/di17oleqbkatmh5kikho.jpg"
           }
         ],
         "description": "A crispy and delicious festive sweet filled with rich khoya and dry fruits, deep-fried to perfection.",
         "category": "sweets",
         "lifeInDays": 15,
         "flavourType": "sweet",
-        "size": "MEDIUM",
-        "price": 345,
-        "measurement": "per 500g",
+        "defaultSize": "Medium",
+        "price": 411,
+        "prices": [{"size": "Small", "quantity": 250, "price": 205}, {"size": "Medium", "quantity": 500, "price": 411 }, {"size": "Large", "quantity": 1000, "price": 820}],
+        "quantity": null,
+        "measurement": "gm",
         "addons": ["Extra Dry Fruits", "Saffron Topping"],
         "discount": 10,
         "days": "Available on Festivals",
