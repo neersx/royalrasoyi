@@ -7,6 +7,7 @@ import { WhyUsComponent } from './pages/why-us/why-us.component';
 import { NgModule } from '@angular/core';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { PaymentConfirmationComponent } from './pages/payment-confirmation/payment-confirmation.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,7 @@ export const routes: Routes = [
   },
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'payment-confirmed', component: PaymentConfirmationComponent },
   {
     path: 'about-us',
     component: AboutComponent,

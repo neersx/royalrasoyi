@@ -1,0 +1,38 @@
+<!--====== Start Checkout Section ======-->
+<section class="checkout-section pt-130 pb-100">
+    <div class="container">
+        <div class="confirmation-container">
+            <h2>✅ Payment Successful! Your Order is Confirmed 🎉</h2>
+
+            <div class="order-summary">
+                <h3>Your Order:</h3>
+                <div *ngFor="let item of orderDetails.items" class="order-item">
+                    <img [src]="item.image" [alt]="item.name" class="item-image" />
+                    <div class="item-details">
+                        <h4>{{ item.name }}</h4>
+                        <p><strong>Ingredients:</strong> {{ item.ingredients.join(', ') }}</p>
+                        <p><strong>Health Benefits:</strong> {{ item.benefits }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usp-section">
+                <h3>🌿 Why Royal रसोई?</h3>
+                <p>We use **fresh, natural, and organic ingredients** 🥗🍯. No preservatives, no old stock.</p>
+                <p><strong>Other restaurants use:</strong> ❌ Stale food ❌ Artificial flavors ❌ Excess oil & sugar</p>
+            </div>
+
+            <div class="social-media">
+                <h3>📢 Spread the Word!</h3>
+                <button (click)="shareOnSocialMedia('facebook')">📘 Share on Facebook</button>
+                <button (click)="shareOnSocialMedia('twitter')">🐦 Share on Twitter</button>
+                <a [href]="socialMediaLinks.instagram" target="_blank">📸 Follow us on Instagram</a>
+            </div>
+
+            <div class="actions">
+                <button class="order-again">🍽️ Order Again</button>
+                <button class="download-invoice">📜 Download Invoice</button>
+            </div>
+        </div>
+    </div>
+</section><!--====== End Checkout Section ======-->
