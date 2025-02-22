@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { CartService } from '../../../core/services/cart.service';
 import { LoginModalComponent } from '../../auth/login-modal/login-modal.component';
@@ -11,14 +11,15 @@ import { RegisterModalComponent } from '../../auth/register-modal/register-modal
   selector: 'app-top-menu-header',
   imports: [CommonModule, RouterLink, RouterModule],
   templateUrl: './top-menu-header.component.html',
-  styleUrl: './top-menu-header.component.scss'
+  styleUrl: './top-menu-header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TopMenuHeaderComponent implements OnInit, AfterViewInit {
   cartCount: number = 0;
   isUserLoggedIn: boolean = false;
   user: any = null;
 
-  constructor(private readonly authService: AuthService, private readonly cartService: CartService, private readonly dialog: MatDialog, private readonly router: Router) {}
+  constructor(private readonly authService: AuthService, private readonly cartService: CartService, private readonly dialog: MatDialog, private readonly router: Router, private readonly cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.checkUserLogin();
@@ -31,11 +32,13 @@ export class TopMenuHeaderComponent implements OnInit, AfterViewInit {
       const storedCart = localStorage.getItem("cartItems");
       this.cartCount = storedCart ? JSON.parse(storedCart).length : 0;
     }
+    this.cdr.markForCheck();
   }
 
   ngAfterViewInit(): void {
       this.authService.userData$.subscribe((user: any) => {
         this.isUserLoggedIn = !!user;
+        this.cdr.detectChanges();
       });
   }
 
@@ -80,7 +83,10 @@ export class TopMenuHeaderComponent implements OnInit, AfterViewInit {
       dialogRef.afterClosed().subscribe((result: any) => {
         if (result) {
           console.log(result, 'header login result');
+          this.cdr.detectChanges();
         }
       });
+
+      this.cdr.detectChanges();
     }
 }

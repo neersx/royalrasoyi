@@ -80,6 +80,7 @@ export class FoodDetailsComponent {
       this.isAddedToCart = this.isAddedToCart ? false : this.isAddedToCart;
     }
     this.calculateTotalPrice();
+    this.cdr.markForCheck();
   }
 
   // Function to calculate total price based on selected quantity
