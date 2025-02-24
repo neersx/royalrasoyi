@@ -88,6 +88,27 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
     }
   }
 
+  prepareCartHeader() {
+    const cartHeader = {
+      userId: this.user.id,
+      name: this.user.name,
+      email: this.user.email,
+      phone: this.user.phone,
+      address: this.addressForm.value,
+      couponCode: 'GSTFREE',
+      discount : this.discount,
+      cartTotal : this.cartSubtotal,
+      shippingFee: this.shippingFee,
+      gst: this.totalGst,
+      orderTotal: this.orderTotal,
+      cartDetails: this.cartItems.map((item) => ({
+        id: item.id,
+        quantity: item.quantity,
+      })),
+    };
+    return cartHeader;
+    };
+
   calculateTotals() {
     this.cartSubtotal = this.cartItems.reduce(
       (total, item) => total + item.price * item.quantity,

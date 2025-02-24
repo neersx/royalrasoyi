@@ -94,8 +94,13 @@ export class FoodDetailsComponent {
 
 
   addToCart() {
-    const foodItem = { id: this.foodDetails.id, image: this.foodDetails.images[0], name: this.foodDetails.title, quantity: this.selectedQuantity, price: this.totalAmount }; // Example item
+    const foodItem = { id: this.foodDetails.id, image: this.foodDetails.images[0], name: this.foodDetails.title, 
+      quantity: this.selectedQuantity, 
+      price: this.totalAmount,
+      measurementUnit : this.measurementUnit,
+      }; // Example item
     this.cartService.addToCart(foodItem);
+    console.log('Added to cart', foodItem);
     this.isAddedToCart = true;
   }
 
