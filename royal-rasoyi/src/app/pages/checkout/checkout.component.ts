@@ -33,7 +33,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
   location: string | null = '';
   orderid: string | null = '';
 
-  private readonly razorpayKey = 'rzp_live_PLBP5NKNs69xqz';
+  private readonly razorpayKey = 'rzp_live_YpjN5qGZG453wJ';
   private readonly razorpaySecret = 'f55EzMygz2pf53PEkQsbaDPT';
 
   constructor(
