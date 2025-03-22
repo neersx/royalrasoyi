@@ -12,6 +12,7 @@ import { NgbModal, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { AppStateService } from '../../services/app-state.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { AuthService } from '../../../services/identity/auth.service';
 interface Item {
   id: number;
   name: string;
@@ -30,6 +31,7 @@ export class HeaderComponent implements OnInit {
   notificationCount: number = 5;
   public isCollapsed = true;
   collapse: any;
+  user: any;
   closeResult = '';
   themeType: string | undefined;
 
@@ -41,6 +43,7 @@ export class HeaderComponent implements OnInit {
     private elementRef: ElementRef,
     public renderer: Renderer2,
     public modalService:NgbModal,
+    private readonly authService: AuthService,
     private router: Router, private activatedRoute: ActivatedRoute
   ) {this.localStorageBackUp()}
 
@@ -53,6 +56,17 @@ export class HeaderComponent implements OnInit {
 
   closeDropdown() {
     this.isOpen = false;
+  }
+
+  checkUserLogin() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      // this.openLoginModal();
+    } else {
+      this.user = JSON.parse(localStorage.getItem('user') || '{}');
+      // this.isUserLoggedIn = !!this.user;
+      // this.prefillUserDetails();
+    }
   }
 
   handleItemClick(title: string) {
@@ -269,6 +283,7 @@ export class HeaderComponent implements OnInit {
   public SearchResultEmpty: boolean = false;
 
   ngOnInit(): void {
+    this.checkUserLogin();
     const storedSelectedItem = localStorage.getItem('selectedItem');
     // this.updateSelectedItem();
   // If there's no selected item stored, set a default one
@@ -296,6 +311,15 @@ export class HeaderComponent implements OnInit {
     const dashboard = this.activatedRoute.snapshot.firstChild?.url[0]?.path;
     this.selectedItem = dashboard ? dashboard.charAt(0).toUpperCase() + dashboard.slice(1) + ' Dashboard' : this.selectedItem;
   }
+  logout() {
+    this.authService.logout();
+    this.user = null;
+    this.router.navigate(['/auth/login']);
+    localStorage.setItem('token', '');
+    localStorage.setItem('user', ''); 
+  }
+
+  
   ngOnDestroy(): void {
     const windowObject: any = window;
     let html = this.elementRef.nativeElement.ownerDocument.documentElement;

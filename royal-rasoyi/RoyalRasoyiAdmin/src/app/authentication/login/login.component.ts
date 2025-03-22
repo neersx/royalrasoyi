@@ -6,6 +6,7 @@ import { Router, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { AuthService } from '../../shared/services/auth.service';
+import { AuthService as Auth } from '../../services/identity/auth.service';
 import { FirebaseService } from '../../shared/services/firebase.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -45,6 +46,7 @@ constructor(
   @Inject(DOCUMENT) private document: Document,private elementRef: ElementRef,
  private sanitizer: DomSanitizer,
   public authservice: AuthService,
+  public auth: Auth,
   private router: Router,
   private formBuilder: FormBuilder,
   private renderer: Renderer2,
@@ -66,8 +68,8 @@ ngOnDestroy(): void {
 }
 ngOnInit(): void {
   this.loginForm = this.formBuilder.group({
-    username: ['spruko@admin.com', [Validators.required, Validators.email]],
-    password: ['sprukoadmin', Validators.required],
+    username: ['', [Validators.required]],
+    password: ['', Validators.required],
   });
 // Initialize Firebase services here
 this.firestoreModule = this.firebaseService.getFirestore();
@@ -77,8 +79,8 @@ this.authModule = this.firebaseService.getAuth();
 
 // firebase
 
-email = 'spruko@admin.com';
-password = 'sprukoadmin';
+phoneNumber = '';
+password = '';
 errorMessage = ''; // validation _error handle
 _error: { name: string; message: string } = { name: '', message: '' }; // for firbase _error handle
 
@@ -90,20 +92,26 @@ clearErrorMessage() {
 login() {
   // this.disabled = "btn-loading"
   this.clearErrorMessage();
-  if (this.validateForm(this.email, this.password)) {
-    this.authservice
-      .loginWithEmail(this.email, this.password)
-      .then(() => {
-        this.router.navigate(['/dashboards/sales']);
-        console.clear();
-        this.toastr.success('login successful','zeno', {
-          timeOut: 3000,
-          positionClass: 'toast-top-right',
-        });
-      })
-      .catch((_error: any) => {
-        this._error = _error;
-        this.router.navigate(['/']);
+  if (this.validateForm(this.loginForm.value.username, this.loginForm.value.password)) {
+    this.auth
+      .login(this.loginForm.value)
+      .subscribe({
+        next: (res: any) => {
+          if(res.isSuccess){
+          console.log(res);
+          this.router.navigate(['/dashboards/sales']);
+          this.toastr.success('login successful','Royal रसोई', {
+            timeOut: 3000,
+            positionClass: 'toast-top-right',
+          });
+          }
+          console.clear();
+
+        },
+        error: (_error: any) => {
+          this._error = _error;
+          this.router.navigate(['/']);
+        }
       });
    
   }
@@ -115,9 +123,9 @@ login() {
   }
 }
 
-validateForm(email: string, password: string) {
-  if (email.length === 0) {
-    this.errorMessage = 'please enter email id';
+validateForm(phoneNumber: string, password: string) {
+  if (phoneNumber.length === 0) {
+    this.errorMessage = 'please enter phoneNumber id';
     return false;
   }
 
@@ -147,14 +155,9 @@ get form() {
 Submit() {
   console.log(this.loginForm)
   if (
-    this.loginForm.controls['username'].value === 'spruko@admin.com' &&
-    this.loginForm.controls['password'].value === 'sprukoadmin'
+    this.loginForm.valid
   ) {
-    this.router.navigate(['/dashboards/sales']);
-    this.toastr.success('login successful','zeno', {
-      timeOut: 3000,
-      positionClass: 'toast-top-right',
-    });
+   this.login();
   } else {
     this.toastr.error('Invalid details','zeno', {
       timeOut: 3000,
