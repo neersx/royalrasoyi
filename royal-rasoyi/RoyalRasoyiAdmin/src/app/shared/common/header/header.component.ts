@@ -45,7 +45,10 @@ export class HeaderComponent implements OnInit {
     public modalService:NgbModal,
     private readonly authService: AuthService,
     private router: Router, private activatedRoute: ActivatedRoute
-  ) {this.localStorageBackUp()}
+  ) {
+    this.checkUserLogin();
+    this.localStorageBackUp()
+  }
 
   private offcanvasService = inject(NgbOffcanvas);
 
@@ -283,7 +286,7 @@ export class HeaderComponent implements OnInit {
   public SearchResultEmpty: boolean = false;
 
   ngOnInit(): void {
-    this.checkUserLogin();
+   
     const storedSelectedItem = localStorage.getItem('selectedItem');
     // this.updateSelectedItem();
   // If there's no selected item stored, set a default one
@@ -311,6 +314,7 @@ export class HeaderComponent implements OnInit {
     const dashboard = this.activatedRoute.snapshot.firstChild?.url[0]?.path;
     this.selectedItem = dashboard ? dashboard.charAt(0).toUpperCase() + dashboard.slice(1) + ' Dashboard' : this.selectedItem;
   }
+
   logout() {
     this.authService.logout();
     this.user = null;

@@ -535,7 +535,7 @@
                 <ul ngbDropdownMenu class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end" aria-labelledby="mainHeaderProfile">
                     <li>
                         <div ngbDropdownItem class="dropdown-item text-center border-bottom">
-                            <span>
+                            <span *ngIf="user">
                                 {{user.name}}
                             </span>
                             <span class="d-block fs-12 text-muted">Designer</span>

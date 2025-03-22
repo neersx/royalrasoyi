@@ -23,6 +23,7 @@ import { SpkSalesCardComponent } from '../../../@spk/reusable-dashboards/spk-sal
 export class SalesComponent {
   inlineDatePicker: boolean = false;
   weekNumbers!: true
+  user: any;
   // selectedDate: Date | null = null; 
   flatpickrOptions: any = {
     inline: true,
@@ -35,7 +36,20 @@ export class SalesComponent {
   };
 
   ngOnInit() {
+    this.checkUserLogin();
     this.cdr.detectChanges(); 
+
+  }
+
+  checkUserLogin() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      // this.openLoginModal();
+    } else {
+      this.user = JSON.parse(localStorage.getItem('user') || '{}');
+      // this.isUserLoggedIn = !!this.user;
+      // this.prefillUserDetails();
+    }
   }
 
 chartOptions:any = {
