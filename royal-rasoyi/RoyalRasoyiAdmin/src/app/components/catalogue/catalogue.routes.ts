@@ -20,6 +20,13 @@ export const admin: Routes = [
           ),
       },
       {
+        path: 'edit-food-details/:id',
+        loadComponent: () =>
+          import('./edit-food-details/edit-food-details.component').then(
+            (m) => m.EditFoodDetailsComponent
+          ),
+      },
+      {
         path: 'food-items',
         loadComponent: () =>
           import('./food-items/food-items.component').then(

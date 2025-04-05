@@ -10,10 +10,10 @@ import { FilePondComponent } from 'ngx-filepond';
 import { FilePondOptions } from 'filepond';
 import { AngularEditorConfig } from '@wfpena/angular-wysiwyg';
 import { AngularEditorModule } from '@kolkov/angular-editor';
-import { SharedModule } from '../../../sharedmodule';
 import { SpkFlatpickrComponent } from '../../../@spk/spk-flatpickr/spk-flatpickr.component';
 import { SpkNgSelectComponent } from '../../../@spk/spk-ng-select/spk-ng-select.component';
 import jsonDoc from '../../../shared/data/editor';
+import { SharedModule } from '../../../shared/sharedmodule';
 
 @Component({
   selector: 'app-edit-food-details',

@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, ViewChild } from '@angular/core';
-import { SharedModule } from '../../../../shared/sharedmodule';
+
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GalleryItem, Gallery, ImageItem, ImageSize, ThumbnailsPosition,GalleryModule } from 'ng-gallery';
@@ -7,10 +7,12 @@ import { Lightbox, LightboxModule } from 'ng-gallery/lightbox';
 import Swiper from 'swiper'
 import { register as registerSwiperElements } from 'swiper/element';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { SharedModule } from '../../../../shared/sharedmodule';
 import { ProductdetailsService } from '../../../../shared/services/e-commerce/productdetails.service';
 import { ShopServiceService } from '../../../../shared/services/e-commerce/shop-service.service';
 import { SpkProductsReusableCardComponent } from '../../../../@spk/reusable-apps/spk-products-reusable-card/spk-products-reusable-card.component';
 import { SpkGalleryComponent } from '../../../../@spk/spk-reusable-plugins/spk-gallery/spk-gallery.component';
+import { SwiperComponent } from '../../../../@spk/spk-reusable-plugins/swiper/swiper.component';
 Swiper.use([Autoplay, Navigation, Pagination]);
 registerSwiperElements();
 const data = [
@@ -26,7 +28,7 @@ const data = [
   selector: 'app-productdetails',
   standalone: true,
   imports: [SharedModule,RouterModule,GalleryModule,NgbModule,SpkGalleryComponent,
-    LightboxModule,SpkProductsReusableCardComponent],
+    LightboxModule,SpkProductsReusableCardComponent, SwiperComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './productdetails.component.html',
   styleUrl: './productdetails.component.scss'

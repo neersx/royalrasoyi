@@ -44,7 +44,7 @@
                                 <td>{{list.createdOn}}</td>
                                 <td>
                                     <div class="hstack gap-2 fs-15">
-                                        <a routerLink="/apps/ecommerce/editproducts" class="btn btn-icon btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
+                                        <a [routerLink]="['/catalogue/edit-food-details/', 23423]" class="btn btn-icon btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
                                         <a href="javascript:void(0);" (click)="Remove(list.id)" class="btn btn-icon btn-sm btn-danger-light product-btn"><i class="ri-delete-bin-line"></i></a>
                                     </div>
                                 </td>
