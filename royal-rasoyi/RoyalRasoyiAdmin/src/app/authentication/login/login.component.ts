@@ -1,12 +1,17 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, Renderer2 } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
-import { AuthService } from '../../shared/services/auth.service';
-import { AuthService as Auth } from '../../services/identity/auth.service';
+import { AuthService as Auth, AuthService } from '../../services/identity/auth.service';
 import { FirebaseService } from '../../shared/services/firebase.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -16,20 +21,30 @@ import { SharedModule } from '../../shared/sharedmodule';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule,NgbModule,FormsModule,ReactiveFormsModule ,AngularFireModule,SharedModule,
+  imports: [
+    RouterModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule,
+    SharedModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule,ToastrModule
-],
-  
-    providers: [FirebaseService,{ provide: ToastrService, useClass: ToastrService }],
+    AngularFirestoreModule,
+    ToastrModule,
+  ],
+
+  providers: [
+    FirebaseService,
+    { provide: ToastrService, useClass: ToastrService },
+  ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   public showPassword: boolean = false;
 
   toggleClass = 'off-line';
-  active="Angular";
+  active = 'Angular';
   firestoreModule: any;
   databaseModule: any;
   authModule: any;
@@ -40,131 +55,130 @@ export class LoginComponent {
     } else {
       this.toggleClass = 'line';
     }
-}
-disabled = '';
-constructor(
-  @Inject(DOCUMENT) private document: Document,private elementRef: ElementRef,
- private sanitizer: DomSanitizer,
-  public authservice: AuthService,
-  public auth: Auth,
-  private router: Router,
-  private formBuilder: FormBuilder,
-  private renderer: Renderer2,
-  private firebaseService: FirebaseService,
-  private toastr: ToastrService 
-) {
-  // AngularFireModule.initializeApp(environment.firebase);
-  document.body.classList.add('authentication-background');
-   const bodyElement = this.renderer.selectRootElement('body', true);
-  //  this.renderer.setAttribute(bodyElement, 'class', 'cover1 justify-center');
-  
-}
-// firestoreModule = this.firebaseService.getFirestore();
-// databaseModule = this.firebaseService.getDatabase();
-// authModule = this.firebaseService.getAuth();
+  }
+  disabled = '';
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private elementRef: ElementRef,
+    private sanitizer: DomSanitizer,
+    public authservice: AuthService,
+    public auth: Auth,
+    private router: Router,
+    private formBuilder: FormBuilder,
+    private renderer: Renderer2,
+    private firebaseService: FirebaseService,
+    private toastr: ToastrService
+  ) {
+    // AngularFireModule.initializeApp(environment.firebase);
+    document.body.classList.add('authentication-background');
+    const bodyElement = this.renderer.selectRootElement('body', true);
+    //  this.renderer.setAttribute(bodyElement, 'class', 'cover1 justify-center');
+  }
+  // firestoreModule = this.firebaseService.getFirestore();
+  // databaseModule = this.firebaseService.getDatabase();
+  // authModule = this.firebaseService.getAuth();
 
-ngOnDestroy(): void {
-  document.body.classList.remove('authentication-background');    
-}
-ngOnInit(): void {
-  this.loginForm = this.formBuilder.group({
-    username: ['', [Validators.required]],
-    password: ['', Validators.required],
-  });
-// Initialize Firebase services here
-this.firestoreModule = this.firebaseService.getFirestore();
-this.databaseModule = this.firebaseService.getDatabase();
-this.authModule = this.firebaseService.getAuth();
-}
+  ngOnDestroy(): void {
+    document.body.classList.remove('authentication-background');
+   
+  }
+  ngOnInit(): void {
+    if( this.authservice.currentUser !== null) {
+      this.router.navigate(['/dashboards/sales']);
+    }
+    this.loginForm = this.formBuilder.group({
+      username: ['', [Validators.required]],
+      password: ['', Validators.required],
+    });
+    // Initialize Firebase services here
+    this.firestoreModule = this.firebaseService.getFirestore();
+    this.databaseModule = this.firebaseService.getDatabase();
+    this.authModule = this.firebaseService.getAuth();
+  }
 
-// firebase
+  // firebase
 
-phoneNumber = '';
-password = '';
-errorMessage = ''; // validation _error handle
-_error: { name: string; message: string } = { name: '', message: '' }; // for firbase _error handle
+  phoneNumber = '';
+  password = '';
+  errorMessage = ''; // validation _error handle
+  _error: { name: string; message: string } = { name: '', message: '' }; // for firbase _error handle
 
-clearErrorMessage() {
-  this.errorMessage = '';
-  this._error = { name: '', message: '' };
-}
+  clearErrorMessage() {
+    this.errorMessage = '';
+    this._error = { name: '', message: '' };
+  }
 
-login() {
-  // this.disabled = "btn-loading"
-  this.clearErrorMessage();
-  if (this.validateForm(this.loginForm.value.username, this.loginForm.value.password)) {
-    this.auth
-      .login(this.loginForm.value)
-      .subscribe({
+  login() {
+    // this.disabled = "btn-loading"
+    this.clearErrorMessage();
+    if (
+      this.validateForm(
+        this.loginForm.value.username,
+        this.loginForm.value.password
+      )
+    ) {
+      this.auth.login(this.loginForm.value).subscribe({
         next: (res: any) => {
-          if(res.isSuccess){
-          console.log(res);
-          this.router.navigate(['/dashboards/sales']);
-          this.toastr.success('login successful','Royal रसोई', {
-            timeOut: 3000,
-            positionClass: 'toast-top-right',
-          });
+          if (res.isSuccess) {
+            console.log(res);
+            this.router.navigate(['/dashboards/sales']);
+            this.toastr.success('login successful', 'Royal रसोई', {
+              timeOut: 3000,
+              positionClass: 'toast-top-right',
+            });
           }
           console.clear();
-
         },
         error: (_error: any) => {
           this._error = _error;
           this.router.navigate(['/']);
-        }
+        },
       });
-   
-  }
-  else {
-    this.toastr.error('Invalid details','zeno', {
-      timeOut: 3000,
-      positionClass: 'toast-top-right',
-    });
-  }
-}
-
-validateForm(phoneNumber: string, password: string) {
-  if (phoneNumber.length === 0) {
-    this.errorMessage = 'please enter phoneNumber id';
-    return false;
+    } else {
+      this.toastr.error('Invalid details', 'zeno', {
+        timeOut: 3000,
+        positionClass: 'toast-top-right',
+      });
+    }
   }
 
-  if (password.length === 0) {
-    this.errorMessage = 'please enter password';
-    return false;
+  validateForm(phoneNumber: string, password: string) {
+    if (phoneNumber.length === 0) {
+      this.errorMessage = 'please enter phoneNumber id';
+      return false;
+    }
+
+    if (password.length === 0) {
+      this.errorMessage = 'please enter password';
+      return false;
+    }
+
+    if (password.length < 6) {
+      this.errorMessage = 'password should be at least 6 char';
+      return false;
+    }
+
+    this.errorMessage = '';
+    return true;
   }
 
-  if (password.length < 6) {
-    this.errorMessage = 'password should be at least 6 char';
-    return false;
+  //angular
+  public loginForm!: FormGroup;
+  public error: any = '';
+
+  get form() {
+    return this.loginForm.controls;
   }
 
-  this.errorMessage = '';
-  return true;
-  
-}
-
-//angular
-public loginForm!: FormGroup;
-public error: any = '';
-
-get form() {
-  return this.loginForm.controls;
-}
-
-Submit() {
-  console.log(this.loginForm)
-  if (
-    this.loginForm.valid
-  ) {
-   this.login();
-  } else {
-    this.toastr.error('Invalid details','zeno', {
-      timeOut: 3000,
-      positionClass: 'toast-top-right',
-    });
+  Submit() {
+    console.log(this.loginForm);
+    if (this.loginForm.valid) {
+      this.login();
+    } else {
+      this.toastr.error('Invalid details', 'zeno', {
+        timeOut: 3000,
+        positionClass: 'toast-top-right',
+      });
+    }
   }
-
-}
-
 }

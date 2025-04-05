@@ -7,11 +7,24 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
 })
 export class AuthService {
   private readonly apiUrl = 'http://strikeminds.com/auth/api/auth'; // Replace with actual API URL
+  public showLoader:boolean=false;
 
   private readonly userData = new BehaviorSubject<any>({}); // Observable cart count
     userData$ = this.userData.asObservable(); 
 
   constructor(private readonly http: HttpClient) {}
+
+  get currentUser(): any {
+    return localStorage.getItem('user') !== null ? JSON.parse(JSON.stringify(localStorage.getItem('user'))) : null;
+  }
+
+  // get isUserEmailLoggedIn(): boolean {
+  //   if (this.authState !== null && !this.isUserAnonymousLoggedIn) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
   login(credentials: { username: string; password: string }): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/login`, credentials).pipe(

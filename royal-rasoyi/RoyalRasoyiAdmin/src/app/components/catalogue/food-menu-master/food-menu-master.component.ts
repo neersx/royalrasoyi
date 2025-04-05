@@ -50,6 +50,11 @@ export class FoodMenuMasterComponent implements OnInit {
     this.allTasksChecked = checked;
   }
 
+  openDetails(id: any) {
+    this.router.navigate(['catalogue/food-menu-details', id]);
+  }
+
+
   Remove(id: any) {
     var Outputdata = this.lists.filter((x) => {
       return x.id != id;
@@ -73,9 +78,6 @@ export class FoodMenuMasterComponent implements OnInit {
     {header:"Status",field:"Status"},
     {header:"Published",field:"Published"},
     {header:"Action",field:"Action"},
-
-
-
   ]
 
 }
