@@ -16,7 +16,12 @@ export class FoodMenuService {
   emitProductId(value: any){
     this.productId.next(value);
   }
+
   getFoodMenuList(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
+  }
+
+  getFoodDetals(id: number): Observable<FoodMaster> {
+    return this.http.get<FoodMaster>(`${this.apiUrl}/${id}`);
   }
 }

@@ -54,6 +54,10 @@ export class FoodMenuMasterComponent implements OnInit {
     this.router.navigate(['catalogue/food-menu-details', id]);
   }
 
+  navigateToEdit(id: any) {
+    this.router.navigate(['catalogue/edit-food-menu', id]);
+  }
+
 
   Remove(id: any) {
     var Outputdata = this.lists.filter((x) => {

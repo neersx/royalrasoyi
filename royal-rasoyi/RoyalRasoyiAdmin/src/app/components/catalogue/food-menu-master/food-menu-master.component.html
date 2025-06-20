@@ -34,17 +34,8 @@
                                 <td>{{list.bestSeason}}</td>
                                 <td><span class="badge bg-primary-transparent">{{list.type}}</span></td>
                                 <td>
-                                    <div class="d-flex align-items-center fw-semibold">
-                                        <span class="avatar avatar-sm me-2 avatar-rounded">
-                                            <img [src]="list.imageUrl" alt="">
-                                        </span>
-                                        <a href="javascript:void(0);">{{list.addons}}</a>
-                                    </div>
-                                </td>
-                                <td>{{list.createdOn}}</td>
-                                <td>
                                     <div class="hstack gap-2 fs-15">
-                                        <a [routerLink]="['/catalogue/edit-food-details/', 23423]" class="btn btn-icon btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
+                                        <a (click)="navigateToEdit(list.id)" [routerLink]="['/catalogue/edit-food-details', list.id]" class="btn btn-icon btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
                                         <a href="javascript:void(0);" (click)="Remove(list.id)" class="btn btn-icon btn-sm btn-danger-light product-btn"><i class="ri-delete-bin-line"></i></a>
                                     </div>
                                 </td>

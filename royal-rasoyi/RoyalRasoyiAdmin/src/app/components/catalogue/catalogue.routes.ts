@@ -21,7 +21,7 @@ export const admin: Routes = [
       },
       {
         path: 'edit-food-details/:id',
-        loadComponent: () =>
+        loadComponent: () => 
           import('./edit-food-details/edit-food-details.component').then(
             (m) => m.EditFoodDetailsComponent
           ),
