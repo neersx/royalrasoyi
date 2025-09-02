@@ -4,7 +4,7 @@
 # sudo systemctl start royalrasoyi-app.service
 
 [Unit]
-Description=Quizlo Angular 20 SSR Server
+Description=Royal Rasoyi Web Application
 After=network.target
 
 [Service]
@@ -14,6 +14,7 @@ WorkingDirectory=/var/www/royalrasoyi/html
 ExecStart=/usr/bin/node /var/www/royalrasoyi/html/server/server.mjs
 Restart=always
 Environment=NODE_ENV=production
+Environment=PORT=4100
 SyslogIdentifier=royalrasoyi-app
 StandardOutput=journal
 StandardError=journal
